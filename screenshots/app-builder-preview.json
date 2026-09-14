@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Core Marketing",
+      "hasCanvas": false,
+      "bodyTextLen": 6658,
+      "bodyTextHash": "e68ae7e51c81416d651d9b9302858a8c373081a9fe0faa9cd097c7456ffe007b",
+      "bodyTextPrefix": "CORE MARKETING Rooms Work Retainers The house The book CONVERSAT",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Core Marketing",
+      "hasCanvas": false,
+      "bodyTextLen": 6605,
+      "bodyTextHash": "c80982aa32baa85b01e90907d423395d801573eac204e14b79a4f9d9e2fba3ba",
+      "bodyTextPrefix": "CORE MARKETING KIGALI · BY APPOINTMENT Core Marketing Presence, ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

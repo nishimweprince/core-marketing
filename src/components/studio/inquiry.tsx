@@ -1,16 +1,17 @@
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
-import { BRAND, RETAINERS, ROOMS } from "@/lib/brand";
+import { BRAND } from "@/lib/brand";
+import { STUDIO_RETAINERS, STUDIO_ROOMS } from "@/lib/studio-content";
 
 const ROOMS_OPTIONS = [
-  { value: "", label: "Select a room" },
-  ...ROOMS.map((r) => ({ value: r.id, label: r.name })),
-  { value: "other", label: "Another house" },
+  { value: "", label: "Select a focus area" },
+  ...STUDIO_ROOMS.map((r) => ({ value: r.id, label: r.name })),
+  { value: "other", label: "Something else" },
 ];
 
 const RETAINER_OPTIONS = [
-  { value: "", label: "Not yet decided" },
-  ...RETAINERS.map((r) => ({ value: r.id, label: `${r.latin}: ${r.means}` })),
+  { value: "", label: "I’m not sure yet" },
+  ...STUDIO_RETAINERS.map((r) => ({ value: r.id, label: `${r.latin}: ${r.means}` })),
 ];
 
 export function Inquiry() {
@@ -29,21 +30,21 @@ export function Inquiry() {
     const note = String(data.get("note") ?? "").trim();
 
     if (!name || !email) {
-      toast.error("A name and an email are required.");
+      toast.error("Add your name and email to continue.");
       return;
     }
 
     const roomLabel = ROOMS_OPTIONS.find((o) => o.value === room)?.label ?? room;
     const retainerLabel = RETAINER_OPTIONS.find((o) => o.value === retainer)?.label ?? retainer;
-    const subject = `Conversation: ${house || name}`;
+    const subject = `New conversation: ${house || name}`;
     const body = [
       `Name: ${name}`,
-      `House: ${house || "-"}`,
+      `Brand or property: ${house || "-"}`,
       `Email: ${email}`,
-      `Room: ${roomLabel || "-"}`,
-      `Retainer: ${retainerLabel || "Not yet decided"}`,
+      `Focus area: ${roomLabel || "-"}`,
+      `Preferred retainer: ${retainerLabel || "I’m not sure yet"}`,
       "",
-      note || "(no note)",
+      note || "No additional context provided.",
     ].join("\n");
 
     const href = `mailto:${BRAND.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -52,17 +53,17 @@ export function Inquiry() {
     window.setTimeout(() => {
       setBusy(false);
       setSent(true);
-      toast.success("Your mail client should open. If it does not, write us directly.");
+      toast.success("Your email draft is ready. If it did not open, email us directly.");
     }, 400);
   }
 
   if (sent) {
     return (
       <div className="border-t border-vellum/12 pt-10">
-        <p className="font-display text-3xl font-normal">The letter is with you.</p>
-        <p className="mt-4 max-w-md text-sm leading-relaxed text-limestone">
-          If the mail window did not open, write directly to {BRAND.email}. We read every note. We do
-          not always take the work.
+        <p className="font-display text-3xl font-normal">Your email is ready.</p>
+        <p className="body-copy-compact mt-4 max-w-md text-limestone">
+          If your mail app did not open, email us directly at {BRAND.email}. We read every note and
+          reply when the fit is clear.
         </p>
         <a
           href={`mailto:${BRAND.email}`}
@@ -78,25 +79,38 @@ export function Inquiry() {
     <form onSubmit={onSubmit} className="grid gap-8" noValidate>
       <div className="grid gap-8 md:grid-cols-2">
         <label className="block">
-          <span className="label text-limestone">Name</span>
-          <input className="field mt-4" name="name" autoComplete="name" required suppressHydrationWarning />
+          <span className="label text-limestone">Your name</span>
+          <input
+            className="field mt-4"
+            name="name"
+            autoComplete="name"
+            required
+            suppressHydrationWarning
+          />
         </label>
         <label className="block">
-          <span className="label text-limestone">House</span>
+          <span className="label text-limestone">Brand or property</span>
           <input
             className="field mt-4"
             name="house"
             autoComplete="organization"
-            placeholder="Hotel, villa, motor, property"
+            placeholder="Hotel, villa, automotive brand, or property"
             suppressHydrationWarning
           />
         </label>
         <label className="block md:col-span-2">
-          <span className="label text-limestone">Email</span>
-          <input className="field mt-4" name="email" type="email" autoComplete="email" required suppressHydrationWarning />
+          <span className="label text-limestone">Work email</span>
+          <input
+            className="field mt-4"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            suppressHydrationWarning
+          />
         </label>
         <label className="block">
-          <span className="label text-limestone">Room</span>
+          <span className="label text-limestone">Focus area</span>
           <select className="field mt-4" name="room" defaultValue="" suppressHydrationWarning>
             {ROOMS_OPTIONS.map((o) => (
               <option key={o.value || "none"} value={o.value} className="bg-ink text-vellum">
@@ -106,7 +120,7 @@ export function Inquiry() {
           </select>
         </label>
         <label className="block">
-          <span className="label text-limestone">Retainer</span>
+          <span className="label text-limestone">Preferred retainer</span>
           <select className="field mt-4" name="retainer" defaultValue="" suppressHydrationWarning>
             {RETAINER_OPTIONS.map((o) => (
               <option key={o.value || "none"} value={o.value} className="bg-ink text-vellum">
@@ -116,21 +130,27 @@ export function Inquiry() {
           </select>
         </label>
         <label className="block md:col-span-2">
-          <span className="label text-limestone">Note</span>
-          <textarea className="field mt-4 min-h-32 resize-y" name="note" rows={4} suppressHydrationWarning />
+          <span className="label text-limestone">A little context</span>
+          <textarea
+            className="field mt-4 min-h-32 resize-y"
+            name="note"
+            rows={4}
+            placeholder="What would you like to change, launch, or grow?"
+            suppressHydrationWarning
+          />
         </label>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <p className="max-w-sm text-xs leading-relaxed text-ash">
-          Opens a letter to {BRAND.email}. Fees are discussed in the first conversation. We do not
-          send decks unasked.
+        <p className="body-copy-compact max-w-sm text-limestone">
+          This opens a draft email to {BRAND.email}. We’ll discuss scope and fees in the first
+          conversation.
         </p>
         <button
           type="submit"
           disabled={busy}
           className="inline-flex min-h-11 items-center bg-vellum px-6 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90 disabled:opacity-60"
         >
-          {busy ? "Opening…" : "Request a conversation"}
+          {busy ? "Opening your email…" : "Start the conversation"}
         </button>
       </div>
     </form>

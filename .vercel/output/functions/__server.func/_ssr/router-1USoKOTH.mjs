@@ -1,9 +1,9 @@
 import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
-import { _ as createRootRoute, b as require_jsx_runtime, d as HeadContent, g as createFileRoute, h as lazyRouteComponent, m as Outlet, p as createRouter, u as Scripts, y as useRouter, z as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
+import { R as require_react, _ as createRootRoute, d as HeadContent, g as createFileRoute, h as lazyRouteComponent, m as Outlet, p as createRouter, u as Scripts, y as useRouter, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-L63RMrdB.js
-var router_L63RMrdB_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-1USoKOTH.js
+var router_1USoKOTH_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var FALLBACK_MESSAGE = "An unexpected error occurred. Try reloading the page.";
@@ -297,7 +297,7 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-DSE_sMnP.css";
+var styles_default = "/assets/styles-ChpR9sA7.css";
 var APP_NAME = "Core Marketing";
 var Route$2 = createRootRoute({
 	head: () => ({
@@ -310,7 +310,7 @@ var Route$2 = createRootRoute({
 			{ title: APP_NAME },
 			{
 				name: "description",
-				content: "Core Marketing — the architecture of attention. A house of strategy, presence, content, and promotion for hotels, villas, motor, and property."
+				content: "Core Marketing: the architecture of attention. A house of strategy, presence, content, and promotion for hotels, villas, motor, and property."
 			},
 			{
 				name: "theme-color",
@@ -351,9 +351,9 @@ var Route$2 = createRootRoute({
 		})]
 	})
 });
-var $$splitComponentImporter$1 = () => import("./routes-vkClzx-u.mjs");
+var $$splitComponentImporter$1 = () => import("./routes-BnW3HuZ1.mjs");
 var Route$1 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$1, "component") });
-var $$splitComponentImporter = () => import("./book-CrgYVmae.mjs");
+var $$splitComponentImporter = () => import("./book-JI4cuaPW.mjs");
 var Route = createFileRoute("/book")({ component: lazyRouteComponent($$splitComponentImporter, "component") });
 var rootRouteChildren = {
 	IndexRoute: Route$1.update({
@@ -375,4 +375,4 @@ function getRouter() {
 	});
 }
 //#endregion
-export { getRouter, router_L63RMrdB_exports as t };
+export { getRouter, router_1USoKOTH_exports as t };

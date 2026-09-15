@@ -1,8 +1,7 @@
-import { b as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { r as Menu, t as X } from "../_libs/lucide-react.mjs";
+import { z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/nav-CzN1HY-M.js
+//#region node_modules/.nitro/vite/services/ssr/assets/mark-DDLwdtde.js
 var import_jsx_runtime = require_jsx_runtime();
 var BRAND = {
 	name: "Core Marketing",
@@ -152,7 +151,7 @@ var PRACTICES = [
 		roman: "II",
 		name: "Presence",
 		subtitle: "The channels",
-		body: "Social architecture, platform roles, and a cadence a brand can actually keep. Not more posts. The right ones, on purpose.",
+		body: "Social architecture, platform roles, and a cadence a brand can keep. Fewer posts, placed on purpose.",
 		holds: [
 			"The channels",
 			"The cadence",
@@ -174,7 +173,7 @@ var PRACTICES = [
 		roman: "IV",
 		name: "Promotion",
 		subtitle: "The amplification",
-		body: "Paid, launched, and always-on growth built on the strategy — never instead of it. Attention, rented only after it has been earned.",
+		body: "Paid, launched, and always-on growth built on the strategy, never instead of it. Attention, rented only after it has been earned.",
 		holds: [
 			"Launch",
 			"Always-on",
@@ -185,7 +184,7 @@ var PRACTICES = [
 var TRAITS = [
 	{
 		name: "Composed",
-		body: "We do not rush the room. Urgency is designed; panic is not a process."
+		body: "We hold the room steady. Urgency is designed; panic stays outside."
 	},
 	{
 		name: "Exact",
@@ -227,7 +226,7 @@ var VOICE_SAMPLES = [
 	{
 		label: "Service",
 		wrong: "We’re a full-service agency that does it all for amazing brands!",
-		right: "Strategy, presence, content, and promotion — held as one system."
+		right: "Strategy, presence, content, and promotion, held as one system."
 	},
 	{
 		label: "Result",
@@ -246,7 +245,7 @@ var IMAGE_RULES = [
 	},
 	{
 		title: "People, at a distance",
-		body: "When figures appear, they are occupied — never posing for the brand. Faces are not the product."
+		body: "When figures appear, they are occupied, never posing for the brand. Faces are not the product."
 	},
 	{
 		title: "Quiet colour",
@@ -308,7 +307,7 @@ var DOWNLOADS = [
 		group: "The book",
 		items: [{
 			href: "/brand/kit/05-brand-book/Core-Marketing-Brand-Book.pdf",
-			label: "Brand Book — PDF, 16 pages, A4",
+			label: "Brand Book: PDF, 16 pages, A4",
 			file: "Core-Marketing-Brand-Book.pdf"
 		}]
 	},
@@ -317,27 +316,27 @@ var DOWNLOADS = [
 		items: [
 			{
 				href: "/brand/kit/01-logo-only/Core-Mark-On-Ink.svg",
-				label: "Mark — SVG on ink",
+				label: "Mark: SVG on ink",
 				file: "Core-Mark-On-Ink.svg"
 			},
 			{
 				href: "/brand/kit/01-logo-only/Core-Mark-On-Vellum.svg",
-				label: "Mark — SVG on vellum",
+				label: "Mark: SVG on vellum",
 				file: "Core-Mark-On-Vellum.svg"
 			},
 			{
 				href: "/brand/kit/01-logo-only/Core-Mark-Mono.svg",
-				label: "Mark — SVG mono",
+				label: "Mark: SVG mono",
 				file: "Core-Mark-Mono.svg"
 			},
 			{
 				href: "/brand/kit/01-logo-only/Core-Mark-On-Ink.png",
-				label: "Mark — PNG on ink",
+				label: "Mark: PNG on ink",
 				file: "Core-Mark-On-Ink.png"
 			},
 			{
 				href: "/brand/kit/01-logo-only/Core-Mark-On-Vellum.png",
-				label: "Mark — PNG on vellum",
+				label: "Mark: PNG on vellum",
 				file: "Core-Mark-On-Vellum.png"
 			}
 		]
@@ -347,27 +346,27 @@ var DOWNLOADS = [
 		items: [
 			{
 				href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink.svg",
-				label: "Lockup — SVG on ink",
+				label: "Lockup: SVG on ink",
 				file: "Core-Lockup-On-Ink.svg"
 			},
 			{
 				href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Vellum.svg",
-				label: "Lockup — SVG on vellum",
+				label: "Lockup: SVG on vellum",
 				file: "Core-Lockup-On-Vellum.svg"
 			},
 			{
 				href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink-Transparent.svg",
-				label: "Lockup — SVG transparent",
+				label: "Lockup: SVG transparent",
 				file: "Core-Lockup-On-Ink-Transparent.svg"
 			},
 			{
 				href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink.png",
-				label: "Lockup — PNG on ink",
+				label: "Lockup: PNG on ink",
 				file: "Core-Lockup-On-Ink.png"
 			},
 			{
 				href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Vellum.png",
-				label: "Lockup — PNG on vellum",
+				label: "Lockup: PNG on vellum",
 				file: "Core-Lockup-On-Vellum.png"
 			}
 		]
@@ -377,22 +376,22 @@ var DOWNLOADS = [
 		items: [
 			{
 				href: "/brand/kit/03-business-cards/Core-Business-Card-Front.svg",
-				label: "Card front — SVG editable",
+				label: "Card front: SVG editable",
 				file: "Core-Business-Card-Front.svg"
 			},
 			{
 				href: "/brand/kit/03-business-cards/Core-Business-Card-Back.svg",
-				label: "Card back — SVG editable",
+				label: "Card back: SVG editable",
 				file: "Core-Business-Card-Back.svg"
 			},
 			{
 				href: "/brand/kit/03-business-cards/Core-Business-Card-Front.pdf",
-				label: "Card front — PDF print",
+				label: "Card front: PDF print",
 				file: "Core-Business-Card-Front.pdf"
 			},
 			{
 				href: "/brand/kit/03-business-cards/Core-Business-Card-Back.pdf",
-				label: "Card back — PDF print",
+				label: "Card back: PDF print",
 				file: "Core-Business-Card-Back.pdf"
 			}
 		]
@@ -401,18 +400,18 @@ var DOWNLOADS = [
 		group: "Stationery",
 		items: [{
 			href: "/brand/kit/04-stationery/Core-Letterhead-A4.svg",
-			label: "Letterhead A4 — SVG",
+			label: "Letterhead A4: SVG",
 			file: "Core-Letterhead-A4.svg"
 		}, {
 			href: "/brand/kit/04-stationery/Core-Envelope-DL.svg",
-			label: "Envelope DL — SVG",
+			label: "Envelope DL: SVG",
 			file: "Core-Envelope-DL.svg"
 		}]
 	}
 ];
 var KIT_ZIP = {
 	href: "/brand/Core-Marketing-Brand-Kit.zip",
-	label: "Download everything — ZIP",
+	label: "Download everything: ZIP",
 	file: "Core-Marketing-Brand-Kit.zip"
 };
 var SITE_NAV = [
@@ -431,192 +430,6 @@ var SITE_NAV = [
 	{
 		id: "house",
 		label: "The house"
-	}
-];
-var ROOMS = [
-	{
-		id: "hotels",
-		kicker: "Hospitality",
-		name: "Hotels & villas",
-		image: "/brand/villa.jpg",
-		alt: "A private villa terrace at dusk — limestone, linen, one lamp.",
-		lede: "A house that is already expensive should not sound like it is asking.",
-		body: "Five-star hotels and private villas. We hold the argument, the channels, and the evidence so the house feels inevitable — before the guest arrives, and after they leave. Not more posts. A presence that matches the key."
-	},
-	{
-		id: "motor",
-		kicker: "Hire and houses",
-		name: "Motor",
-		image: "/brand/motor.jpg",
-		alt: "A dark car in a limestone courtyard at dusk, one shaft of warm light.",
-		lede: "A vehicle is not a thumbnail.",
-		body: "Expensive hire, and dealerships that already know they are not a lot. Presence built like the courtyard at dusk: one car, one light, no noise. The marque is described. It is never shouted."
-	},
-	{
-		id: "property",
-		kicker: "Land and addresses",
-		name: "Property",
-		image: "/brand/property.jpg",
-		alt: "A stone and glass residence at blue hour, one warm window in a dark garden.",
-		lede: "Listings expire. A house of record does not.",
-		body: "Developers, private offices, and addresses bought as a life rather than a listing. We treat a property the way we treat a hotel: as a place with a voice, held across seasons."
-	}
-];
-var RETAINERS = [
-	{
-		id: "prima",
-		latin: "Prima",
-		means: "The first",
-		roman: "I",
-		term: "Three months",
-		featured: false,
-		for: "A house establishing, or correcting, its public face.",
-		includes: [
-			"Strategy — the argument written as we would want to receive it",
-			"Presence — channel architecture and a cadence that can be kept",
-			"A monthly senior room"
-		],
-		typical: "A villa opening a season. A dealership’s first year of seriousness. A property house entering a market."
-	},
-	{
-		id: "altera",
-		latin: "Altera",
-		means: "The second",
-		roman: "II",
-		term: "Six months",
-		featured: false,
-		for: "A house that already has a voice and needs evidence.",
-		includes: [
-			"Everything in Prima",
-			"Content — film, stills, and language directed as one system",
-			"Two platforms held with intent"
-		],
-		typical: "A hotel that already knows its guests. A marque that needs more than posts."
-	},
-	{
-		id: "summa",
-		latin: "Summa",
-		means: "The highest",
-		roman: "III",
-		term: "Twelve months",
-		featured: true,
-		for: "The full architecture. Retained. Always-on.",
-		includes: [
-			"Everything in Altera",
-			"Promotion — paid only after it has been earned",
-			"Launch and always-on, a room that does not drop"
-		],
-		typical: "A hotel of record. A motor house with more than one address. A developer who intends to last."
-	}
-];
-var STEPS = [
-	{
-		roman: "I",
-		name: "Conversation",
-		body: "We begin by speaking. Fit is a discipline. We take the work that can be done properly, and we decline the rest."
-	},
-	{
-		roman: "II",
-		name: "The argument",
-		body: "Positioning and narrative first. The brief we would want to receive — so every later decision is cheaper."
-	},
-	{
-		roman: "III",
-		name: "The rooms",
-		body: "Channels and cadence. Not more surface. The right ones, on purpose, kept."
-	},
-	{
-		roman: "IV",
-		name: "The evidence",
-		body: "Film, stills, and language. If it would not survive a quiet room, it does not ship. Promotion, when the retainer is Summa, follows."
-	}
-];
-var MEASURES = [
-	{
-		figure: "2018",
-		caption: "The house opened."
-	},
-	{
-		figure: "Kigali",
-		caption: "The city. Work travels."
-	},
-	{
-		figure: "IV",
-		caption: "Practices, never sold apart."
-	},
-	{
-		figure: "One",
-		caption: "Architecture. Not a menu of trades."
-	}
-];
-var INSIGHT = {
-	kicker: "The landscape",
-	title: "Discovery has left the directory.",
-	body: "A guest, a driver, a buyer — they decide in a quiet room of the phone. A still that survives a second look. A name spoken once. Ranking is not presence. Presence is whether the house is already chosen when the search begins.",
-	pull: "The room is decided before the door."
-};
-var WORK = [
-	{
-		roman: "01",
-		room: "Hospitality",
-		title: "A hotel of record",
-		image: "/brand/reception.jpg",
-		alt: "A hotel lobby at dusk — walnut, limestone, one lamp, an empty chair.",
-		body: "A house that is already expensive should not sound like it is asking. Presence held before arrival, and after departure."
-	},
-	{
-		roman: "02",
-		room: "Motor",
-		title: "One car. One light.",
-		image: "/brand/motor.jpg",
-		alt: "A dark car in a limestone courtyard at dusk, one shaft of warm light.",
-		body: "Hire and houses of the marque. The courtyard at dusk: described, never shouted."
-	},
-	{
-		roman: "03",
-		room: "Property",
-		title: "An address, not a listing",
-		image: "/brand/property.jpg",
-		alt: "A stone and glass residence at blue hour, one warm window in a dark garden.",
-		body: "Developers and private offices. A place with a voice, held across seasons."
-	}
-];
-var QUESTIONS = [
-	{
-		num: "01",
-		id: "holds",
-		q: "What does the house hold?",
-		a: "Strategy, presence, content, and promotion — as one architecture. We do not sell them apart. A brand that is loud in one place and absent in another is not a brand. It is noise."
-	},
-	{
-		num: "02",
-		id: "retainers",
-		q: "What are Prima, Altera, and Summa?",
-		a: "Latin. The first, the second, the highest. Three retainers, not packages on a menu. Prima writes the argument and the channels. Altera adds the evidence. Summa is the full architecture — retained, always-on."
-	},
-	{
-		num: "03",
-		id: "fees",
-		q: "Why is there no rate card?",
-		a: "Fees are discussed in conversation. A published menu invites the wrong comparison. Houses that already sell at a premium do not buy marketing by the post."
-	},
-	{
-		num: "04",
-		id: "term",
-		q: "How long is an engagement?",
-		a: "Prima is three months. Altera, six. Summa, twelve. We do not take work that cannot be held for the term. Campaigns expire. A room should not."
-	},
-	{
-		num: "05",
-		id: "anyone",
-		q: "Will you take anyone?",
-		a: "No. Fit is a discipline. We take fewer partners so the work can go further. Hotels, villas, motor, and property of record. We decline the rest."
-	},
-	{
-		num: "06",
-		id: "where",
-		q: "Where is the house?",
-		a: "Kigali. Working wherever the work is serious. Correspondence is by appointment — studio@core.marketing."
 	}
 ];
 function cn(...inputs) {
@@ -778,104 +591,5 @@ function CoreWordmark({ className, compact = false }) {
 		})]
 	});
 }
-function ProgressBar({ value }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "pointer-events-none fixed top-0 right-0 left-0 z-50 h-px bg-transparent",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "h-full origin-left bg-limestone",
-			style: { transform: `scaleX(${Math.min(Math.max(value, 0), 1)})` }
-		})
-	});
-}
-function SideRail({ active, onJump }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
-		className: "fixed top-0 left-0 z-40 hidden h-dvh w-52 flex-col border-r border-vellum/8 bg-ink px-6 py-8 lg:flex",
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-				type: "button",
-				onClick: () => onJump("cover"),
-				className: "text-left text-vellum transition-[opacity] duration-150 hover:opacity-80",
-				"aria-label": "Core Marketing, back to cover",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreLockup, { size: "sm" })
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
-				className: "mt-12 flex flex-1 flex-col gap-1",
-				"aria-label": "Brand book",
-				children: SECTIONS.map((s) => {
-					const on = active === s.id;
-					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-						type: "button",
-						onClick: () => onJump(s.id),
-						className: cn("flex min-h-10 items-center gap-3 rounded-sm px-1 text-left transition-[color] duration-150", on ? "text-vellum" : "text-ash hover:text-limestone"),
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-sans text-[10px] tabular-nums tracking-wide",
-							children: s.num
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-sans text-xs",
-							children: s.label
-						})]
-					}, s.id);
-				})
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-				className: "font-sans text-[10px] leading-relaxed text-ash",
-				children: [
-					"Brand Book",
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-					"Volume 01"
-				]
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-				to: "/",
-				className: "mt-4 font-sans text-[10px] tracking-label text-limestone uppercase transition-[color] duration-150 hover:text-vellum",
-				children: "The house"
-			})
-		]
-	});
-}
-function MobileBar({ open, onToggle, onJump }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-		className: "fixed top-0 right-0 left-0 z-40 flex h-14 items-center justify-between border-b border-vellum/8 bg-ink/95 px-4 lg:hidden",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-			type: "button",
-			onClick: () => onJump("cover"),
-			className: "flex items-center gap-2.5 text-vellum",
-			"aria-label": "Core Marketing, back to cover",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreLockup, { size: "sm" })
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-			type: "button",
-			onClick: onToggle,
-			className: "flex size-11 items-center justify-center text-vellum",
-			"aria-expanded": open,
-			"aria-label": open ? "Close index" : "Open index",
-			children: open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "size-5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "size-5" })
-		})]
-	}), open ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "fixed inset-0 z-30 overflow-y-auto bg-ink px-6 pt-20 pb-12 lg:hidden",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-			className: "label text-limestone",
-			children: "Index"
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-			className: "mt-8 flex flex-col",
-			"aria-label": "Brand book",
-			children: [SECTIONS.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-				type: "button",
-				onClick: () => onJump(s.id),
-				className: "flex min-h-14 items-baseline justify-between border-b border-vellum/8 text-left text-vellum",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-display text-2xl font-light tracking-display",
-					children: s.label
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-sans text-xs tabular-nums text-ash",
-					children: s.num
-				})]
-			}, s.id)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-				to: "/",
-				className: "mt-8 flex min-h-14 items-center font-display text-2xl font-light tracking-display text-limestone",
-				children: "The house"
-			})]
-		})]
-	}) : null] });
-}
 //#endregion
-export { TRAITS as C, WORK as D, VOICE_SAMPLES as E, cn as O, SideRail as S, VOICE_RULES as T, RETAINERS as _, CoreMarkConstruct as a, SITE_NAV as b, IMAGE_RULES as c, MEASURES as d, MISUSE as f, QUESTIONS as g, ProgressBar as h, CoreMark as i, INSIGHT as l, PRACTICES as m, COLORS as n, CoreWordmark as o, MobileBar as p, CoreLockup as r, DOWNLOADS as s, BRAND as t, KIT_ZIP as u, ROOMS as v, TYPE_ROLES as w, STEPS as x, SECTIONS as y };
+export { VOICE_SAMPLES as _, CoreMarkConstruct as a, IMAGE_RULES as c, PRACTICES as d, SECTIONS as f, VOICE_RULES as g, TYPE_ROLES as h, CoreMark as i, KIT_ZIP as l, TRAITS as m, COLORS as n, CoreWordmark as o, SITE_NAV as p, CoreLockup as r, DOWNLOADS as s, BRAND as t, MISUSE as u, cn as v };

@@ -21,9 +21,11 @@
   --tracking-brand: 0.18em;
   --tracking-label: 0.32em;
 
-  --shadow-border: 0 0 0 1px rgba(12, 11, 10, 0.08), 0 1px 2px -1px rgba(12, 11, 10, 0.08),
+  --shadow-border:
+    0 0 0 1px rgba(12, 11, 10, 0.08), 0 1px 2px -1px rgba(12, 11, 10, 0.08),
     0 18px 40px -16px rgba(12, 11, 10, 0.35);
-  --shadow-border-hover: 0 0 0 1px rgba(12, 11, 10, 0.12), 0 1px 2px -1px rgba(12, 11, 10, 0.1),
+  --shadow-border-hover:
+    0 0 0 1px rgba(12, 11, 10, 0.12), 0 1px 2px -1px rgba(12, 11, 10, 0.1),
     0 22px 44px -16px rgba(12, 11, 10, 0.42);
   --shadow-dark: 0 0 0 1px rgba(243, 239, 232, 0.08);
 
@@ -69,7 +71,7 @@
     color: var(--color-ink);
   }
 
-  img.brand-photo {
+  .brand-photo {
     outline: 1px solid rgba(243, 239, 232, 0.1);
     outline-offset: -1px;
   }
@@ -82,6 +84,41 @@
     font-weight: 500;
     line-height: 1.4;
     color: var(--color-ash);
+  }
+
+  .body-copy {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .body-copy-compact {
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .brand-image-skeleton {
+    background-size: 220% 100%;
+    animation: brand-image-shimmer 1.6s var(--ease-in) infinite;
+  }
+
+  .brand-image-skeleton-dark {
+    background-image: linear-gradient(
+      105deg,
+      var(--color-night) 16%,
+      color-mix(in oklab, var(--color-limestone) 18%, var(--color-night)) 38%,
+      var(--color-night) 62%
+    );
+  }
+
+  .brand-image-skeleton-light {
+    background-image: linear-gradient(
+      105deg,
+      color-mix(in oklab, var(--color-limestone) 72%, var(--color-vellum)) 16%,
+      color-mix(in oklab, var(--color-vellum) 74%, var(--color-limestone)) 38%,
+      color-mix(in oklab, var(--color-limestone) 72%, var(--color-vellum)) 62%
+    );
   }
 
   .hairline {
@@ -138,7 +175,8 @@
   }
 
   select.field {
-    background-image: linear-gradient(45deg, transparent 50%, var(--color-limestone) 50%),
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--color-limestone) 50%),
       linear-gradient(135deg, var(--color-limestone) 50%, transparent 50%);
     background-position:
       calc(100% - 12px) calc(50% - 2px),
@@ -170,6 +208,15 @@
   }
 }
 
+@keyframes brand-image-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -181,5 +228,13 @@
   .rise-4,
   .rise-5 {
     animation: none;
+  }
+
+  .brand-image-skeleton {
+    animation: none;
+  }
+
+  .brand-photo img {
+    transition: none;
   }
 }

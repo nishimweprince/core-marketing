@@ -1,11 +1,101 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { b as require_jsx_runtime, z as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as Copy, i as Download, o as Check } from "../_libs/lucide-react.mjs";
-import { C as TRAITS, E as VOICE_SAMPLES, O as cn, S as SideRail, T as VOICE_RULES, a as CoreMarkConstruct, c as IMAGE_RULES, f as MISUSE, h as ProgressBar, i as CoreMark, m as PRACTICES, n as COLORS, o as CoreWordmark, p as MobileBar, r as CoreLockup, s as DOWNLOADS, t as BRAND, u as KIT_ZIP, w as TYPE_ROLES, y as SECTIONS } from "./nav-CzN1HY-M.mjs";
+import { R as require_react, v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { _ as VOICE_SAMPLES, a as CoreMarkConstruct, c as IMAGE_RULES, d as PRACTICES, f as SECTIONS, g as VOICE_RULES, h as TYPE_ROLES, i as CoreMark, l as KIT_ZIP, m as TRAITS, n as COLORS, o as CoreWordmark, r as CoreLockup, s as DOWNLOADS, t as BRAND, u as MISUSE, v as cn } from "./mark-DDLwdtde.mjs";
+import { a as Copy, i as Download, o as Check, r as Menu, t as X } from "../_libs/lucide-react.mjs";
 import { n as toast, t as Toaster } from "../_libs/sonner.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/book-CrgYVmae.js
+//#region node_modules/.nitro/vite/services/ssr/assets/book-JI4cuaPW.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
+function SideRail({ active, onJump }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
+		className: "fixed top-0 left-0 z-40 hidden h-dvh w-52 flex-col border-r border-vellum/8 bg-ink px-6 py-8 lg:flex",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+				type: "button",
+				onClick: () => onJump("cover"),
+				className: "text-left text-vellum transition-[opacity] duration-150 hover:opacity-80",
+				"aria-label": "Core Marketing, back to cover",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreLockup, { size: "sm" })
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
+				className: "mt-12 flex flex-1 flex-col gap-1",
+				"aria-label": "Brand book",
+				children: SECTIONS.map((s) => {
+					const on = active === s.id;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						type: "button",
+						onClick: () => onJump(s.id),
+						className: cn("flex min-h-10 items-center gap-3 rounded-sm px-1 text-left transition-[color] duration-150", on ? "text-vellum" : "text-ash hover:text-limestone"),
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-sans text-xs tabular-nums",
+							children: s.num
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-sans text-xs",
+							children: s.label
+						})]
+					}, s.id);
+				})
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				className: "font-sans text-xs leading-relaxed text-ash",
+				children: [
+					"Brand Book",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+					"Volume 01"
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				to: "/",
+				className: "mt-4 font-sans text-xs text-limestone uppercase transition-[color] duration-150 hover:text-vellum",
+				children: "The house"
+			})
+		]
+	});
+}
+function MobileBar({ open, onToggle, onJump }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
+		className: "fixed top-0 right-0 left-0 z-40 flex h-14 items-center justify-between border-b border-vellum/8 bg-ink/95 px-4 lg:hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+			type: "button",
+			onClick: () => onJump("cover"),
+			className: "flex items-center gap-2.5 text-vellum",
+			"aria-label": "Core Marketing, back to cover",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreLockup, { size: "sm" })
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+			type: "button",
+			onClick: onToggle,
+			className: "flex size-11 items-center justify-center text-vellum",
+			"aria-expanded": open,
+			"aria-label": open ? "Close index" : "Open index",
+			children: open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "size-5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "size-5" })
+		})]
+	}), open ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "fixed inset-0 z-30 overflow-y-auto bg-ink px-6 pt-20 pb-12 lg:hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			className: "label text-limestone",
+			children: "Index"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+			className: "mt-8 flex flex-col",
+			"aria-label": "Brand book",
+			children: [SECTIONS.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+				type: "button",
+				onClick: () => onJump(s.id),
+				className: "flex min-h-14 items-baseline justify-between border-b border-vellum/8 text-left text-vellum",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "font-display text-2xl font-normal",
+					children: s.label
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "font-sans text-xs tabular-nums text-ash",
+					children: s.num
+				})]
+			}, s.id)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				to: "/",
+				className: "mt-8 flex min-h-14 items-center font-display text-2xl font-normal text-limestone",
+				children: "The house"
+			})]
+		})]
+	}) : null] });
+}
 async function copyValue(label, value) {
 	try {
 		await navigator.clipboard.writeText(value);
@@ -26,12 +116,12 @@ function Chapter({ id, num, kicker, title, lede, tone = "paper", children }) {
 					className: cn("label", ink ? "text-limestone" : "text-ash"),
 					children: [
 						num,
-						"  —  ",
+						" · ",
 						kicker
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-display md:text-6xl",
+					className: "mt-5 max-w-3xl font-display text-4xl font-light leading-tight md:text-6xl",
 					children: title
 				}),
 				lede ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -56,7 +146,7 @@ function CopyChip({ label, value, invert = false }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 		type: "button",
 		onClick: onCopy,
-		className: cn("inline-flex min-h-11 items-center gap-2 rounded-sm px-3 py-2 font-sans text-xs tracking-wide transition-[background-color,color] duration-150 ease-out active:not-disabled:scale-[0.96]", invert ? "text-limestone hover:bg-vellum/5 hover:text-vellum" : "text-ash hover:bg-ink/5 hover:text-ink"),
+		className: cn("inline-flex min-h-11 items-center gap-2 rounded-sm px-3 py-2 font-sans text-xs transition-[background-color,color] duration-150 ease-out", invert ? "text-limestone hover:bg-vellum/5 hover:text-vellum" : "text-ash hover:bg-ink/5 hover:text-ink"),
 		"aria-label": `Copy ${label} ${value}`,
 		children: [done ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "size-3.5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "size-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 			className: "tabular-nums",
@@ -92,7 +182,7 @@ function DownloadLink({ href, file, className, children }) {
 			toast.success(`Saved ${file}`);
 		} catch {
 			if (!window.open(href, "_blank", "noopener,noreferrer")) toast.error("Allow downloads in the browser, or use Save As from the new tab.");
-			else toast.message("File opened in a new tab — save it from there.");
+			else toast.message("File opened in a new tab. Save it from there.");
 		} finally {
 			setBusy(false);
 		}
@@ -115,7 +205,7 @@ function BusinessCard({ side, className }) {
 		className: cn("flex aspect-[3.5/2] w-full flex-col justify-between rounded-md bg-vellum p-6 text-ink md:p-7", className),
 		style: { boxShadow: "var(--shadow-border)" },
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-			className: "font-display text-xl font-light leading-none",
+			className: "font-display text-xl font-normal leading-none",
 			children: "Studio"
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 			className: "mt-2 font-sans text-[11px] leading-relaxed text-ash",
@@ -151,7 +241,7 @@ function Letterhead({ className }) {
 					size: "sm",
 					field: "vellum"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					className: "text-right font-sans text-[9px] leading-relaxed text-ash",
+					className: "text-right font-sans text-[10px] leading-relaxed text-ash",
 					children: [
 						"Core Marketing",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -174,7 +264,7 @@ function Letterhead({ className }) {
 					className: "label text-[8px]",
 					children: "Confidential"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-sans text-[9px] tracking-label text-ash uppercase",
+					className: "font-sans text-[10px] text-ash uppercase",
 					children: "core.marketing"
 				})]
 			})
@@ -200,7 +290,7 @@ function Envelope({ className }) {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative ml-auto text-right",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreWordmark, { compact: true }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-2 font-sans text-[9px] tracking-label text-ash uppercase",
+					className: "mt-2 font-sans text-[10px] text-ash uppercase",
 					children: "By appointment · Kigali"
 				})]
 			})
@@ -219,14 +309,14 @@ function SocialPost({ className }) {
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-display text-3xl font-light leading-tight tracking-display md:text-4xl",
+				className: "font-display text-3xl font-normal leading-tight md:text-4xl",
 				children: "The architecture of attention."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "mt-6 font-sans text-xs leading-relaxed text-limestone",
-				children: "Strategy, presence, content, and promotion — held as one system."
+				children: "Strategy, presence, content, and promotion, held as one system."
 			})] }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-sans text-[10px] tracking-label text-ash uppercase",
+				className: "font-sans text-[10px] text-ash uppercase",
 				children: "Core Marketing"
 			})
 		]
@@ -248,7 +338,7 @@ function SocialStory({ className }) {
 					className: "label text-limestone",
 					children: "The house"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					className: "mt-4 font-display text-3xl font-light leading-tight tracking-display",
+					className: "mt-4 font-display text-3xl font-normal leading-tight",
 					children: [
 						"Fewer partners.",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -291,12 +381,12 @@ function TitleSlide({ className }) {
 				className: "label text-limestone",
 				children: "A conversation"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-				className: "mt-4 max-w-lg font-display text-3xl font-light leading-tight tracking-display md:text-5xl",
+				className: "mt-4 max-w-lg font-display text-3xl font-light leading-tight md:text-5xl",
 				children: "Presence, built as architecture."
 			})] }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-sans text-[10px] tracking-label text-ash uppercase",
-				children: "Core Marketing  ·  Volume 01"
+				className: "font-sans text-[10px] text-ash uppercase",
+				children: "Core Marketing · Volume 01"
 			})
 		]
 	});
@@ -348,7 +438,7 @@ function WebChrome({ className }) {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "size-2.5 rounded-full bg-vellum/20" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "size-2.5 rounded-full bg-vellum/20" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "ml-3 flex-1 rounded-sm bg-ink px-3 py-1.5 font-sans text-[10px] tracking-wide text-ash",
+					className: "ml-3 flex-1 rounded-sm bg-ink px-3 py-1.5 font-sans text-[10px] text-ash",
 					children: "core.marketing"
 				})
 			]
@@ -392,7 +482,6 @@ function SignagePlaque({ className }) {
 function BrandBook() {
 	const [active, setActive] = (0, import_react.useState)("cover");
 	const [open, setOpen] = (0, import_react.useState)(false);
-	const [progress, setProgress] = (0, import_react.useState)(0);
 	(0, import_react.useEffect)(() => {
 		const els = SECTIONS.map((s) => s.id).map((id) => document.getElementById(id)).filter((el) => Boolean(el));
 		const io = new IntersectionObserver((entries) => {
@@ -409,16 +498,6 @@ function BrandBook() {
 		els.forEach((el) => io.observe(el));
 		return () => io.disconnect();
 	}, []);
-	(0, import_react.useEffect)(() => {
-		const onScroll = () => {
-			const root = document.documentElement;
-			const max = root.scrollHeight - root.clientHeight;
-			setProgress(max > 0 ? root.scrollTop / max : 0);
-		};
-		onScroll();
-		window.addEventListener("scroll", onScroll, { passive: true });
-		return () => window.removeEventListener("scroll", onScroll);
-	}, []);
 	function jump(id) {
 		setOpen(false);
 		document.getElementById(id)?.scrollIntoView({
@@ -434,7 +513,6 @@ function BrandBook() {
 				position: "bottom-right",
 				toastOptions: { className: "!bg-night !text-vellum !border-vellum/10 !font-sans !rounded-md !shadow-none" }
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProgressBar, { value: progress }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SideRail, {
 				active,
 				onJump: jump
@@ -471,12 +549,11 @@ function Cover({ onOpen }) {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative flex flex-col justify-between px-6 py-10 md:px-14 lg:px-16 lg:py-16",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid-construct pointer-events-none absolute inset-0 opacity-60" }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 						className: "rise label relative text-limestone",
 						children: [
 							BRAND.bookTitle,
-							"  ·  ",
+							" · ",
 							BRAND.edition
 						]
 					}),
@@ -492,11 +569,11 @@ function Cover({ onOpen }) {
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreLockup, { size: "hero" })
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "rise rise-3 mt-8 font-sans text-[11px] font-medium tracking-label text-limestone uppercase",
+								className: "rise rise-3 mt-8 font-sans text-xs font-medium text-limestone uppercase",
 								children: [BRAND.origin, " · A marketing studio"]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "rise rise-4 mt-6 max-w-md font-display text-4xl font-light tracking-display text-vellum italic md:text-5xl",
+								className: "rise rise-4 mt-6 max-w-md font-display text-4xl font-light text-vellum md:text-5xl",
 								children: "Presence, made inevitable."
 							})
 						]
@@ -518,19 +595,19 @@ function Cover({ onOpen }) {
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DownloadLink, {
 									href: "/brand/kit/05-brand-book/Core-Marketing-Brand-Book.pdf",
 									file: "Core-Marketing-Brand-Book.pdf",
-									className: "inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[opacity] duration-150 hover:opacity-90",
+									className: "inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90",
 									children: "Download the brand book"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DownloadLink, {
 									href: KIT_ZIP.href,
 									file: KIT_ZIP.file,
-									className: "inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-xs font-medium tracking-label text-vellum uppercase transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5",
+									className: "inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-[13px] font-medium text-vellum transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5",
 									children: "Download the kit"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 									type: "button",
 									onClick: onOpen,
-									className: "inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-xs font-medium tracking-label text-vellum uppercase transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5",
+									className: "inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-[13px] font-medium text-vellum transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5",
 									children: "Open the book"
 								})
 							]
@@ -541,7 +618,7 @@ function Cover({ onOpen }) {
 				className: "relative hidden min-h-[48vh] lg:block",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: "/brand/aperture.jpg",
-					alt: "A circular aperture of light held in a dark opening — the core.",
+					alt: "A circular aperture of light held in a dark opening, the core.",
 					className: "absolute inset-0 size-full object-cover"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-ink/15" })]
 			})]
@@ -562,7 +639,7 @@ function House() {
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "text-lg leading-relaxed md:text-xl",
-						children: "We partner with a small number of companies who already know they are not average — and who want their public presence to finally match that fact."
+						children: "We partner with a small number of companies who already know they are not average, and who want their public presence to finally match that fact."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-6 leading-relaxed text-ash",
@@ -577,7 +654,7 @@ function House() {
 				className: "lg:col-span-5",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: "/brand/studio.jpg",
-					alt: "A quiet studio at dusk — walnut desk, a single lamp, the city beyond.",
+					alt: "A quiet studio at dusk, walnut desk, a single lamp, the city beyond.",
 					className: "brand-photo aspect-[4/5] w-full rounded-md object-cover"
 				})
 			})]
@@ -586,7 +663,7 @@ function House() {
 			children: TRAITS.map((t) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 				className: "bg-vellum px-6 py-8",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-display text-2xl font-light tracking-display",
+					className: "font-display text-2xl font-normal",
 					children: t.name
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 text-sm leading-relaxed text-ash",
@@ -614,7 +691,7 @@ function Position() {
 							className: "label text-limestone",
 							children: "For"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 font-display text-2xl font-light tracking-display",
+							className: "mt-4 font-display text-2xl font-normal",
 							children: "Founders, houses, and professional practices that already sell at a premium."
 						})]
 					}),
@@ -624,8 +701,8 @@ function Position() {
 							className: "label text-limestone",
 							children: "Does"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 font-display text-2xl font-light tracking-display",
-							children: "Architects digital presence — strategy through promotion — as a single system."
+							className: "mt-4 font-display text-2xl font-normal",
+							children: "Architects digital presence, strategy through promotion, as a single system."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
@@ -634,7 +711,7 @@ function Position() {
 							className: "label text-limestone",
 							children: "Unlike"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 font-display text-2xl font-light tracking-display",
+							className: "mt-4 font-display text-2xl font-normal",
 							children: "Volume agencies, freelance scatter, and work that looks busy without becoming inevitable."
 						})]
 					})
@@ -649,31 +726,24 @@ function Position() {
 					className: "mt-8 divide-y divide-vellum/10 border-y border-vellum/10",
 					children: PRACTICES.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 						className: "grid gap-4 py-8 md:grid-cols-12 md:items-start",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "font-display text-2xl text-limestone md:col-span-1",
-								children: p.roman
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "md:col-span-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "font-display text-3xl font-light tracking-display",
-									children: p.name
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-1 text-sm text-ash",
-									children: p.subtitle
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-sm leading-relaxed text-limestone md:col-span-7 md:text-base",
-								children: p.body
-							})
-						]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "md:col-span-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "font-display text-3xl font-normal",
+								children: p.name
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-1 text-sm text-ash",
+								children: p.subtitle
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-sm leading-relaxed text-limestone md:col-span-7 md:text-base",
+							children: p.body
+						})]
 					}, p.name))
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-16 max-w-2xl font-display text-2xl font-light tracking-display text-vellum italic md:text-3xl",
+				className: "mt-16 max-w-2xl font-display text-2xl font-normal text-vellum md:text-3xl",
 				children: "Engagements begin by conversation. We take the work that can be done properly, and we decline the rest."
 			})
 		]
@@ -685,7 +755,7 @@ function Mark() {
 		num: "03",
 		kicker: "The Mark",
 		title: "Ivory. Stone. Juniper.",
-		lede: "The mark sits to the left of the name. CORE is the larger line — semibold, tracked. MARKETING sits beneath it, smaller, regular, in limestone.",
+		lede: "The mark sits to the left of the name. CORE is the larger line, semibold, tracked. MARKETING sits beneath it, smaller, regular, in limestone.",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-6 md:grid-cols-2",
@@ -703,7 +773,7 @@ function Mark() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mt-4 grid gap-4 text-sm text-ash md:grid-cols-2",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Primary mark — on ink. Ivory outer, stone inner, juniper nucleus. Use this digitally, in film, and on dark print." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Construction. Clear space equals one core-diameter on every side. Minimum size: 20px digital, 8mm print. The nucleus is always Juniper, except in single-colour reproduction." })]
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Primary mark: on ink. Ivory outer, stone inner, juniper nucleus. Use this digitally, in film, and on dark print." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Construction. Clear space equals one core-diameter on every side. Minimum size: 20px digital, 8mm print. The nucleus is always Juniper, except in single-colour reproduction." })]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mt-16 grid gap-6 lg:grid-cols-3",
@@ -777,7 +847,7 @@ function Mark() {
 							className: "w-1/3",
 							field: f.field
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-sans text-[10px] tracking-wide opacity-70",
+							className: "font-sans text-xs opacity-70",
 							children: f.label
 						})]
 					}, f.label))
@@ -805,7 +875,7 @@ function Colour() {
 		num: "04",
 		kicker: "Colour",
 		title: "Six named colours. Juniper is used once.",
-		lede: "The palette is a material specification, not a moodboard. Ink and Vellum do the work. Limestone is stone. Juniper is the nucleus — reserved for the mark.",
+		lede: "The palette is a material specification, not a moodboard. Ink and Vellum do the work. Limestone is stone. Juniper is the nucleus, reserved for the mark.",
 		tone: "ink",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -813,7 +883,7 @@ function Colour() {
 				children: COLORS.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 					className: cn("flex flex-col justify-between gap-8 rounded-lg p-6 md:min-h-44 md:flex-row md:items-end", c.swatch, c.tall && "min-h-56 md:min-h-64", c.invertChip && "ring-1 ring-vellum/12"),
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-display text-4xl font-light tracking-display md:text-5xl",
+						className: "font-display text-4xl font-light md:text-5xl",
 						children: c.name
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-3 max-w-md text-sm leading-relaxed opacity-80",
@@ -872,7 +942,7 @@ function Combo({ a, aBg, b, note }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: cn("rounded-md p-6", aBg),
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-			className: "font-display text-2xl font-light",
+			className: "font-display text-2xl font-normal",
 			children: [
 				a,
 				" / ",
@@ -890,7 +960,7 @@ function Type() {
 		num: "05",
 		kicker: "Type",
 		title: "A serif for the name. A sans for the work.",
-		lede: "Cormorant Garamond carries the voice — light, editorial, unhurried. Manrope carries the information. Two families. No substitutes.",
+		lede: "Cormorant Garamond carries the voice, light, editorial, unhurried. Manrope carries the information. Two families. No substitutes.",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-10 lg:grid-cols-2",
@@ -900,11 +970,11 @@ function Type() {
 						children: "Display"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-4 font-display text-6xl leading-none font-light tracking-display md:text-8xl",
+						className: "mt-4 font-display text-6xl leading-none font-light md:text-8xl",
 						children: "Aa"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-6 font-display text-3xl font-light tracking-display",
+						className: "mt-6 font-display text-3xl font-normal",
 						children: "Cormorant Garamond"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
@@ -952,7 +1022,7 @@ function Type() {
 							children: t.role
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: cn("md:col-span-7", t.role === "Display" && "font-display text-5xl leading-none font-light tracking-display md:text-6xl", t.role === "Headline" && "font-display text-3xl font-light tracking-display md:text-4xl", t.role === "Deck" && "text-base leading-relaxed", t.role === "Label" && "label text-ash"),
+							className: cn("md:col-span-7", t.role === "Display" && "font-display text-5xl leading-none font-light md:text-6xl", t.role === "Headline" && "font-display text-3xl font-normal md:text-4xl", t.role === "Deck" && "text-base leading-relaxed", t.role === "Label" && "label text-ash"),
 							children: t.sample
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
@@ -961,7 +1031,7 @@ function Type() {
 								t.family,
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
 								t.size,
-								"  ·  ",
+								" · ",
 								t.tracking
 							]
 						})
@@ -971,11 +1041,11 @@ function Type() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("blockquote", {
 				className: "mt-16 border-l border-ink/15 pl-6 md:pl-10",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-display text-3xl font-light tracking-display italic md:text-5xl",
+					className: "font-display text-3xl font-light md:text-5xl",
 					children: "Presence is not volume. It is the feeling that a brand was inevitable."
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 label",
-					children: "Pull quote — Cormorant Italic"
+					children: "Pull quote: Cormorant"
 				})]
 			})
 		]
@@ -1085,7 +1155,7 @@ function Image() {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4",
 			children: IMAGE_RULES.map((r) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-display text-2xl font-light tracking-display",
+				className: "font-display text-2xl font-normal",
 				children: r.title
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "mt-3 text-sm leading-relaxed text-ash",
@@ -1100,16 +1170,16 @@ function Applications() {
 		num: "08",
 		kicker: "Applications",
 		title: "How the brand occupies the world.",
-		lede: "Stationery, screens, and spaces. Every surface should feel like the same house — not a campaign wearing a logo.",
+		lede: "Stationery, screens, and spaces. Every surface should feel like the same house, not a campaign wearing a logo.",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-10 md:grid-cols-2",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BusinessCard, { side: "front" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 					className: "mt-3 text-sm text-ash",
-					children: "Calling card — face. Ink field, reverse mark."
+					children: "Calling card: face. Ink field, reverse mark."
 				})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BusinessCard, { side: "back" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 					className: "mt-3 text-sm text-ash",
-					children: "Calling card — reverse. Vellum, studio line."
+					children: "Calling card: reverse. Vellum, studio line."
 				})] })]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -1143,14 +1213,14 @@ function Applications() {
 							className: "md:col-span-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SocialPost, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 								className: "mt-3 text-sm text-ash",
-								children: "Feed — 4:5. One idea. No collage."
+								children: "Feed: 4:5. One idea. No collage."
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
 							className: "md:col-span-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SocialStory, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 								className: "mt-3 text-sm text-ash",
-								children: "Story — 9:16. Image as architecture."
+								children: "Story: 9:16. Image as architecture."
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
@@ -1192,7 +1262,7 @@ function Applications() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-ink/20" }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "absolute bottom-6 left-6 label text-vellum",
-						children: "Environmental — niche, waiting"
+						children: "Environmental: niche, waiting"
 					})
 				]
 			})
@@ -1210,15 +1280,15 @@ function System() {
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "label text-limestone",
-						children: "09  —  System"
+						children: "09 · System"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-display md:text-6xl",
+						className: "mt-5 max-w-3xl font-display text-4xl font-light leading-tight md:text-6xl",
 						children: "Rules that keep the house standing."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-6 max-w-xl text-base leading-relaxed text-limestone md:text-lg",
-						children: "Spacing, files, and the closing note. This is the kit — not a mood, a specification."
+						children: "Spacing, files, and the closing note. This is the kit, not a mood, a specification."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-16 grid gap-6 md:grid-cols-3",
@@ -1231,7 +1301,7 @@ function System() {
 										children: "Grid"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-4 font-display text-2xl font-light tracking-display",
+										className: "mt-4 font-display text-2xl font-normal",
 										children: "Twelve columns on desktop. Four on mobile. Margins generous."
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -1248,7 +1318,7 @@ function System() {
 										children: "Space"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-4 font-display text-2xl font-light tracking-display",
+										className: "mt-4 font-display text-2xl font-normal",
 										children: "4, 8, 12, 16, 24, 32, 48, 64. Air is a brand colour."
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -1265,7 +1335,7 @@ function System() {
 										children: "Motion"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-4 font-display text-2xl font-light tracking-display",
+										className: "mt-4 font-display text-2xl font-normal",
 										children: "150–250ms. Ease out. Opacity and transform only."
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -1285,17 +1355,17 @@ function System() {
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "mt-4 max-w-xl text-sm leading-relaxed text-ash",
-								children: "The book as a 16-page A4 PDF — send this to stakeholders. The mark alone. The lockup with words. Editable business cards (open the SVG, change the name). Letterhead and envelope. Or take the full kit."
+								children: "The book as a 16-page A4 PDF. Send this to stakeholders. The mark alone. The lockup with words. Editable business cards (open the SVG, change the name). Letterhead and envelope. Or take the full kit."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DownloadLink, {
 								href: KIT_ZIP.href,
 								file: KIT_ZIP.file,
 								className: "mt-8 flex min-h-16 w-full items-center justify-between gap-4 rounded-md bg-vellum px-6 text-left text-ink transition-[opacity] duration-150 hover:opacity-90",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "block font-sans text-sm font-semibold tracking-brand uppercase",
+									className: "block font-sans text-sm font-semibold uppercase",
 									children: KIT_ZIP.label
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "mt-1 block font-sans text-[10px] tracking-label text-ash uppercase",
+									className: "mt-1 block font-sans text-[13px] text-ash",
 									children: "Logos, lockups, cards, stationery, book, tokens"
 								})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: "size-5 shrink-0" })]
 							}),
@@ -1323,7 +1393,7 @@ function System() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-20 grid gap-12 lg:grid-cols-2 lg:items-end",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreLockup, { size: "lg" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-10 max-w-md font-display text-3xl font-light tracking-display italic",
+							className: "mt-10 max-w-md font-display text-3xl font-normal",
 							children: BRAND.tagline
 						})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "lg:text-right",
@@ -1338,11 +1408,11 @@ function System() {
 									" · By appointment"
 								]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "mt-8 text-xs tracking-label text-ash uppercase",
+								className: "mt-8 text-xs text-ash uppercase",
 								children: [
 									"Est. ",
 									BRAND.year,
-									"  ·  ",
+									" · ",
 									BRAND.edition
 								]
 							})]

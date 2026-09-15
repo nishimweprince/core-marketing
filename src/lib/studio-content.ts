@@ -40,8 +40,8 @@ export const STUDIO_ROOMS = [
       alt: "A white Tembera U Rwanda tour coach parked and ready for the road.",
       objectPosition: "center",
     },
-    lede: "Give the car the attention it deserves.",
-    body: "For premium hire and dealerships, we build a clear, composed presence that lets the marque—and the experience around it—lead.",
+    lede: "Give the journey the attention it deserves.",
+    body: "For tour operators, premium hire, and dealerships, we build a clear, composed presence that lets the vehicle—and the experience around it—lead.",
   },
   {
     id: "property",
@@ -63,7 +63,7 @@ export const STUDIO_WORK = [
   {
     id: "hospitality",
     room: "Hospitality",
-    title: "A hotel people remember",
+    title: "Somewhere worth remembering",
     image: {
       src: pexelsImage("36470601"),
       sourcePage:
@@ -76,7 +76,7 @@ export const STUDIO_WORK = [
   {
     id: "motor",
     room: "Motor",
-    title: "The marque, clearly framed",
+    title: "Built for the road ahead",
     image: {
       src: pexelsImage("39386240"),
       sourcePage:
@@ -84,7 +84,7 @@ export const STUDIO_WORK = [
       alt: "A quiet red-earth road winding past brick walls and homes in Kigali.",
       objectPosition: "center",
     },
-    body: "A focused content and channel system lets the vehicle lead, without crowding it with campaign noise.",
+    body: "A focused content and channel system keeps the journey moving, without crowding the road with campaign noise.",
   },
   {
     id: "property",

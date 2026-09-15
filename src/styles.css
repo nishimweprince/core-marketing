@@ -133,6 +133,19 @@
     animation: rise 700ms var(--ease-out) both;
   }
 
+  .has-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 600ms var(--ease-out),
+      transform 600ms var(--ease-out);
+  }
+
+  .has-reveal [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+  }
+
   .rise-1 {
     animation-delay: 80ms;
   }
@@ -235,6 +248,12 @@
   }
 
   .brand-photo img {
+    transition: none;
+  }
+
+  .has-reveal [data-reveal] {
+    opacity: 1;
+    transform: none;
     transition: none;
   }
 }

@@ -3,7 +3,7 @@ import { R as require_react, v as Link, z as require_jsx_runtime } from "../_lib
 import { p as SITE_NAV, r as CoreLockup, t as BRAND, v as cn } from "./mark-DDLwdtde.mjs";
 import { r as Menu, t as X } from "../_libs/lucide-react.mjs";
 import { n as toast, t as Toaster } from "../_libs/sonner.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BnW3HuZ1.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BGMzx3US.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var pexelsImage = (id, width = 1400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
@@ -37,8 +37,8 @@ var STUDIO_ROOMS = [
 			alt: "A white Tembera U Rwanda tour coach parked and ready for the road.",
 			objectPosition: "center"
 		},
-		lede: "Give the car the attention it deserves.",
-		body: "For premium hire and dealerships, we build a clear, composed presence that lets the marque—and the experience around it—lead."
+		lede: "Give the journey the attention it deserves.",
+		body: "For tour operators, premium hire, and dealerships, we build a clear, composed presence that lets the vehicle—and the experience around it—lead."
 	},
 	{
 		id: "property",
@@ -58,7 +58,7 @@ var STUDIO_WORK = [
 	{
 		id: "hospitality",
 		room: "Hospitality",
-		title: "A hotel people remember",
+		title: "Somewhere worth remembering",
 		image: {
 			src: pexelsImage("36470601"),
 			sourcePage: "https://www.pexels.com/photo/aerial-view-of-kigali-city-landscape-rwanda-36470601/",
@@ -70,14 +70,14 @@ var STUDIO_WORK = [
 	{
 		id: "motor",
 		room: "Motor",
-		title: "The marque, clearly framed",
+		title: "Built for the road ahead",
 		image: {
 			src: pexelsImage("39386240"),
 			sourcePage: "https://www.pexels.com/photo/rural-dirt-road-in-kigali-surrounded-by-walls-39386240/",
 			alt: "A quiet red-earth road winding past brick walls and homes in Kigali.",
 			objectPosition: "center"
 		},
-		body: "A focused content and channel system lets the vehicle lead, without crowding it with campaign noise."
+		body: "A focused content and channel system keeps the journey moving, without crowding the road with campaign noise."
 	},
 	{
 		id: "property",
@@ -539,6 +539,26 @@ function Studio() {
 			threshold: [.1, .35]
 		});
 		els.forEach((el) => io.observe(el));
+		if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+			document.documentElement.classList.add("has-reveal");
+			const targets = Array.from(document.querySelectorAll("[data-reveal]"));
+			const rio = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("is-in");
+						rio.unobserve(entry.target);
+					}
+				});
+			}, {
+				threshold: .1,
+				rootMargin: "0px 0px -6% 0px"
+			});
+			targets.forEach((el) => rio.observe(el));
+			return () => {
+				io.disconnect();
+				rio.disconnect();
+			};
+		}
 		return () => io.disconnect();
 	}, []);
 	function jump(id) {
@@ -736,6 +756,7 @@ function Insight() {
 		className: "bg-night px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-12",
+			"data-reveal": true,
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "lg:col-span-7",
 				children: [
@@ -772,6 +793,7 @@ function Rooms() {
 		className: "scroll-mt-14 bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "label",
@@ -857,6 +879,7 @@ function Work() {
 		className: "scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "label text-limestone",
@@ -930,6 +953,7 @@ function Practices() {
 		className: "border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "label text-limestone",
@@ -980,6 +1004,7 @@ function Retainers({ onJump }) {
 		className: "scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "label text-limestone",
@@ -1045,6 +1070,7 @@ function Approach() {
 		className: "border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "label text-limestone",
@@ -1081,6 +1107,7 @@ function House() {
 		className: "scroll-mt-14 bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid items-start gap-12 lg:grid-cols-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -1140,6 +1167,7 @@ function Questions() {
 		className: "scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid items-start gap-12 lg:grid-cols-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -1198,6 +1226,7 @@ function Close({ onJump }) {
 		className: "bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "label",
@@ -1235,6 +1264,7 @@ function Conversation() {
 		className: "scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "mx-auto max-w-6xl",
+			"data-reveal": true,
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-16 lg:grid-cols-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

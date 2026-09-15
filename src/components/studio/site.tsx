@@ -40,6 +40,29 @@ export function Studio() {
       { rootMargin: "-30% 0px -50% 0px", threshold: [0.1, 0.35] },
     );
     els.forEach((el) => io.observe(el));
+    if (
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+      "IntersectionObserver" in window
+    ) {
+      document.documentElement.classList.add("has-reveal");
+      const targets = Array.from(document.querySelectorAll("[data-reveal]"));
+      const rio = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-in");
+              rio.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -6% 0px" },
+      );
+      targets.forEach((el) => rio.observe(el));
+      return () => {
+        io.disconnect();
+        rio.disconnect();
+      };
+    }
     return () => io.disconnect();
   }, []);
 
@@ -240,7 +263,7 @@ function Measures() {
 function Insight() {
   return (
     <section className="bg-night px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16">
-      <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-12">
+      <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-12" data-reveal>
         <div className="lg:col-span-7">
           <p className="label text-limestone">{STUDIO_INSIGHT.kicker}</p>
           <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
@@ -266,7 +289,7 @@ function Rooms() {
       id="rooms"
       className="scroll-mt-14 bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <p className="label">Our rooms</p>
         <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Where we do our best work.
@@ -322,7 +345,7 @@ function Work() {
       id="work"
       className="scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <p className="label text-limestone">Work</p>
         <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           A closer look at the work.
@@ -371,7 +394,7 @@ function Work() {
 function Practices() {
   return (
     <section className="border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <p className="label text-limestone">Practices</p>
         <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Four disciplines, one clear direction.
@@ -410,7 +433,7 @@ function Retainers({ onJump }: { onJump: (id: string) => void }) {
       id="retainers"
       className="scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <p className="label text-limestone">Retainers</p>
         <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Choose the level of support you need.
@@ -480,7 +503,7 @@ function Retainers({ onJump }: { onJump: (id: string) => void }) {
 function Approach() {
   return (
     <section className="border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <p className="label text-limestone">Approach</p>
         <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           What working together looks like.
@@ -505,7 +528,7 @@ function House() {
       id="house"
       className="scroll-mt-14 bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <div className="grid items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <p className="label">The house</p>
@@ -556,7 +579,7 @@ function Questions() {
       id="questions"
       className="scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <div className="grid items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <p className="label text-limestone">Questions</p>
@@ -600,7 +623,7 @@ function Questions() {
 function Close({ onJump }: { onJump: (id: string) => void }) {
   return (
     <section className="bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:px-16">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <p className="label">Have a project in mind?</p>
         <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-6xl">
           Tell us what you’re building.
@@ -636,7 +659,7 @@ function Conversation() {
       id="conversation"
       className="scroll-mt-14 border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" data-reveal>
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <p className="label text-limestone">Start here</p>

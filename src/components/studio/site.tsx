@@ -17,13 +17,11 @@ import {
 } from "@/lib/brand";
 import { cn } from "@/lib/utils";
 import { CoreLockup } from "@/components/brand/mark";
-import { ProgressBar } from "@/components/brand/nav";
 import { Inquiry } from "@/components/studio/inquiry";
 
 export function Studio() {
   const [active, setActive] = useState("cover");
   const [open, setOpen] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const ids = ["cover", "rooms", "work", "retainers", "house", "conversation"];
@@ -43,17 +41,6 @@ export function Studio() {
     return () => io.disconnect();
   }, []);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const root = document.documentElement;
-      const max = root.scrollHeight - root.clientHeight;
-      setProgress(max > 0 ? root.scrollTop / max : 0);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   function jump(id: string) {
     setOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -69,7 +56,6 @@ export function Studio() {
             "!bg-night !text-vellum !border-vellum/10 !font-sans !rounded-md !shadow-none",
         }}
       />
-      <ProgressBar value={progress} />
       <Header active={active} open={open} onToggle={() => setOpen((v) => !v)} onJump={jump} />
       <Hero onJump={jump} />
       <Measures />
@@ -118,7 +104,7 @@ function Header({
                 type="button"
                 onClick={() => onJump(item.id)}
                 className={cn(
-                  "inline-flex min-h-11 items-center px-3 font-sans text-xs tracking-wide transition-[color] duration-150",
+                  "inline-flex min-h-11 items-center px-3 font-sans text-xs transition-[color] duration-150",
                   active === item.id ? "text-vellum" : "text-ash hover:text-limestone",
                 )}
               >
@@ -127,14 +113,14 @@ function Header({
             ))}
             <Link
               to="/book"
-              className="inline-flex min-h-11 items-center px-3 font-sans text-xs tracking-wide text-ash transition-[color] duration-150 hover:text-limestone"
+              className="inline-flex min-h-11 items-center px-3 font-sans text-xs text-ash transition-[color] duration-150 hover:text-limestone"
             >
               The book
             </Link>
             <button
               type="button"
               onClick={() => onJump("conversation")}
-              className="ml-2 inline-flex min-h-11 items-center bg-vellum px-4 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[opacity] duration-150 hover:opacity-90 active:not-disabled:scale-[0.96]"
+              className="ml-2 inline-flex min-h-11 items-center bg-vellum px-4 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
             >
               Conversation
             </button>
@@ -159,14 +145,14 @@ function Header({
                 key={item.id}
                 type="button"
                 onClick={() => onJump(item.id)}
-                className="flex min-h-14 items-center border-b border-vellum/8 text-left font-display text-2xl font-light tracking-display text-vellum"
+                className="flex min-h-14 items-center border-b border-vellum/8 text-left font-display text-2xl font-normal text-vellum"
               >
                 {item.label}
               </button>
             ))}
             <Link
               to="/book"
-              className="flex min-h-14 items-center border-b border-vellum/8 font-display text-2xl font-light tracking-display text-vellum"
+              className="flex min-h-14 items-center border-b border-vellum/8 font-display text-2xl font-normal text-vellum"
               onClick={() => onToggle()}
             >
               The book
@@ -174,7 +160,7 @@ function Header({
             <button
               type="button"
               onClick={() => onJump("conversation")}
-              className="mt-8 inline-flex min-h-12 items-center justify-center bg-vellum font-sans text-xs font-medium tracking-label text-ink uppercase"
+              className="mt-8 inline-flex min-h-12 items-center justify-center bg-vellum font-sans text-[13px] font-medium text-ink"
             >
               Request a conversation
             </button>
@@ -190,17 +176,16 @@ function Hero({ onJump }: { onJump: (id: string) => void }) {
     <section id="cover" className="relative bg-ink pt-14 md:pt-16">
       <div className="grid min-h-[calc(100dvh-3.5rem)] lg:min-h-dvh lg:grid-cols-2">
         <div className="relative order-2 flex flex-col justify-between px-6 py-10 md:px-12 lg:order-1 lg:px-16 lg:py-20">
-          <div className="grid-construct pointer-events-none absolute inset-0 opacity-50" />
           <p className="rise label relative text-limestone">
             {BRAND.origin} · By appointment
           </p>
           <div className="relative">
             <h1 className="sr-only">Core Marketing</h1>
-            <p className="rise rise-2 max-w-lg font-display text-4xl font-light leading-[1.05] tracking-display text-vellum italic md:text-6xl">
+            <p className="rise rise-2 max-w-lg font-display text-4xl font-light leading-[1.05] text-vellum md:text-6xl">
               Presence, made inevitable.
             </p>
             <p className="rise rise-3 mt-6 max-w-md text-sm leading-relaxed text-limestone md:text-base">
-              A house of strategy, presence, content, and promotion — for hotels, villas, motor,
+              A house of strategy, presence, content, and promotion, for hotels, villas, motor,
               and property that already sell at a premium.
             </p>
           </div>
@@ -208,14 +193,14 @@ function Hero({ onJump }: { onJump: (id: string) => void }) {
             <button
               type="button"
               onClick={() => onJump("conversation")}
-              className="inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[opacity] duration-150 hover:opacity-90 active:not-disabled:scale-[0.96]"
+              className="inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
             >
               Request a conversation
             </button>
             <button
               type="button"
               onClick={() => onJump("work")}
-              className="inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-xs font-medium tracking-label text-vellum uppercase transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5"
+              className="inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-[13px] font-medium text-vellum transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5"
             >
               The work
             </button>
@@ -224,7 +209,7 @@ function Hero({ onJump }: { onJump: (id: string) => void }) {
         <div className="relative order-1 min-h-[42vh] lg:order-2 lg:min-h-dvh">
           <img
             src="/brand/hotel.jpg"
-            alt="A limestone hotel courtyard at blue hour — still water, one lantern."
+            alt="A limestone hotel courtyard at blue hour, still water, one lantern."
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute inset-0 bg-ink/20" />
@@ -240,7 +225,7 @@ function Measures() {
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-vellum/8 md:grid-cols-4">
         {MEASURES.map((m) => (
           <article key={m.figure} className="bg-ink px-6 py-8 md:px-8 md:py-10">
-            <p className="font-display text-3xl font-light tracking-display text-vellum md:text-4xl">
+            <p className="font-display text-3xl font-normal text-vellum md:text-4xl">
               {m.figure}
             </p>
             <p className="mt-3 max-w-[14rem] text-sm leading-relaxed text-ash">{m.caption}</p>
@@ -257,17 +242,17 @@ function Insight() {
       <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <p className="label text-limestone">{INSIGHT.kicker}</p>
-          <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display md:text-5xl">
+          <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
             {INSIGHT.title}
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-limestone">{INSIGHT.body}</p>
         </div>
         <aside className="border-t border-vellum/12 pt-8 lg:col-span-5 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-12">
-          <p className="font-display text-3xl font-light tracking-display text-vellum italic md:text-4xl">
+          <p className="font-display text-3xl font-normal text-vellum md:text-4xl">
             {INSIGHT.pull}
           </p>
           <p className="mt-6 text-sm leading-relaxed text-ash">
-            We do not rent attention. We build it — so the house is already chosen.
+            We build attention. The house is already chosen.
           </p>
         </aside>
       </div>
@@ -281,7 +266,7 @@ function Rooms() {
     <section id="rooms" className="scroll-mt-14 bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:scroll-mt-16 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <p className="label">The rooms we keep</p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display md:text-5xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Hospitality. Motor. Property.
         </h2>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-ash">
@@ -298,8 +283,8 @@ function Rooms() {
           </figure>
           <div className="lg:col-span-5">
             <p className="label">{hotels.kicker}</p>
-            <h3 className="mt-3 font-display text-3xl font-light tracking-display">{hotels.name}</h3>
-            <p className="mt-4 font-display text-xl font-light italic">{hotels.lede}</p>
+            <h3 className="mt-3 font-display text-3xl font-normal">{hotels.name}</h3>
+            <p className="mt-4 font-display text-xl font-normal">{hotels.lede}</p>
             <p className="mt-4 text-sm leading-relaxed text-ash">{hotels.body}</p>
           </div>
         </article>
@@ -313,8 +298,8 @@ function Rooms() {
                 className="brand-photo aspect-[3/2] w-full rounded-lg object-cover"
               />
               <p className="label mt-5">{room.kicker}</p>
-              <h3 className="mt-2 font-display text-3xl font-light tracking-display">{room.name}</h3>
-              <p className="mt-3 font-display text-xl font-light italic">{room.lede}</p>
+              <h3 className="mt-2 font-display text-3xl font-normal">{room.name}</h3>
+              <p className="mt-3 font-display text-xl font-normal">{room.lede}</p>
               <p className="mt-3 text-sm leading-relaxed text-ash">{room.body}</p>
             </article>
           ))}
@@ -333,7 +318,7 @@ function Work() {
     >
       <div className="mx-auto max-w-6xl">
         <p className="label text-limestone">Work</p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display md:text-5xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Selected plates.
         </h2>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-limestone">
@@ -351,9 +336,9 @@ function Work() {
           </figure>
           <div className="lg:col-span-4">
             <p className="label text-limestone">
-              {featured.roman} · {featured.room}
+              {featured.room}
             </p>
-            <h3 className="mt-3 font-display text-3xl font-light tracking-display">{featured.title}</h3>
+            <h3 className="mt-3 font-display text-3xl font-normal">{featured.title}</h3>
             <p className="mt-4 text-sm leading-relaxed text-ash">{featured.body}</p>
           </div>
         </article>
@@ -367,9 +352,9 @@ function Work() {
                 className="brand-photo aspect-[3/2] w-full rounded-lg object-cover"
               />
               <p className="label mt-5 text-limestone">
-                {plate.roman} · {plate.room}
+                {plate.room}
               </p>
-              <h3 className="mt-2 font-display text-3xl font-light tracking-display">{plate.title}</h3>
+              <h3 className="mt-2 font-display text-3xl font-normal">{plate.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-ash">{plate.body}</p>
             </article>
           ))}
@@ -384,18 +369,16 @@ function Practices() {
     <section className="border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <p className="label text-limestone">Practices</p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display md:text-5xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Four trades. One architecture.
         </h2>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-limestone">
-          Never sold apart. A brand that is loud in one place and absent in another is not a
-          brand.
+          Sold only together. A brand holds every room it keeps.
         </p>
         <div className="mt-14 grid gap-px bg-vellum/10 md:grid-cols-2">
           {PRACTICES.map((p) => (
             <article key={p.name} className="bg-ink p-8 md:p-10">
-              <p className="font-display text-2xl text-limestone">{p.roman}</p>
-              <h3 className="mt-4 font-display text-3xl font-light tracking-display">{p.name}</h3>
+              <h3 className="mt-4 font-display text-3xl font-normal">{p.name}</h3>
               <p className="mt-1 text-sm text-ash">{p.subtitle}</p>
               <p className="mt-6 text-sm leading-relaxed text-limestone md:text-base">{p.body}</p>
               <ul className="mt-8">
@@ -424,12 +407,12 @@ function Retainers({ onJump }: { onJump: (id: string) => void }) {
     >
       <div className="mx-auto max-w-6xl">
         <p className="label text-limestone">Retainers</p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display md:text-5xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           Prima. Altera. Summa.
         </h2>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-limestone">
-          Named in Latin. The first, the second, the highest. Fees are discussed in conversation —
-          never published as a menu.
+          Named in Latin. The first, the second, the highest. Fees are discussed in conversation.
+          Never published as a menu.
         </p>
 
         <div className="mt-16 grid gap-4 lg:grid-cols-3">
@@ -443,11 +426,11 @@ function Retainers({ onJump }: { onJump: (id: string) => void }) {
             >
               <div className="flex items-baseline justify-between gap-3">
                 <p className={cn("label", r.featured ? "text-ash" : "text-limestone")}>
-                  {r.roman}  ·  {r.means}
+                  {r.means}
                 </p>
                 <p className="text-xs text-ash">{r.term}</p>
               </div>
-              <h3 className="mt-6 font-display text-4xl font-light tracking-display">{r.latin}</h3>
+              <h3 className="mt-6 font-display text-4xl font-normal">{r.latin}</h3>
               <p className={cn("mt-4 text-sm leading-relaxed", r.featured ? "text-ash" : "text-limestone")}>
                 {r.for}
               </p>
@@ -469,7 +452,7 @@ function Retainers({ onJump }: { onJump: (id: string) => void }) {
                 type="button"
                 onClick={() => onJump("conversation")}
                 className={cn(
-                  "mt-8 inline-flex min-h-11 items-center justify-center px-5 font-sans text-xs font-medium tracking-label uppercase transition-[opacity,background-color,border-color] duration-150 active:not-disabled:scale-[0.96]",
+                  "mt-8 inline-flex min-h-11 items-center justify-center px-5 font-sans text-[13px] font-medium transition-[opacity,background-color,border-color] duration-150",
                   r.featured
                     ? "bg-ink text-vellum hover:opacity-90"
                     : "border border-vellum/20 text-vellum hover:border-vellum/40 hover:bg-vellum/5",
@@ -490,14 +473,14 @@ function Approach() {
     <section className="border-t border-vellum/8 bg-ink px-6 py-20 text-vellum md:px-12 md:py-28 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <p className="label text-limestone">Approach</p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display md:text-5xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-5xl">
           How an engagement is held.
         </h2>
         <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s) => (
             <article key={s.name}>
               <p className="font-display text-2xl text-limestone">{s.roman}</p>
-              <h3 className="mt-3 font-display text-2xl font-light tracking-display">{s.name}</h3>
+              <h3 className="mt-3 font-display text-2xl font-normal">{s.name}</h3>
               <p className="mt-4 text-sm leading-relaxed text-ash">{s.body}</p>
             </article>
           ))}
@@ -517,13 +500,12 @@ function House() {
         <div className="grid items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <p className="label">The house</p>
-            <h2 className="mt-5 font-display text-4xl font-light tracking-display md:text-5xl">
-              A studio, not a mill.
+            <h2 className="mt-5 font-display text-4xl font-light md:text-5xl">
+              A studio, kept small.
             </h2>
             <p className="mt-6 text-base leading-relaxed">
-              Core is not a department and not a campaign. It is the structure a brand stands on
-              when the noise is stripped away. Based in Kigali. Working wherever the work is
-              serious.
+              Core is the structure a brand stands on when the noise is stripped away. Based in
+              Kigali. Working wherever the work is serious.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ash">
               Digital marketing, social, promotion, and content are usually bought as separate
@@ -532,7 +514,7 @@ function House() {
             </p>
             <Link
               to="/book"
-              className="mt-8 inline-flex min-h-11 items-center border border-ink/15 px-5 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[border-color,background-color] duration-150 hover:border-ink/30 hover:bg-ink/5"
+              className="mt-8 inline-flex min-h-11 items-center border border-ink/15 px-5 font-sans text-[13px] font-medium text-ink transition-[border-color,background-color] duration-150 hover:border-ink/30 hover:bg-ink/5"
             >
               Read the brand book
             </Link>
@@ -540,7 +522,7 @@ function House() {
           <figure className="lg:col-span-6">
             <img
               src="/brand/studio.jpg"
-              alt="A quiet studio at dusk — walnut desk, a single lamp, the city beyond."
+              alt="A quiet studio at dusk, walnut desk, a single lamp, the city beyond."
               className="brand-photo aspect-[3/2] w-full rounded-lg object-cover"
             />
           </figure>
@@ -548,7 +530,7 @@ function House() {
         <div className="mt-16 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
           {TRAITS.map((t) => (
             <article key={t.name} className="bg-vellum px-6 py-8">
-              <p className="font-display text-2xl font-light tracking-display">{t.name}</p>
+              <p className="font-display text-2xl font-normal">{t.name}</p>
               <p className="mt-4 text-sm leading-relaxed text-ash">{t.body}</p>
             </article>
           ))}
@@ -568,11 +550,11 @@ function Questions() {
         <div className="grid items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <p className="label text-limestone">Questions</p>
-            <h2 className="mt-5 font-display text-4xl font-light tracking-display md:text-5xl">
+            <h2 className="mt-5 font-display text-4xl font-light md:text-5xl">
               Asked before the letter.
             </h2>
             <p className="mt-6 text-sm leading-relaxed text-ash">
-              The rest is discussed in conversation. We do not send decks unasked.
+              The rest is discussed in conversation. Decks follow the first meeting.
             </p>
           </div>
           <div className="border-t border-vellum/10 lg:col-span-8">
@@ -580,10 +562,7 @@ function Questions() {
               <details key={item.id} className="faq-item group border-b border-vellum/10">
                 <summary className="flex min-h-14 cursor-pointer items-center justify-between gap-6 py-5 text-left">
                   <span className="flex min-w-0 items-baseline gap-4">
-                    <span className="shrink-0 font-sans text-xs tracking-wide text-limestone">
-                      {item.num}
-                    </span>
-                    <span className="font-display text-xl font-light tracking-display md:text-2xl">
+                    <span className="font-display text-xl font-normal md:text-2xl">
                       {item.q}
                     </span>
                   </span>
@@ -600,7 +579,7 @@ function Questions() {
                     −
                   </span>
                 </summary>
-                <p className="max-w-xl pb-6 pl-10 text-sm leading-relaxed text-limestone md:pl-12">
+                <p className="max-w-xl pb-6 text-sm leading-relaxed text-limestone">
                   {item.a}
                 </p>
               </details>
@@ -617,7 +596,7 @@ function Close({ onJump }: { onJump: (id: string) => void }) {
     <section className="bg-vellum px-6 py-20 text-ink md:px-12 md:py-28 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <p className="label">The house is open</p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light tracking-display italic md:text-6xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light md:text-6xl">
           Tell us the house.
         </h2>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-ash">
@@ -627,14 +606,14 @@ function Close({ onJump }: { onJump: (id: string) => void }) {
           <button
             type="button"
             onClick={() => onJump("conversation")}
-            className="inline-flex min-h-11 items-center bg-ink px-5 font-sans text-xs font-medium tracking-label text-vellum uppercase transition-[opacity] duration-150 hover:opacity-90 active:not-disabled:scale-[0.96]"
+            className="inline-flex min-h-11 items-center bg-ink px-5 font-sans text-[13px] font-medium text-vellum transition-[opacity] duration-150 hover:opacity-90"
           >
             Request a conversation
           </button>
           <button
             type="button"
             onClick={() => onJump("retainers")}
-            className="inline-flex min-h-11 items-center border border-ink/15 px-5 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[border-color,background-color] duration-150 hover:border-ink/30 hover:bg-ink/5"
+            className="inline-flex min-h-11 items-center border border-ink/15 px-5 font-sans text-[13px] font-medium text-ink transition-[border-color,background-color] duration-150 hover:border-ink/30 hover:bg-ink/5"
           >
             The retainers
           </button>
@@ -654,7 +633,7 @@ function Conversation() {
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <p className="label text-limestone">Conversation</p>
-            <h2 className="mt-5 font-display text-4xl font-light tracking-display md:text-5xl">
+            <h2 className="mt-5 font-display text-4xl font-light md:text-5xl">
               Engagements begin by speaking.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-limestone">
@@ -684,7 +663,7 @@ function Footer({ onJump }: { onJump: (id: string) => void }) {
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <CoreLockup size="md" />
-          <p className="mt-6 max-w-xs font-display text-2xl font-light tracking-display italic">
+          <p className="mt-6 max-w-xs font-display text-2xl font-normal">
             {BRAND.tagline}
           </p>
         </div>
@@ -741,9 +720,9 @@ function Footer({ onJump }: { onJump: (id: string) => void }) {
           </p>
           <a
             href="/brand/kit/05-brand-book/Core-Marketing-Brand-Book.pdf"
-            className="mt-4 inline-flex min-h-11 items-center font-sans text-xs tracking-label text-ash uppercase transition-[color] duration-150 hover:text-limestone"
+            className="mt-4 inline-flex min-h-11 items-center font-sans text-[13px] text-ash transition-[color] duration-150 hover:text-limestone"
           >
-            Brand book — PDF
+            Brand book: PDF
           </a>
         </div>
       </div>

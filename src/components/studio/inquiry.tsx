@@ -10,7 +10,7 @@ const ROOMS_OPTIONS = [
 
 const RETAINER_OPTIONS = [
   { value: "", label: "Not yet decided" },
-  ...RETAINERS.map((r) => ({ value: r.id, label: `${r.latin} — ${r.means}` })),
+  ...RETAINERS.map((r) => ({ value: r.id, label: `${r.latin}: ${r.means}` })),
 ];
 
 export function Inquiry() {
@@ -35,12 +35,12 @@ export function Inquiry() {
 
     const roomLabel = ROOMS_OPTIONS.find((o) => o.value === room)?.label ?? room;
     const retainerLabel = RETAINER_OPTIONS.find((o) => o.value === retainer)?.label ?? retainer;
-    const subject = `Conversation — ${house || name}`;
+    const subject = `Conversation: ${house || name}`;
     const body = [
       `Name: ${name}`,
-      `House: ${house || "—"}`,
+      `House: ${house || "-"}`,
       `Email: ${email}`,
-      `Room: ${roomLabel || "—"}`,
+      `Room: ${roomLabel || "-"}`,
       `Retainer: ${retainerLabel || "Not yet decided"}`,
       "",
       note || "(no note)",
@@ -59,14 +59,14 @@ export function Inquiry() {
   if (sent) {
     return (
       <div className="border-t border-vellum/12 pt-10">
-        <p className="font-display text-3xl font-light tracking-display italic">The letter is with you.</p>
+        <p className="font-display text-3xl font-normal">The letter is with you.</p>
         <p className="mt-4 max-w-md text-sm leading-relaxed text-limestone">
           If the mail window did not open, write directly to {BRAND.email}. We read every note. We do
           not always take the work.
         </p>
         <a
           href={`mailto:${BRAND.email}`}
-          className="mt-8 inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[opacity] duration-150 hover:opacity-90 active:not-disabled:scale-[0.96]"
+          className="mt-8 inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
         >
           {BRAND.email}
         </a>
@@ -128,7 +128,7 @@ export function Inquiry() {
         <button
           type="submit"
           disabled={busy}
-          className="inline-flex min-h-11 items-center bg-vellum px-6 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[opacity] duration-150 hover:opacity-90 active:not-disabled:scale-[0.96] disabled:opacity-60"
+          className="inline-flex min-h-11 items-center bg-vellum px-6 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90 disabled:opacity-60"
         >
           {busy ? "Opening…" : "Request a conversation"}
         </button>

@@ -4,17 +4,6 @@ import { CoreLockup } from "@/components/brand/mark";
 import { Menu, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
-export function ProgressBar({ value }: { value: number }) {
-  return (
-    <div className="pointer-events-none fixed top-0 right-0 left-0 z-50 h-px bg-transparent">
-      <div
-        className="h-full origin-left bg-limestone"
-        style={{ transform: `scaleX(${Math.min(Math.max(value, 0), 1)})` }}
-      />
-    </div>
-  );
-}
-
 export function SideRail({
   active,
   onJump,
@@ -46,21 +35,21 @@ export function SideRail({
                 on ? "text-vellum" : "text-ash hover:text-limestone",
               )}
             >
-              <span className="font-sans text-[10px] tabular-nums tracking-wide">{s.num}</span>
+              <span className="font-sans text-xs tabular-nums">{s.num}</span>
               <span className="font-sans text-xs">{s.label}</span>
             </button>
           );
         })}
       </nav>
 
-      <p className="font-sans text-[10px] leading-relaxed text-ash">
+      <p className="font-sans text-xs leading-relaxed text-ash">
         Brand Book
         <br />
         Volume 01
       </p>
       <Link
         to="/"
-        className="mt-4 font-sans text-[10px] tracking-label text-limestone uppercase transition-[color] duration-150 hover:text-vellum"
+        className="mt-4 font-sans text-xs text-limestone uppercase transition-[color] duration-150 hover:text-vellum"
       >
         The house
       </Link>
@@ -110,13 +99,13 @@ export function MobileBar({
                 onClick={() => onJump(s.id)}
                 className="flex min-h-14 items-baseline justify-between border-b border-vellum/8 text-left text-vellum"
               >
-                <span className="font-display text-2xl font-light tracking-display">{s.label}</span>
+                <span className="font-display text-2xl font-normal">{s.label}</span>
                 <span className="font-sans text-xs tabular-nums text-ash">{s.num}</span>
               </button>
             ))}
             <Link
               to="/"
-              className="mt-8 flex min-h-14 items-center font-display text-2xl font-light tracking-display text-limestone"
+              className="mt-8 flex min-h-14 items-center font-display text-2xl font-normal text-limestone"
             >
               The house
             </Link>

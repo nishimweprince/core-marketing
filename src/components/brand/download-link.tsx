@@ -38,7 +38,7 @@ export function DownloadLink({
       if (!opened) {
         toast.error("Allow downloads in the browser, or use Save As from the new tab.");
       } else {
-        toast.message("File opened in a new tab — save it from there.");
+        toast.message("File opened in a new tab. Save it from there.");
       }
     } finally {
       setBusy(false);

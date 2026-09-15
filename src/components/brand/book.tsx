@@ -17,7 +17,7 @@ import {
 } from "@/lib/brand";
 import { cn } from "@/lib/utils";
 import { CoreLockup, CoreMark, CoreMarkConstruct, CoreWordmark } from "@/components/brand/mark";
-import { MobileBar, ProgressBar, SideRail } from "@/components/brand/nav";
+import { MobileBar, SideRail } from "@/components/brand/nav";
 import { Chapter, CopyChip, Rule } from "@/components/brand/ui";
 import { DownloadLink } from "@/components/brand/download-link";
 import {
@@ -36,7 +36,6 @@ import {
 export function BrandBook() {
   const [active, setActive] = useState("cover");
   const [open, setOpen] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const ids = SECTIONS.map((s) => s.id);
@@ -58,17 +57,6 @@ export function BrandBook() {
     return () => io.disconnect();
   }, []);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const root = document.documentElement;
-      const max = root.scrollHeight - root.clientHeight;
-      setProgress(max > 0 ? root.scrollTop / max : 0);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   function jump(id: string) {
     setOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -84,7 +72,6 @@ export function BrandBook() {
             "!bg-night !text-vellum !border-vellum/10 !font-sans !rounded-md !shadow-none",
         }}
       />
-      <ProgressBar value={progress} />
       <SideRail active={active} onJump={jump} />
       <MobileBar open={open} onToggle={() => setOpen((v) => !v)} onJump={jump} />
 
@@ -112,9 +99,8 @@ function Cover({ onOpen }: { onOpen: () => void }) {
     >
       <div className="grid min-h-dvh lg:grid-cols-2">
         <div className="relative flex flex-col justify-between px-6 py-10 md:px-14 lg:px-16 lg:py-16">
-          <div className="grid-construct pointer-events-none absolute inset-0 opacity-60" />
           <p className="rise label relative text-limestone">
-            {BRAND.bookTitle}  ·  {BRAND.edition}
+            {BRAND.bookTitle} · {BRAND.edition}
           </p>
 
           <div className="relative">
@@ -122,10 +108,10 @@ function Cover({ onOpen }: { onOpen: () => void }) {
             <div className="rise rise-1">
               <CoreLockup size="hero" />
             </div>
-            <p className="rise rise-3 mt-8 font-sans text-[11px] font-medium tracking-label text-limestone uppercase">
+            <p className="rise rise-3 mt-8 font-sans text-xs font-medium text-limestone uppercase">
               {BRAND.origin} · A marketing studio
             </p>
-            <p className="rise rise-4 mt-6 max-w-md font-display text-4xl font-light tracking-display text-vellum italic md:text-5xl">
+            <p className="rise rise-4 mt-6 max-w-md font-display text-4xl font-light text-vellum md:text-5xl">
               Presence, made inevitable.
             </p>
           </div>
@@ -140,21 +126,21 @@ function Cover({ onOpen }: { onOpen: () => void }) {
               <DownloadLink
                 href="/brand/kit/05-brand-book/Core-Marketing-Brand-Book.pdf"
                 file="Core-Marketing-Brand-Book.pdf"
-                className="inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-xs font-medium tracking-label text-ink uppercase transition-[opacity] duration-150 hover:opacity-90"
+                className="inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
               >
                 Download the brand book
               </DownloadLink>
               <DownloadLink
                 href={KIT_ZIP.href}
                 file={KIT_ZIP.file}
-                className="inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-xs font-medium tracking-label text-vellum uppercase transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5"
+                className="inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-[13px] font-medium text-vellum transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5"
               >
                 Download the kit
               </DownloadLink>
               <button
                 type="button"
                 onClick={onOpen}
-                className="inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-xs font-medium tracking-label text-vellum uppercase transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5"
+                className="inline-flex min-h-11 items-center border border-vellum/20 px-5 font-sans text-[13px] font-medium text-vellum transition-[border-color,background-color] duration-150 hover:border-vellum/40 hover:bg-vellum/5"
               >
                 Open the book
               </button>
@@ -165,7 +151,7 @@ function Cover({ onOpen }: { onOpen: () => void }) {
         <div className="relative hidden min-h-[48vh] lg:block">
           <img
             src="/brand/aperture.jpg"
-            alt="A circular aperture of light held in a dark opening — the core."
+            alt="A circular aperture of light held in a dark opening, the core."
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute inset-0 bg-ink/15" />
@@ -187,7 +173,7 @@ function House() {
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <p className="text-lg leading-relaxed md:text-xl">
-            We partner with a small number of companies who already know they are not average —
+            We partner with a small number of companies who already know they are not average,
             and who want their public presence to finally match that fact.
           </p>
           <p className="mt-6 leading-relaxed text-ash">
@@ -205,7 +191,7 @@ function House() {
         <div className="lg:col-span-5">
           <img
             src="/brand/studio.jpg"
-            alt="A quiet studio at dusk — walnut desk, a single lamp, the city beyond."
+            alt="A quiet studio at dusk, walnut desk, a single lamp, the city beyond."
             className="brand-photo aspect-[4/5] w-full rounded-md object-cover"
           />
         </div>
@@ -214,7 +200,7 @@ function House() {
       <div className="mt-20 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
         {TRAITS.map((t) => (
           <article key={t.name} className="bg-vellum px-6 py-8">
-            <p className="font-display text-2xl font-light tracking-display">{t.name}</p>
+            <p className="font-display text-2xl font-normal">{t.name}</p>
             <p className="mt-4 text-sm leading-relaxed text-ash">{t.body}</p>
           </article>
         ))}
@@ -236,19 +222,19 @@ function Position() {
       <div className="grid gap-6 md:grid-cols-3">
         <article className="rounded-lg bg-night p-7">
           <p className="label text-limestone">For</p>
-          <p className="mt-4 font-display text-2xl font-light tracking-display">
+          <p className="mt-4 font-display text-2xl font-normal">
             Founders, houses, and professional practices that already sell at a premium.
           </p>
         </article>
         <article className="rounded-lg bg-night p-7">
           <p className="label text-limestone">Does</p>
-          <p className="mt-4 font-display text-2xl font-light tracking-display">
-            Architects digital presence — strategy through promotion — as a single system.
+          <p className="mt-4 font-display text-2xl font-normal">
+            Architects digital presence, strategy through promotion, as a single system.
           </p>
         </article>
         <article className="rounded-lg bg-night p-7">
           <p className="label text-limestone">Unlike</p>
-          <p className="mt-4 font-display text-2xl font-light tracking-display">
+          <p className="mt-4 font-display text-2xl font-normal">
             Volume agencies, freelance scatter, and work that looks busy without becoming
             inevitable.
           </p>
@@ -260,9 +246,8 @@ function Position() {
         <div className="mt-8 divide-y divide-vellum/10 border-y border-vellum/10">
           {PRACTICES.map((p) => (
             <article key={p.name} className="grid gap-4 py-8 md:grid-cols-12 md:items-start">
-              <p className="font-display text-2xl text-limestone md:col-span-1">{p.roman}</p>
               <div className="md:col-span-4">
-                <h3 className="font-display text-3xl font-light tracking-display">{p.name}</h3>
+                <h3 className="font-display text-3xl font-normal">{p.name}</h3>
                 <p className="mt-1 text-sm text-ash">{p.subtitle}</p>
               </div>
               <p className="text-sm leading-relaxed text-limestone md:col-span-7 md:text-base">
@@ -273,7 +258,7 @@ function Position() {
         </div>
       </div>
 
-      <p className="mt-16 max-w-2xl font-display text-2xl font-light tracking-display text-vellum italic md:text-3xl">
+      <p className="mt-16 max-w-2xl font-display text-2xl font-normal text-vellum md:text-3xl">
         Engagements begin by conversation. We take the work that can be done properly, and we
         decline the rest.
       </p>
@@ -295,7 +280,7 @@ function Mark() {
       num="03"
       kicker="The Mark"
       title="Ivory. Stone. Juniper."
-      lede="The mark sits to the left of the name. CORE is the larger line — semibold, tracked. MARKETING sits beneath it, smaller, regular, in limestone."
+      lede="The mark sits to the left of the name. CORE is the larger line, semibold, tracked. MARKETING sits beneath it, smaller, regular, in limestone."
     >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex aspect-square items-center justify-center rounded-lg bg-ink text-vellum">
@@ -309,7 +294,7 @@ function Mark() {
         <CoreLockup size="lg" />
       </div>
       <div className="mt-4 grid gap-4 text-sm text-ash md:grid-cols-2">
-        <p>Primary mark — on ink. Ivory outer, stone inner, juniper nucleus. Use this digitally, in film, and on dark print.</p>
+        <p>Primary mark: on ink. Ivory outer, stone inner, juniper nucleus. Use this digitally, in film, and on dark print.</p>
         <p>
           Construction. Clear space equals one core-diameter on every side. Minimum size: 20px
           digital, 8mm print. The nucleus is always Juniper, except in single-colour
@@ -350,7 +335,7 @@ function Mark() {
               )}
             >
               <CoreMark className="w-1/3" field={f.field} />
-              <p className="font-sans text-[10px] tracking-wide opacity-70">{f.label}</p>
+              <p className="font-sans text-xs opacity-70">{f.label}</p>
             </div>
           ))}
         </div>
@@ -381,7 +366,7 @@ function Colour() {
       num="04"
       kicker="Colour"
       title="Six named colours. Juniper is used once."
-      lede="The palette is a material specification, not a moodboard. Ink and Vellum do the work. Limestone is stone. Juniper is the nucleus — reserved for the mark."
+      lede="The palette is a material specification, not a moodboard. Ink and Vellum do the work. Limestone is stone. Juniper is the nucleus, reserved for the mark."
       tone="ink"
     >
       <div className="grid gap-3">
@@ -396,7 +381,7 @@ function Colour() {
             )}
           >
             <div>
-              <p className="font-display text-4xl font-light tracking-display md:text-5xl">
+              <p className="font-display text-4xl font-light md:text-5xl">
                 {c.name}
               </p>
               <p
@@ -446,7 +431,7 @@ function Combo({
 }) {
   return (
     <div className={cn("rounded-md p-6", aBg)}>
-      <p className="font-display text-2xl font-light">
+      <p className="font-display text-2xl font-normal">
         {a} / {b}
       </p>
       <p className="mt-3 text-xs opacity-70">{note}</p>
@@ -461,15 +446,15 @@ function Type() {
       num="05"
       kicker="Type"
       title="A serif for the name. A sans for the work."
-      lede="Cormorant Garamond carries the voice — light, editorial, unhurried. Manrope carries the information. Two families. No substitutes."
+      lede="Cormorant Garamond carries the voice, light, editorial, unhurried. Manrope carries the information. Two families. No substitutes."
     >
       <div className="grid gap-10 lg:grid-cols-2">
         <div>
           <p className="label">Display</p>
-          <p className="mt-4 font-display text-6xl leading-none font-light tracking-display md:text-8xl">
+          <p className="mt-4 font-display text-6xl leading-none font-light md:text-8xl">
             Aa
           </p>
-          <p className="mt-6 font-display text-3xl font-light tracking-display">
+          <p className="mt-6 font-display text-3xl font-normal">
             Cormorant Garamond
           </p>
           <p className="mt-4 font-display text-xl leading-snug">
@@ -505,9 +490,9 @@ function Type() {
               className={cn(
                 "md:col-span-7",
                 t.role === "Display" &&
-                  "font-display text-5xl leading-none font-light tracking-display md:text-6xl",
+                  "font-display text-5xl leading-none font-light md:text-6xl",
                 t.role === "Headline" &&
-                  "font-display text-3xl font-light tracking-display md:text-4xl",
+                  "font-display text-3xl font-normal md:text-4xl",
                 t.role === "Deck" && "text-base leading-relaxed",
                 t.role === "Label" && "label text-ash",
               )}
@@ -517,17 +502,17 @@ function Type() {
             <p className="text-xs leading-relaxed text-ash md:col-span-3 md:text-right">
               {t.family}
               <br />
-              {t.size}  ·  {t.tracking}
+              {t.size} · {t.tracking}
             </p>
           </div>
         ))}
       </div>
 
       <blockquote className="mt-16 border-l border-ink/15 pl-6 md:pl-10">
-        <p className="font-display text-3xl font-light tracking-display italic md:text-5xl">
+        <p className="font-display text-3xl font-light md:text-5xl">
           Presence is not volume. It is the feeling that a brand was inevitable.
         </p>
-        <p className="mt-6 label">Pull quote — Cormorant Italic</p>
+        <p className="mt-6 label">Pull quote: Cormorant</p>
       </blockquote>
     </Chapter>
   );
@@ -627,7 +612,7 @@ function Image() {
       <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {IMAGE_RULES.map((r) => (
           <article key={r.title}>
-            <p className="font-display text-2xl font-light tracking-display">{r.title}</p>
+            <p className="font-display text-2xl font-normal">{r.title}</p>
             <p className="mt-3 text-sm leading-relaxed text-ash">{r.body}</p>
           </article>
         ))}
@@ -643,16 +628,16 @@ function Applications() {
       num="08"
       kicker="Applications"
       title="How the brand occupies the world."
-      lede="Stationery, screens, and spaces. Every surface should feel like the same house — not a campaign wearing a logo."
+      lede="Stationery, screens, and spaces. Every surface should feel like the same house, not a campaign wearing a logo."
     >
       <div className="grid gap-10 md:grid-cols-2">
         <figure>
           <BusinessCard side="front" />
-          <figcaption className="mt-3 text-sm text-ash">Calling card — face. Ink field, reverse mark.</figcaption>
+          <figcaption className="mt-3 text-sm text-ash">Calling card: face. Ink field, reverse mark.</figcaption>
         </figure>
         <figure>
           <BusinessCard side="back" />
-          <figcaption className="mt-3 text-sm text-ash">Calling card — reverse. Vellum, studio line.</figcaption>
+          <figcaption className="mt-3 text-sm text-ash">Calling card: reverse. Vellum, studio line.</figcaption>
         </figure>
       </div>
 
@@ -678,11 +663,11 @@ function Applications() {
         <div className="mt-6 grid gap-6 md:grid-cols-12">
           <figure className="md:col-span-4">
             <SocialPost />
-            <figcaption className="mt-3 text-sm text-ash">Feed — 4:5. One idea. No collage.</figcaption>
+            <figcaption className="mt-3 text-sm text-ash">Feed: 4:5. One idea. No collage.</figcaption>
           </figure>
           <figure className="md:col-span-3">
             <SocialStory />
-            <figcaption className="mt-3 text-sm text-ash">Story — 9:16. Image as architecture.</figcaption>
+            <figcaption className="mt-3 text-sm text-ash">Story: 9:16. Image as architecture.</figcaption>
           </figure>
           <figure className="md:col-span-5 flex flex-col gap-6">
             <LinkedInBanner />
@@ -713,7 +698,7 @@ function Applications() {
           className="brand-photo aspect-video w-full object-cover"
         />
         <div className="absolute inset-0 bg-ink/20" />
-        <p className="absolute bottom-6 left-6 label text-vellum">Environmental — niche, waiting</p>
+        <p className="absolute bottom-6 left-6 label text-vellum">Environmental: niche, waiting</p>
       </div>
     </Chapter>
   );
@@ -724,18 +709,18 @@ function System() {
     <section id="system" className="relative scroll-mt-14 bg-ink text-vellum lg:scroll-mt-0">
       <div className="px-6 py-20 md:px-14 md:py-28 lg:px-20 lg:py-32">
         <div className="mx-auto max-w-6xl">
-          <p className="label text-limestone">09  —  System</p>
-          <h2 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-display md:text-6xl">
+          <p className="label text-limestone">09 · System</p>
+          <h2 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight md:text-6xl">
             Rules that keep the house standing.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-limestone md:text-lg">
-            Spacing, files, and the closing note. This is the kit — not a mood, a specification.
+            Spacing, files, and the closing note. This is the kit, not a mood, a specification.
           </p>
 
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             <article className="rounded-lg bg-night p-7">
               <p className="label text-limestone">Grid</p>
-              <p className="mt-4 font-display text-2xl font-light tracking-display">
+              <p className="mt-4 font-display text-2xl font-normal">
                 Twelve columns on desktop. Four on mobile. Margins generous.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-ash">
@@ -744,7 +729,7 @@ function System() {
             </article>
             <article className="rounded-lg bg-night p-7">
               <p className="label text-limestone">Space</p>
-              <p className="mt-4 font-display text-2xl font-light tracking-display">
+              <p className="mt-4 font-display text-2xl font-normal">
                 4, 8, 12, 16, 24, 32, 48, 64. Air is a brand colour.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-ash">
@@ -753,7 +738,7 @@ function System() {
             </article>
             <article className="rounded-lg bg-night p-7">
               <p className="label text-limestone">Motion</p>
-              <p className="mt-4 font-display text-2xl font-light tracking-display">
+              <p className="mt-4 font-display text-2xl font-normal">
                 150–250ms. Ease out. Opacity and transform only.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-ash">
@@ -765,7 +750,7 @@ function System() {
           <div className="mt-20">
             <p className="label text-limestone">Downloads</p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ash">
-              The book as a 16-page A4 PDF — send this to stakeholders. The mark
+              The book as a 16-page A4 PDF. Send this to stakeholders. The mark
               alone. The lockup with words. Editable business cards (open the SVG,
               change the name). Letterhead and envelope. Or take the full kit.
             </p>
@@ -775,10 +760,10 @@ function System() {
               className="mt-8 flex min-h-16 w-full items-center justify-between gap-4 rounded-md bg-vellum px-6 text-left text-ink transition-[opacity] duration-150 hover:opacity-90"
             >
               <span>
-                <span className="block font-sans text-sm font-semibold tracking-brand uppercase">
+                <span className="block font-sans text-sm font-semibold uppercase">
                   {KIT_ZIP.label}
                 </span>
-                <span className="mt-1 block font-sans text-[10px] tracking-label text-ash uppercase">
+                <span className="mt-1 block font-sans text-[13px] text-ash">
                   Logos, lockups, cards, stationery, book, tokens
                 </span>
               </span>
@@ -811,7 +796,7 @@ function System() {
           <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:items-end">
             <div>
               <CoreLockup size="lg" />
-              <p className="mt-10 max-w-md font-display text-3xl font-light tracking-display italic">
+              <p className="mt-10 max-w-md font-display text-3xl font-normal">
                 {BRAND.tagline}
               </p>
             </div>
@@ -823,8 +808,8 @@ function System() {
                 <br />
                 {BRAND.origin} · By appointment
               </p>
-              <p className="mt-8 text-xs tracking-label text-ash uppercase">
-                Est. {BRAND.year}  ·  {BRAND.edition}
+              <p className="mt-8 text-xs text-ash uppercase">
+                Est. {BRAND.year} · {BRAND.edition}
               </p>
             </div>
           </div>

@@ -31,7 +31,7 @@ export function BusinessCard({
       style={{ boxShadow: "var(--shadow-border)" }}
     >
       <div>
-        <p className="font-display text-xl font-light leading-none">Studio</p>
+        <p className="font-display text-xl font-normal leading-none">Studio</p>
         <p className="mt-2 font-sans text-[11px] leading-relaxed text-ash">
           By appointment
           <br />
@@ -61,7 +61,7 @@ export function Letterhead({ className }: { className?: string }) {
     >
       <div className="flex items-start justify-between">
         <CoreLockup size="sm" field="vellum" />
-        <p className="text-right font-sans text-[9px] leading-relaxed text-ash">
+        <p className="text-right font-sans text-[10px] leading-relaxed text-ash">
           Core Marketing
           <br />
           By appointment · Kigali
@@ -80,7 +80,7 @@ export function Letterhead({ className }: { className?: string }) {
       </div>
       <div className="flex items-center justify-between pt-6">
         <p className="label text-[8px]">Confidential</p>
-        <p className="font-sans text-[9px] tracking-label text-ash uppercase">core.marketing</p>
+        <p className="font-sans text-[10px] text-ash uppercase">core.marketing</p>
       </div>
     </div>
   );
@@ -106,7 +106,7 @@ export function Envelope({ className }: { className?: string }) {
       <CoreMark className="relative size-7" field="vellum" />
       <div className="relative ml-auto text-right">
         <CoreWordmark compact />
-        <p className="mt-2 font-sans text-[9px] tracking-label text-ash uppercase">
+        <p className="mt-2 font-sans text-[10px] text-ash uppercase">
           By appointment · Kigali
         </p>
       </div>
@@ -127,14 +127,14 @@ export function SocialPost({ className }: { className?: string }) {
         <p className="label text-limestone">01 / Presence</p>
       </div>
       <div>
-        <p className="font-display text-3xl font-light leading-tight tracking-display md:text-4xl">
+        <p className="font-display text-3xl font-normal leading-tight md:text-4xl">
           The architecture of attention.
         </p>
         <p className="mt-6 font-sans text-xs leading-relaxed text-limestone">
-          Strategy, presence, content, and promotion — held as one system.
+          Strategy, presence, content, and promotion, held as one system.
         </p>
       </div>
-      <p className="font-sans text-[10px] tracking-label text-ash uppercase">Core Marketing</p>
+      <p className="font-sans text-[10px] text-ash uppercase">Core Marketing</p>
     </div>
   );
 }
@@ -157,7 +157,7 @@ export function SocialStory({ className }: { className?: string }) {
         <CoreMark className="size-7 text-vellum" />
         <div>
           <p className="label text-limestone">The house</p>
-          <p className="mt-4 font-display text-3xl font-light leading-tight tracking-display">
+          <p className="mt-4 font-display text-3xl font-normal leading-tight">
             Fewer partners.
             <br />
             Further work.
@@ -203,12 +203,12 @@ export function TitleSlide({ className }: { className?: string }) {
       </div>
       <div>
         <p className="label text-limestone">A conversation</p>
-        <h3 className="mt-4 max-w-lg font-display text-3xl font-light leading-tight tracking-display md:text-5xl">
+        <h3 className="mt-4 max-w-lg font-display text-3xl font-light leading-tight md:text-5xl">
           Presence, built as architecture.
         </h3>
       </div>
-      <p className="font-sans text-[10px] tracking-label text-ash uppercase">
-        Core Marketing  ·  Volume 01
+      <p className="font-sans text-[10px] text-ash uppercase">
+        Core Marketing · Volume 01
       </p>
     </div>
   );
@@ -249,7 +249,7 @@ export function WebChrome({ className }: { className?: string }) {
         <span className="size-2.5 rounded-full bg-vellum/20" />
         <span className="size-2.5 rounded-full bg-vellum/20" />
         <span className="size-2.5 rounded-full bg-vellum/20" />
-        <span className="ml-3 flex-1 rounded-sm bg-ink px-3 py-1.5 font-sans text-[10px] tracking-wide text-ash">
+        <span className="ml-3 flex-1 rounded-sm bg-ink px-3 py-1.5 font-sans text-[10px] text-ash">
           core.marketing
         </span>
       </div>

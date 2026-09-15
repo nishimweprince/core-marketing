@@ -105,7 +105,7 @@ export const PRACTICES = [
     roman: "II",
     name: "Presence",
     subtitle: "The channels",
-    body: "Social architecture, platform roles, and a cadence a brand can actually keep. Not more posts. The right ones, on purpose.",
+    body: "Social architecture, platform roles, and a cadence a brand can keep. Fewer posts, placed on purpose.",
     holds: ["The channels", "The cadence", "The room on each platform"],
   },
   {
@@ -119,7 +119,7 @@ export const PRACTICES = [
     roman: "IV",
     name: "Promotion",
     subtitle: "The amplification",
-    body: "Paid, launched, and always-on growth built on the strategy — never instead of it. Attention, rented only after it has been earned.",
+    body: "Paid, launched, and always-on growth built on the strategy, never instead of it. Attention, rented only after it has been earned.",
     holds: ["Launch", "Always-on", "Paid, after it is earned"],
   },
 ] as const;
@@ -127,7 +127,7 @@ export const PRACTICES = [
 export const TRAITS = [
   {
     name: "Composed",
-    body: "We do not rush the room. Urgency is designed; panic is not a process.",
+    body: "We hold the room steady. Urgency is designed; panic stays outside.",
   },
   {
     name: "Exact",
@@ -171,7 +171,7 @@ export const VOICE_SAMPLES = [
   {
     label: "Service",
     wrong: "We’re a full-service agency that does it all for amazing brands!",
-    right: "Strategy, presence, content, and promotion — held as one system.",
+    right: "Strategy, presence, content, and promotion, held as one system.",
   },
   {
     label: "Result",
@@ -191,7 +191,7 @@ export const IMAGE_RULES = [
   },
   {
     title: "People, at a distance",
-    body: "When figures appear, they are occupied — never posing for the brand. Faces are not the product.",
+    body: "When figures appear, they are occupied, never posing for the brand. Faces are not the product.",
   },
   {
     title: "Quiet colour",
@@ -257,7 +257,7 @@ export const DOWNLOADS = [
     items: [
       {
         href: "/brand/kit/05-brand-book/Core-Marketing-Brand-Book.pdf",
-        label: "Brand Book — PDF, 16 pages, A4",
+        label: "Brand Book: PDF, 16 pages, A4",
         file: "Core-Marketing-Brand-Book.pdf",
       },
     ],
@@ -265,44 +265,44 @@ export const DOWNLOADS = [
   {
     group: "Logo only",
     items: [
-      { href: "/brand/kit/01-logo-only/Core-Mark-On-Ink.svg", label: "Mark — SVG on ink", file: "Core-Mark-On-Ink.svg" },
-      { href: "/brand/kit/01-logo-only/Core-Mark-On-Vellum.svg", label: "Mark — SVG on vellum", file: "Core-Mark-On-Vellum.svg" },
-      { href: "/brand/kit/01-logo-only/Core-Mark-Mono.svg", label: "Mark — SVG mono", file: "Core-Mark-Mono.svg" },
-      { href: "/brand/kit/01-logo-only/Core-Mark-On-Ink.png", label: "Mark — PNG on ink", file: "Core-Mark-On-Ink.png" },
-      { href: "/brand/kit/01-logo-only/Core-Mark-On-Vellum.png", label: "Mark — PNG on vellum", file: "Core-Mark-On-Vellum.png" },
+      { href: "/brand/kit/01-logo-only/Core-Mark-On-Ink.svg", label: "Mark: SVG on ink", file: "Core-Mark-On-Ink.svg" },
+      { href: "/brand/kit/01-logo-only/Core-Mark-On-Vellum.svg", label: "Mark: SVG on vellum", file: "Core-Mark-On-Vellum.svg" },
+      { href: "/brand/kit/01-logo-only/Core-Mark-Mono.svg", label: "Mark: SVG mono", file: "Core-Mark-Mono.svg" },
+      { href: "/brand/kit/01-logo-only/Core-Mark-On-Ink.png", label: "Mark: PNG on ink", file: "Core-Mark-On-Ink.png" },
+      { href: "/brand/kit/01-logo-only/Core-Mark-On-Vellum.png", label: "Mark: PNG on vellum", file: "Core-Mark-On-Vellum.png" },
     ],
   },
   {
     group: "Logo with words",
     items: [
-      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink.svg", label: "Lockup — SVG on ink", file: "Core-Lockup-On-Ink.svg" },
-      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Vellum.svg", label: "Lockup — SVG on vellum", file: "Core-Lockup-On-Vellum.svg" },
-      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink-Transparent.svg", label: "Lockup — SVG transparent", file: "Core-Lockup-On-Ink-Transparent.svg" },
-      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink.png", label: "Lockup — PNG on ink", file: "Core-Lockup-On-Ink.png" },
-      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Vellum.png", label: "Lockup — PNG on vellum", file: "Core-Lockup-On-Vellum.png" },
+      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink.svg", label: "Lockup: SVG on ink", file: "Core-Lockup-On-Ink.svg" },
+      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Vellum.svg", label: "Lockup: SVG on vellum", file: "Core-Lockup-On-Vellum.svg" },
+      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink-Transparent.svg", label: "Lockup: SVG transparent", file: "Core-Lockup-On-Ink-Transparent.svg" },
+      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Ink.png", label: "Lockup: PNG on ink", file: "Core-Lockup-On-Ink.png" },
+      { href: "/brand/kit/02-logo-with-words/Core-Lockup-On-Vellum.png", label: "Lockup: PNG on vellum", file: "Core-Lockup-On-Vellum.png" },
     ],
   },
   {
     group: "Business cards",
     items: [
-      { href: "/brand/kit/03-business-cards/Core-Business-Card-Front.svg", label: "Card front — SVG editable", file: "Core-Business-Card-Front.svg" },
-      { href: "/brand/kit/03-business-cards/Core-Business-Card-Back.svg", label: "Card back — SVG editable", file: "Core-Business-Card-Back.svg" },
-      { href: "/brand/kit/03-business-cards/Core-Business-Card-Front.pdf", label: "Card front — PDF print", file: "Core-Business-Card-Front.pdf" },
-      { href: "/brand/kit/03-business-cards/Core-Business-Card-Back.pdf", label: "Card back — PDF print", file: "Core-Business-Card-Back.pdf" },
+      { href: "/brand/kit/03-business-cards/Core-Business-Card-Front.svg", label: "Card front: SVG editable", file: "Core-Business-Card-Front.svg" },
+      { href: "/brand/kit/03-business-cards/Core-Business-Card-Back.svg", label: "Card back: SVG editable", file: "Core-Business-Card-Back.svg" },
+      { href: "/brand/kit/03-business-cards/Core-Business-Card-Front.pdf", label: "Card front: PDF print", file: "Core-Business-Card-Front.pdf" },
+      { href: "/brand/kit/03-business-cards/Core-Business-Card-Back.pdf", label: "Card back: PDF print", file: "Core-Business-Card-Back.pdf" },
     ],
   },
   {
     group: "Stationery",
     items: [
-      { href: "/brand/kit/04-stationery/Core-Letterhead-A4.svg", label: "Letterhead A4 — SVG", file: "Core-Letterhead-A4.svg" },
-      { href: "/brand/kit/04-stationery/Core-Envelope-DL.svg", label: "Envelope DL — SVG", file: "Core-Envelope-DL.svg" },
+      { href: "/brand/kit/04-stationery/Core-Letterhead-A4.svg", label: "Letterhead A4: SVG", file: "Core-Letterhead-A4.svg" },
+      { href: "/brand/kit/04-stationery/Core-Envelope-DL.svg", label: "Envelope DL: SVG", file: "Core-Envelope-DL.svg" },
     ],
   },
 ] as const;
 
 export const KIT_ZIP = {
   href: "/brand/Core-Marketing-Brand-Kit.zip",
-  label: "Download everything — ZIP",
+  label: "Download everything: ZIP",
   file: "Core-Marketing-Brand-Kit.zip",
 } as const;
 
@@ -319,9 +319,9 @@ export const ROOMS = [
     kicker: "Hospitality",
     name: "Hotels & villas",
     image: "/brand/villa.jpg",
-    alt: "A private villa terrace at dusk — limestone, linen, one lamp.",
+    alt: "A private villa terrace at dusk, limestone, linen, one lamp.",
     lede: "A house that is already expensive should not sound like it is asking.",
-    body: "Five-star hotels and private villas. We hold the argument, the channels, and the evidence so the house feels inevitable — before the guest arrives, and after they leave. Not more posts. A presence that matches the key.",
+    body: "Five-star hotels and private villas. We hold the argument, the channels, and the evidence so the house feels inevitable, before the guest arrives, and after they leave. A presence that matches the key.",
   },
   {
     id: "motor",
@@ -330,7 +330,7 @@ export const ROOMS = [
     image: "/brand/motor.jpg",
     alt: "A dark car in a limestone courtyard at dusk, one shaft of warm light.",
     lede: "A vehicle is not a thumbnail.",
-    body: "Expensive hire, and dealerships that already know they are not a lot. Presence built like the courtyard at dusk: one car, one light, no noise. The marque is described. It is never shouted.",
+    body: "Expensive hire, and dealerships that already know they are not a lot. Presence built like the courtyard at dusk: one car, one light, quiet by design. The marque is described.",
   },
   {
     id: "property",
@@ -353,8 +353,8 @@ export const RETAINERS = [
     featured: false,
     for: "A house establishing, or correcting, its public face.",
     includes: [
-      "Strategy — the argument written as we would want to receive it",
-      "Presence — channel architecture and a cadence that can be kept",
+      "Strategy: the argument written as we would want to receive it",
+      "Presence: channel architecture and a cadence that can be kept",
       "A monthly senior room",
     ],
     typical: "A villa opening a season. A dealership’s first year of seriousness. A property house entering a market.",
@@ -369,7 +369,7 @@ export const RETAINERS = [
     for: "A house that already has a voice and needs evidence.",
     includes: [
       "Everything in Prima",
-      "Content — film, stills, and language directed as one system",
+      "Content: film, stills, and language directed as one system",
       "Two platforms held with intent",
     ],
     typical: "A hotel that already knows its guests. A marque that needs more than posts.",
@@ -384,7 +384,7 @@ export const RETAINERS = [
     for: "The full architecture. Retained. Always-on.",
     includes: [
       "Everything in Altera",
-      "Promotion — paid only after it has been earned",
+      "Promotion: paid only after it has been earned",
       "Launch and always-on, a room that does not drop",
     ],
     typical: "A hotel of record. A motor house with more than one address. A developer who intends to last.",
@@ -400,12 +400,12 @@ export const STEPS = [
   {
     roman: "II",
     name: "The argument",
-    body: "Positioning and narrative first. The brief we would want to receive — so every later decision is cheaper.",
+    body: "Positioning and narrative first. The brief we would want to receive, so every later decision is cheaper.",
   },
   {
     roman: "III",
     name: "The rooms",
-    body: "Channels and cadence. Not more surface. The right ones, on purpose, kept.",
+    body: "Channels and cadence. The right surfaces, on purpose, kept.",
   },
   {
     roman: "IV",
@@ -424,7 +424,7 @@ export const MEASURES = [
 export const INSIGHT = {
   kicker: "The landscape",
   title: "Discovery has left the directory.",
-  body: "A guest, a driver, a buyer — they decide in a quiet room of the phone. A still that survives a second look. A name spoken once. Ranking is not presence. Presence is whether the house is already chosen when the search begins.",
+  body: "A guest, a driver, a buyer. They decide in a quiet room of the phone. A still that survives a second look. A name spoken once. Ranking is not presence. Presence is whether the house is already chosen when the search begins.",
   pull: "The room is decided before the door.",
 } as const;
 
@@ -434,7 +434,7 @@ export const WORK = [
     room: "Hospitality",
     title: "A hotel of record",
     image: "/brand/reception.jpg",
-    alt: "A hotel lobby at dusk — walnut, limestone, one lamp, an empty chair.",
+    alt: "A hotel lobby at dusk, walnut, limestone, one lamp, an empty chair.",
     body: "A house that is already expensive should not sound like it is asking. Presence held before arrival, and after departure.",
   },
   {
@@ -460,13 +460,13 @@ export const QUESTIONS = [
     num: "01",
     id: "holds",
     q: "What does the house hold?",
-    a: "Strategy, presence, content, and promotion — as one architecture. We do not sell them apart. A brand that is loud in one place and absent in another is not a brand. It is noise.",
+    a: "Strategy, presence, content, and promotion, as one architecture. Sold only together. A brand holds every room it keeps; the rest is noise.",
   },
   {
     num: "02",
     id: "retainers",
     q: "What are Prima, Altera, and Summa?",
-    a: "Latin. The first, the second, the highest. Three retainers, not packages on a menu. Prima writes the argument and the channels. Altera adds the evidence. Summa is the full architecture — retained, always-on.",
+    a: "Latin. The first, the second, the highest. Three retainers, not packages on a menu. Prima writes the argument and the channels. Altera adds the evidence. Summa is the full architecture, retained, always-on.",
   },
   {
     num: "03",
@@ -478,7 +478,7 @@ export const QUESTIONS = [
     num: "04",
     id: "term",
     q: "How long is an engagement?",
-    a: "Prima is three months. Altera, six. Summa, twelve. We do not take work that cannot be held for the term. Campaigns expire. A room should not.",
+    a: "Prima is three months. Altera, six. Summa, twelve. We take work we can hold for the term. Campaigns expire. A room endures.",
   },
   {
     num: "05",
@@ -490,7 +490,7 @@ export const QUESTIONS = [
     num: "06",
     id: "where",
     q: "Where is the house?",
-    a: "Kigali. Working wherever the work is serious. Correspondence is by appointment — studio@core.marketing.",
+    a: "Kigali. Working wherever the work is serious. Correspondence is by appointment: studio@core.marketing.",
   },
 ] as const;
 

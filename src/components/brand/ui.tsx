@@ -40,9 +40,9 @@ export function Chapter({
     >
       <div className="mx-auto max-w-6xl">
         <p className={cn("label", ink ? "text-limestone" : "text-ash")}>
-          {num}  —  {kicker}
+          {num} · {kicker}
         </p>
-        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-display md:text-6xl">
+        <h2 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight md:text-6xl">
           {title}
         </h2>
         {lede ? (
@@ -83,7 +83,7 @@ export function CopyChip({
       type="button"
       onClick={onCopy}
       className={cn(
-        "inline-flex min-h-11 items-center gap-2 rounded-sm px-3 py-2 font-sans text-xs tracking-wide transition-[background-color,color] duration-150 ease-out active:not-disabled:scale-[0.96]",
+        "inline-flex min-h-11 items-center gap-2 rounded-sm px-3 py-2 font-sans text-xs transition-[background-color,color] duration-150 ease-out",
         invert
           ? "text-limestone hover:bg-vellum/5 hover:text-vellum"
           : "text-ash hover:bg-ink/5 hover:text-ink",

@@ -18,14 +18,11 @@ export function Contact() {
               </p>
             ))}
             <p className="mt-12 font-sans text-sm leading-relaxed text-ash">
-              <a
-                href={`mailto:${BRAND.email}`}
-                className="text-limestone transition-[color] duration-150 hover:text-vellum"
-              >
+              <a href={`mailto:${BRAND.email}`} className="nav-link text-limestone">
                 {BRAND.email}
               </a>
               <br />
-              {BRAND.origin} · Meetings by appointment
+              {BRAND.origin}, by appointment
             </p>
           </div>
           <div className="lg:col-span-7">

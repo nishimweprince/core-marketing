@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
 import { STUDIO_INDUSTRIES, WHAT_WE_DO, type StudioIndustry } from "@/lib/studio-content";
 import { cn } from "@/lib/utils";
 import { BrandImage } from "@/components/studio/brand-image";
@@ -61,7 +60,10 @@ function Chapter({ industry, flip }: { industry: StudioIndustry; flip: boolean }
         <ul className="mt-10 flex flex-col gap-4">
           {industry.cares.map((item) => (
             <li key={item} className="flex items-baseline gap-3 text-sm leading-relaxed text-ink">
-              <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-juniper" aria-hidden="true" />
+              <span
+                className="mt-1.5 size-1.5 shrink-0 rounded-full bg-juniper"
+                aria-hidden="true"
+              />
               {item}
             </li>
           ))}
@@ -69,10 +71,9 @@ function Chapter({ industry, flip }: { industry: StudioIndustry; flip: boolean }
         <Link
           to="/what-we-do/$slug"
           params={{ slug: industry.id }}
-          className="mt-10 inline-flex min-h-11 items-center gap-2 bg-vellum border border-ink px-5 font-sans text-[13px] font-medium text-ink transition-colors duration-150 hover:bg-ink hover:text-vellum"
+          className="link mt-10 inline-block"
         >
-          Explore {industry.name}
-          <ArrowRight className="size-4" aria-hidden="true" />
+          More on {industry.name.toLowerCase()}
         </Link>
       </div>
     </article>

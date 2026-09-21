@@ -67,6 +67,11 @@
     text-wrap: pretty;
   }
 
+  :focus-visible {
+    outline: 2px solid var(--color-juniper);
+    outline-offset: 2px;
+  }
+
   ::selection {
     background: var(--color-limestone);
     color: var(--color-ink);
@@ -147,6 +152,67 @@
   }
   .rise-5 {
     animation-delay: 480ms;
+  }
+
+  /* Juniper is the interaction colour: the one CTA, hover, focus, and structural marks. */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding-inline: 1.5rem;
+    background: var(--color-juniper);
+    color: var(--color-vellum);
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: background-color 150ms var(--ease-out);
+  }
+
+  .btn-primary:hover {
+    background: color-mix(in oklab, var(--color-juniper) 86%, var(--color-ink));
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.6;
+  }
+
+  .link {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, currentColor 35%, transparent);
+    text-underline-offset: 0.35em;
+    transition:
+      color 150ms var(--ease-out),
+      text-decoration-color 150ms var(--ease-out);
+  }
+
+  .link:hover {
+    color: var(--color-juniper);
+    text-decoration-color: var(--color-juniper);
+  }
+
+  .nav-link {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    transition: color 150ms var(--ease-out);
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current="true"] {
+    color: var(--color-juniper);
+  }
+
+  .kicker-dot {
+    display: inline-block;
+    width: 0.375rem;
+    height: 0.375rem;
+    margin-right: 0.625rem;
+    border-radius: 9999px;
+    background: var(--color-juniper);
+    vertical-align: 0.1em;
   }
 
   /* Editorial type roles (see the brand book, chapter 05). */
@@ -253,7 +319,7 @@
 
   .field:focus {
     outline: none;
-    border-color: var(--color-limestone);
+    border-color: var(--color-juniper);
   }
 
   select.field {

@@ -4,53 +4,59 @@ import { SITE_NAV } from "@/lib/brand";
 import { cn } from "@/lib/utils";
 import { CoreLockup } from "@/components/brand/mark";
 
-export function Header({
-  scrolled,
-  open,
-  onToggle,
-  onJump,
-}: {
+type HeaderProps = {
   scrolled: boolean;
   open: boolean;
   onToggle: () => void;
-  onJump: (id: string) => void;
-}) {
-  const solid = scrolled || open;
+  /** On the home page sections are scrolled to; elsewhere the same items link back to "/#id". */
+  onJump?: (id: string) => void;
+  /** Always draw the ink bar: for pages that open on a light field instead of a photograph. */
+  solid?: boolean;
+};
+
+export function Header({ scrolled, open, onToggle, onJump, solid = false }: HeaderProps) {
+  const filled = solid || scrolled || open;
   return (
     <>
       <header
         className={cn(
-          "fixed top-0 right-0 left-0 z-40 transition-[background-color] duration-300",
-          solid ? "bg-ink/95" : "bg-transparent",
+          "fixed top-0 right-0 left-0 z-40 border-b transition-[background-color,border-color] duration-300",
+          filled ? "border-vellum/8 bg-ink/95" : "border-transparent bg-transparent",
         )}
       >
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 md:h-16 md:px-8">
-          <button
-            type="button"
-            onClick={() => onJump("cover")}
-            className="text-left text-vellum transition-[opacity] duration-150 hover:opacity-80"
-            aria-label="Core Marketing, back to the top"
+          <SectionLink
+            id="cover"
+            onJump={onJump}
+            className="text-vellum"
+            label="Core Marketing, home"
           >
             <CoreLockup size="sm" />
-          </button>
+          </SectionLink>
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Site">
             {SITE_NAV.map((item) => (
-              <button
+              <SectionLink
                 key={item.id}
-                type="button"
-                onClick={() => onJump(item.id)}
-                className="inline-flex min-h-11 items-center px-3 font-sans text-[13px] text-limestone transition-[color] duration-150 hover:text-vellum"
+                id={item.id}
+                onJump={onJump}
+                className="nav-link inline-flex min-h-11 items-center px-3 text-limestone"
               >
                 {item.label}
-              </button>
+              </SectionLink>
             ))}
-            <button
-              type="button"
-              onClick={() => onJump("conversation")}
-              className="ml-3 inline-flex min-h-11 items-center bg-vellum hover:bg-vellum/80 px-4 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
+            <Link
+              to="/book"
+              className="nav-link inline-flex min-h-11 items-center px-3 text-limestone"
+            >
+              The book
+            </Link>
+            <SectionLink
+              id="conversation"
+              onJump={onJump}
+              className="btn-primary ml-3 min-h-11 px-4"
             >
               Start a conversation
-            </button>
+            </SectionLink>
           </nav>
           <button
             type="button"
@@ -65,34 +71,71 @@ export function Header({
       </header>
       {open ? (
         <div className="fixed inset-0 z-30 overflow-y-auto bg-ink px-6 pt-20 pb-12 lg:hidden">
-          <nav className="mt-8 flex flex-col gap-2" aria-label="Site">
+          <nav className="mt-8 flex flex-col" aria-label="Site">
             {SITE_NAV.map((item) => (
-              <button
+              <SectionLink
                 key={item.id}
-                type="button"
-                onClick={() => onJump(item.id)}
-                className="flex min-h-14 items-center text-left font-display text-2xl font-normal text-vellum"
+                id={item.id}
+                onJump={onJump}
+                onNavigate={onToggle}
+                className="flex min-h-14 items-center border-b border-vellum/8 text-left font-display text-2xl font-normal text-vellum"
               >
                 {item.label}
-              </button>
+              </SectionLink>
             ))}
             <Link
               to="/book"
-              className="flex min-h-14 items-center font-display text-2xl font-normal text-vellum"
+              className="flex min-h-14 items-center border-b border-vellum/8 font-display text-2xl font-normal text-vellum"
               onClick={() => onToggle()}
             >
               The book
             </Link>
-            <button
-              type="button"
-              onClick={() => onJump("conversation")}
-              className="mt-8 inline-flex min-h-12 items-center justify-center bg-vellum font-sans text-[13px] font-medium text-ink"
+            <SectionLink
+              id="conversation"
+              onJump={onJump}
+              onNavigate={onToggle}
+              className="btn-primary mt-8"
             >
               Start a conversation
-            </button>
+            </SectionLink>
           </nav>
         </div>
       ) : null}
     </>
+  );
+}
+
+function SectionLink({
+  id,
+  onJump,
+  onNavigate,
+  className,
+  label,
+  children,
+}: {
+  id: string;
+  onJump?: (id: string) => void;
+  onNavigate?: () => void;
+  className?: string;
+  label?: string;
+  children: React.ReactNode;
+}) {
+  if (onJump) {
+    return (
+      <button type="button" onClick={() => onJump(id)} className={className} aria-label={label}>
+        {children}
+      </button>
+    );
+  }
+  return (
+    <Link
+      to="/"
+      hash={id === "cover" ? undefined : id}
+      className={className}
+      aria-label={label}
+      onClick={onNavigate}
+    >
+      {children}
+    </Link>
   );
 }

@@ -2,17 +2,11 @@ import { PARTNERS, type Partner } from "@/lib/studio-content";
 
 export function Partners() {
   return (
-    <section
-      aria-labelledby="partners-title"
-      className="bg-ink py-20 text-vellum md:py-28"
-    >
+    <section aria-labelledby="partners-title" className="bg-ink py-20 text-vellum md:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         <h2 id="partners-title" className="font-display text-xl font-normal md:text-2xl">
           In good company
         </h2>
-        <p className="body-copy-compact mt-3 max-w-md text-limestone">
-          The hotels, fleets, and developments we work alongside. Their marks are on the way.
-        </p>
       </div>
       <div className="marquee mt-12 overflow-hidden">
         <div className="marquee-track flex">

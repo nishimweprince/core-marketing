@@ -1,5 +1,5 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { B as require_jsx_runtime, v as Link, z as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
+import { R as require_react, v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { _ as VOICE_SAMPLES, a as CoreMarkConstruct, c as IMAGE_RULES, d as PRACTICES, f as SECTIONS, g as VOICE_RULES, h as TYPE_ROLES, i as CoreMark, l as KIT_ZIP, m as TRAITS, n as COLORS, o as CoreWordmark, r as CoreLockup, s as DOWNLOADS, t as BRAND, u as MISUSE, v as cn } from "./mark-B04OdnPl.mjs";
 import { a as Download, c as Check, i as Menu, o as Copy, t as X } from "../_libs/lucide-react.mjs";
 import { n as toast, t as Toaster } from "../_libs/sonner.mjs";

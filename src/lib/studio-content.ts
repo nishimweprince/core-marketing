@@ -42,7 +42,7 @@ export const HERO_VIDEO: StudioVideo = {
 export const HERO = {
   kicker: "Kigali · Est. 2025",
   title: "Presence, made inevitable.",
-  deck: "One senior team for the hotels, villas, motor brands, and properties people choose before they arrive.",
+  deck: "One senior team for hotels, motor, and real estate in Kigali.",
   cta: "Start a conversation",
 } as const;
 
@@ -70,8 +70,7 @@ export const WHAT_WE_DO = {
   title: "What we do",
   pull: "Guests, drivers, and buyers meet you on a screen long before they meet you in person.",
   paragraphs: [
-    "By the time someone walks into your lobby, sits behind the wheel, or stands on the plot, they have already decided how they feel about you. That decision was made in a search result, a reel, a friend's message, a listing photo. It was made quietly, and it was made early.",
-    "Core exists for that early moment. We work with a small number of premium hospitality, motor, and property brands in Rwanda and the region, and we hold strategy, digital presence, content, and promotion together as one senior team, so that everything a person sees of you feels like it came from the same considered hand.",
+    "We work with a small number of premium hospitality, motor, and real estate brands in Rwanda, and hold strategy, presence, content, and promotion as one senior team, so everything a person sees of you comes from the same hand.",
   ],
 } as const;
 
@@ -81,13 +80,22 @@ export const STUDIO_INDUSTRIES = [
     name: "Hotels & villas",
     lede: "The stay begins with the first photograph.",
     image: {
-      src: "/brand/villa.jpg",
-      alt: "A villa terrace at night: linen curtains, a single lamp, and the dark garden beyond.",
+      src: pexelsImage("37790193", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/luxury-outdoor-patio-at-modern-safari-lodge-37790193/",
+      alt: "A lodge terrace at the end of the day: thatched roof, timber pergola, loungers in low light.",
       objectPosition: "center",
     },
+    second: {
+      src: pexelsImage("18328707", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/light-of-the-setting-sun-streaming-into-the-lobby-through-the-glass-double-doors-18328707/",
+      alt: "Low sun through the glass doors of a hotel lobby, striping the floor and the timber screens.",
+      objectPosition: "center",
+      caption: "The lobby, an hour before check-in.",
+    },
     paragraphs: [
-      "A guest chooses a hotel or a villa on feeling, then justifies it with facts. We work on the feeling: how the property is described, how it is photographed and filmed, which channels carry it, and what happens in the days between booking and arrival.",
-      "The result is a brand that reads the same on the website, on Instagram, on the booking platforms, and in the welcome note on the pillow. Rates hold better when the story is coherent.",
+      "A guest chooses on feeling, then justifies it with facts. We work on the feeling: how the property is described, photographed, and filmed, which channels carry it, and what happens between booking and arrival.",
     ],
     cares: [
       "Positioning and the language of the property",
@@ -100,13 +108,21 @@ export const STUDIO_INDUSTRIES = [
     name: "Motor",
     lede: "Let the vehicle, and the road around it, lead.",
     image: {
-      src: "/brand/motor.jpg",
-      alt: "A dark saloon in a stone courtyard at night, held by the light of a single doorway.",
+      src: pexelsImage("35870484", 1800),
+      sourcePage: "https://www.pexels.com/photo/safari-vehicle-on-winding-forest-road-35870484/",
+      alt: "A Rwandan-plated Land Cruiser with its roof raised, climbing a forest road in soft light.",
       objectPosition: "center",
     },
+    second: {
+      src: pexelsImage("39386240", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/rural-dirt-road-in-kigali-surrounded-by-walls-39386240/",
+      alt: "A quiet red-earth road winding between brick walls and homes in Kigali.",
+      objectPosition: "center",
+      caption: "Kigali, off the tarmac.",
+    },
     paragraphs: [
-      "Tour operators, premium hire fleets, and dealerships sell a journey, not a spec sheet. We build a presence that gets out of the way of the vehicle: composed imagery, clear offers, and channels that reach the traveller or the buyer at the moment they are planning.",
-      "For operators, that means the itinerary feels as considered as the car. For dealerships, it means the showroom starts online, with the same calm you would expect on the floor.",
+      "Tour operators, hire fleets, and dealerships sell a journey, not a spec sheet. We build a presence that gets out of the vehicle's way: composed imagery, clear offers, and channels that reach the traveller or buyer while they are still planning.",
     ],
     cares: [
       "Brand and offer clarity for fleets and dealerships",
@@ -119,13 +135,21 @@ export const STUDIO_INDUSTRIES = [
     name: "Real estate",
     lede: "Sell the life around the address.",
     image: {
-      src: "/brand/property.jpg",
-      alt: "A stone residence at blue hour, one tall window glowing warm against the evening.",
+      src: pexelsImage("31737860", 1800),
+      sourcePage: "https://www.pexels.com/photo/modern-luxury-house-at-night-with-lights-31737860/",
+      alt: "A modern stone-and-timber house at blue hour, warm light through the glass, a wet forecourt.",
+      objectPosition: "center 55%",
+    },
+    second: {
+      src: pexelsImage("34662920", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/cozy-armchair-and-lamp-in-warm-sunset-light-34662920/",
+      alt: "A brass reading lamp over an armchair by a window, the city going soft in the dusk outside.",
       objectPosition: "center",
+      caption: "What a buyer is actually buying.",
     },
     paragraphs: [
-      "A development or a private residence is bought on a picture of a life. We help developers, private offices, and distinctive properties communicate more than square metres and finishes: a point of view a buyer can see themselves inside.",
-      "That begins with a narrative for the address, continues through the launch, and holds across sales cycles and seasons, so the property is still recognisable two years on.",
+      "A development or a residence is bought on a picture of a life. We help developers, private offices, and distinctive properties say more than square metres and finishes: a point of view a buyer can see themselves inside, held from launch through every sales cycle.",
     ],
     cares: [
       "Narrative and naming for developments and residences",
@@ -274,7 +298,7 @@ export const STUDIO_PRACTICES = [
 export const PLANS = {
   title: "Plans",
   intro:
-    "Three plans, named for the three volcanoes on our northern horizon. Each is senior-led and shaped around where your brand is now and how far it needs to go. We discuss fees after the first conversation, once we understand the work.",
+    "Three plans, named for the volcanoes on our northern horizon. Fees are discussed after the first conversation, once we understand the work.",
 } as const;
 
 export const STUDIO_PLANS = [
@@ -282,6 +306,12 @@ export const STUDIO_PLANS = [
     id: "sabyinyo",
     name: "Sabyinyo",
     altitude: 3669,
+    image: {
+      src: pexelsImage("33439499", 1800),
+      sourcePage: "https://www.pexels.com/photo/scenic-view-of-mount-bisoke-in-rwanda-33439499/",
+      alt: "A jagged volcanic crown in the Virunga range above a concrete track through green scrub.",
+      objectPosition: "center 40%",
+    },
     means: "A clear beginning",
     featured: false,
     for: "For brands establishing or sharpening their public presence.",
@@ -315,6 +345,13 @@ export const STUDIO_PLANS = [
     id: "muhabura",
     name: "Muhabura",
     altitude: 4127,
+    image: {
+      src: pexelsImage("19755751", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/landscape-with-a-mountain-lake-and-clouds-19755751/",
+      alt: "A volcano's cone under cloud, seen across the still water and green headlands of Lake Burera.",
+      objectPosition: "center 35%",
+    },
     means: "Build the evidence",
     featured: false,
     for: "For brands with a direction that need consistent content and momentum.",
@@ -348,6 +385,13 @@ export const STUDIO_PLANS = [
     id: "karisimbi",
     name: "Karisimbi",
     altitude: 4507,
+    image: {
+      src: pexelsImage("34784514", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/beautiful-landscape-with-tree-and-mount-karisimbi-in-rwanda-34784514/",
+      alt: "A lone tree over terraced fields, a volcano rising into cloud behind it.",
+      objectPosition: "center 45%",
+    },
     means: "Full partnership",
     featured: true,
     for: "For brands ready to hold a complete, always-on marketing system.",
@@ -381,22 +425,18 @@ export const STUDIO_PLANS = [
 
 export type StudioPlan = (typeof STUDIO_PLANS)[number];
 
-export const PROJECT_CTA = {
-  title: "Have a project in mind?",
-  body: "A launch, a reset, a season that matters. Tell us what you are trying to change and what a strong result would look like a year from now. We reply to every note with a clear next step.",
-  cta: "Start a conversation",
-  image: {
-    src: "/brand/reception.jpg",
-    alt: "A hotel lobby at dusk: walnut, limestone, one lamp, an empty chair.",
-    objectPosition: "center",
-  },
-} as const;
+export const PLANS_BAND_IMAGE: StudioImage = {
+  src: pexelsImage("33596470", 1800),
+  sourcePage:
+    "https://www.pexels.com/photo/sacks-of-potatoes-in-kinigi-with-mountain-view-33596470/",
+  alt: "Sacks of potatoes stacked in a Kinigi field, the Virunga ridge dark against the evening cloud.",
+  objectPosition: "center 60%",
+};
 
 export const CONTACT = {
   title: "Start a conversation",
   paragraphs: [
-    "Tell us about the brand, what you are trying to change, launch, or grow, and what a strong result would look like a year from now.",
-    "We reply to every note with a clear next step. If Core is not the right fit, we will say so and, where we can, point you somewhere that is.",
+    "Tell us about the brand and what a strong result would look like a year from now. We reply to every note with a clear next step, and we say so if Core is not the right fit.",
   ],
 } as const;
 
@@ -443,27 +483,17 @@ export const STUDIO_QUESTIONS = [
   {
     id: "holds",
     q: "What can Core help us with?",
-    a: "Strategy, digital presence, content, and promotion. One senior team holds all four, so your brand feels consistent wherever people meet it.",
+    a: "Strategy, digital presence, content, and promotion, held by one senior team so your brand reads the same wherever people meet it.",
   },
   {
     id: "retainers",
     q: "How do Sabyinyo, Muhabura, and Karisimbi differ?",
-    a: "Sabyinyo covers social management, four videos, graphics, and Meta and TikTok promotion. Muhabura doubles the content and adds Google presence and wider ad campaigns. Karisimbi adds web, SEO and answer engine optimization, and custom application development.",
+    a: "Sabyinyo covers social management, four videos, graphics, and Meta and TikTok promotion. Muhabura doubles the content and adds Google presence and wider campaigns. Karisimbi adds web, SEO and answer engine optimization, and custom application development.",
   },
   {
     id: "fees",
     q: "How much does an engagement cost?",
-    a: "Fees depend on the scope, team, and pace the work needs. We discuss them after the first conversation, once we understand what a strong result requires.",
-  },
-  {
-    id: "term",
-    q: "How long do you work with clients?",
-    a: "For as long as the work needs. Each engagement is scoped around your goals and given the time to become clear, consistent, and useful. There are no fixed terms and no countdowns.",
-  },
-  {
-    id: "fit",
-    q: "Who is a good fit?",
-    a: "Premium hotels, villas, automotive brands, and properties that value considered work and a close senior relationship. We take on fewer partners so we can stay involved.",
+    a: "Fees depend on scope, team, and pace. We discuss them after the first conversation, once we understand what a strong result requires.",
   },
   {
     id: "where",

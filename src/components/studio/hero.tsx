@@ -62,14 +62,17 @@ export function Hero({ onJump }: { onJump: (id: string) => void }) {
 
       <div className="relative flex min-h-dvh flex-col justify-end px-6 pt-32 pb-14 md:px-12 md:pb-20 lg:px-16">
         <div className="mx-auto w-full max-w-7xl">
-          <p className="rise label text-vellum/85">{HERO.kicker}</p>
+          <p className="rise label text-vellum/85">
+            <span className="kicker-dot" aria-hidden="true" />
+            {HERO.kicker}
+          </p>
           <h1 className="rise rise-2 display mt-5 max-w-[11ch] text-vellum">{HERO.title}</h1>
           <div className="mt-8 flex flex-col gap-8 md:mt-10 md:flex-row md:items-end md:justify-between">
             <p className="rise rise-3 editorial max-w-md text-limestone">{HERO.deck}</p>
             <button
               type="button"
               onClick={() => onJump("conversation")}
-              className="rise rise-4 inline-flex min-h-12 w-fit items-center bg-vellum hover:bg-vellum/80 px-6 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
+              className="btn-primary rise rise-4 w-fit"
             >
               {HERO.cta}
             </button>

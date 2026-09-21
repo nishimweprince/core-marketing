@@ -20,9 +20,12 @@ export function Inquiry() {
     }
 
     const subject = `New conversation: ${name}`;
-    const body = [`Name: ${name}`, `Email: ${email}`, "", note || "No additional context provided."].join(
-      "\n",
-    );
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      "",
+      note || "No additional context provided.",
+    ].join("\n");
 
     const href = `mailto:${BRAND.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setBusy(true);
@@ -42,10 +45,7 @@ export function Inquiry() {
           If your mail app did not open, email us directly at {BRAND.email}. We read every note and
           reply when the fit is clear.
         </p>
-        <a
-          href={`mailto:${BRAND.email}`}
-          className="mt-8 inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
-        >
+        <a href={`mailto:${BRAND.email}`} className="btn-primary mt-8">
           {BRAND.email}
         </a>
       </div>
@@ -86,11 +86,7 @@ export function Inquiry() {
         />
       </label>
       <div>
-        <button
-          type="submit"
-          disabled={busy}
-          className="inline-flex min-h-11 items-center bg-vellum px-6 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90 disabled:opacity-60"
-        >
+        <button type="submit" disabled={busy} className="btn-primary">
           {busy ? "Opening your email…" : "Start a conversation"}
         </button>
       </div>

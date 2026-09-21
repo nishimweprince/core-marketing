@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
-import { BRAND } from "@/lib/brand";
-import { STUDIO_PLANS, type StudioPlan } from "@/lib/studio-content";
+import { ChevronDown } from "lucide-react";
+import { PLANS_BAND_IMAGE, STUDIO_PLANS, type StudioPlan } from "@/lib/studio-content";
 import { cn } from "@/lib/utils";
-import { CoreLockup } from "@/components/brand/mark";
-import { Footer } from "@/components/studio/footer";
-import { useHomeJump } from "@/lib/home-nav";
+import { SiteFrame } from "@/components/studio/frame";
+import { BrandImage } from "@/components/studio/brand-image";
 
 export const Route = createFileRoute("/plans/$planId")({
   component: PlanPage,
@@ -31,7 +29,6 @@ const SECTIONS = [
 
 function PlanPage() {
   const { planId } = Route.useParams();
-  const jumpHome = useHomeJump();
   const plan = STUDIO_PLANS.find((p) => p.id === planId);
   const [active, setActive] = useState<string>("inside");
 
@@ -59,59 +56,52 @@ function PlanPage() {
 
   if (!plan) {
     return (
-      <div className="flex min-h-dvh flex-col items-center justify-center gap-6 bg-ink px-6 text-center text-vellum">
-        <p className="font-display text-3xl font-light">There is no plan by that name.</p>
-        <Link
-          to="/"
-          hash="plans"
-          className="inline-flex min-h-11 items-center bg-vellum px-5 font-sans text-[13px] font-medium text-ink"
-        >
-          Back to plans
-        </Link>
-      </div>
+      <SiteFrame solid>
+        <div className="flex min-h-[60dvh] flex-col items-start justify-center gap-6 px-6 md:px-12 lg:px-16">
+          <p className="font-display text-3xl font-light">There is no plan by that name.</p>
+          <Link to="/" hash="plans" className="btn-primary">
+            See the plans
+          </Link>
+        </div>
+      </SiteFrame>
     );
   }
 
   const others = STUDIO_PLANS.filter((p) => p.id !== plan.id);
-  const subject = encodeURIComponent(`Talk about ${plan.name} with Core`);
 
   return (
-    <div className="min-h-dvh bg-ink text-vellum">
-      <header className="absolute top-0 right-0 left-0 z-10">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-12 lg:px-16">
-          <Link to="/" aria-label="Core Marketing, back to the site">
-            <CoreLockup size="sm" />
+    <SiteFrame>
+      <section className="relative isolate overflow-hidden bg-ink">
+        <BrandImage
+          src={plan.image.src}
+          alt={plan.image.alt}
+          objectPosition={plan.image.objectPosition}
+          frameClassName="absolute inset-0 rounded-none"
+          imageClassName="hero-media"
+          priority
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/15 via-35% to-ink/90"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto flex min-h-[82dvh] w-full max-w-7xl flex-col justify-end px-6 pt-32 pb-14 md:px-12 md:pb-20 lg:px-16">
+          <Link to="/" hash="plans" className="link w-fit text-vellum/85">
+            All plans
           </Link>
-          <a
-            href={`mailto:${BRAND.email}?subject=${subject}`}
-            className="inline-flex min-h-11 items-center bg-vellum px-4 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
-          >
-            Start a conversation
-          </a>
-        </div>
-      </header>
-
-      <section className="px-6 pt-32 pb-16 md:px-12 md:pt-40 md:pb-20 lg:px-16">
-        <div className="mx-auto max-w-7xl">
-          <Link
-            to="/"
-            hash="plans"
-            className="inline-flex w-fit items-center gap-2 font-sans text-[13px] text-vellum/85 transition-[color] duration-150 hover:text-vellum"
-          >
-            <ArrowLeft className="size-4" aria-hidden="true" />
-            Plans
-          </Link>
-          <p className="mt-10 font-sans text-xs text-limestone tabular-nums">
+          <p className="mt-10 font-sans text-xs text-juniper tabular-nums">
             {plan.altitude.toLocaleString("en-GB")} m
           </p>
-          <h1 className="display mt-4 text-vellum">{plan.name}</h1>
+          <h1 className="display mt-3 text-vellum">{plan.name}</h1>
           <p className="mt-6 max-w-md font-display text-xl font-normal text-limestone md:text-2xl">
             {plan.means}. {plan.for}
           </p>
         </div>
       </section>
 
-      <nav aria-label="On this page" className="sticky top-0 z-10 bg-ink/95 backdrop-blur-sm">
+      <nav
+        aria-label="On this page"
+        className="sticky top-14 z-10 border-b border-vellum/8 bg-ink/95 backdrop-blur-sm md:top-16"
+      >
         <div className="mx-auto flex max-w-7xl items-center gap-8 overflow-x-auto px-6 md:px-12 lg:px-16">
           {SECTIONS.map((s) => (
             <a
@@ -119,8 +109,8 @@ function PlanPage() {
               href={`#plan-${s.id}`}
               aria-current={active === s.id ? "true" : undefined}
               className={cn(
-                "inline-flex min-h-14 shrink-0 items-center font-sans text-[13px] transition-[color] duration-150",
-                active === s.id ? "text-vellum" : "text-ash hover:text-limestone",
+                "nav-link inline-flex min-h-14 shrink-0 items-center",
+                active === s.id ? "text-juniper" : "text-ash",
               )}
             >
               {s.label}
@@ -131,7 +121,7 @@ function PlanPage() {
 
       <section
         id="plan-inside"
-        className="scroll-mt-20 bg-vellum px-6 py-28 text-ink md:px-12 md:py-40 lg:px-16"
+        className="scroll-mt-32 bg-vellum px-6 py-28 text-ink md:px-12 md:py-40 lg:px-16"
       >
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
           <h2 className="headline lg:col-span-5">What {plan.name} holds</h2>
@@ -163,67 +153,65 @@ function PlanPage() {
 
       <section
         id="plan-who"
-        className="scroll-mt-20 bg-vellum px-6 pb-28 text-ink md:px-12 md:pb-40 lg:px-16"
+        className="relative isolate scroll-mt-32 overflow-hidden bg-ink text-vellum"
       >
-        <div className="mx-auto max-w-7xl">
+        <BrandImage
+          src={PLANS_BAND_IMAGE.src}
+          alt={PLANS_BAND_IMAGE.alt}
+          objectPosition={PLANS_BAND_IMAGE.objectPosition}
+          frameClassName="absolute inset-0 rounded-none"
+          imageClassName="hero-media"
+        />
+        <div className="absolute inset-0 bg-ink/80" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-6 py-28 md:px-12 md:py-40 lg:px-16">
           <h2 className="headline max-w-xl">Businesses on {plan.name}</h2>
-          <p className="editorial mt-8 text-ash">
-            The same package, in different hands. If you recognise your business here, the plan
-            already fits.
-          </p>
-          <ul className="mt-16 grid gap-6 md:grid-cols-2">
+          <dl className="mt-16 grid gap-x-12 md:grid-cols-2">
             {plan.suitedFor.map((entry) => (
-              <li key={entry.business} className="rounded-md bg-ink/[0.04] p-8 md:p-10">
-                <p className="font-display text-2xl font-normal">{entry.business}</p>
-                <p className="body-copy-compact mt-4 text-ash">{entry.why}</p>
-              </li>
+              <div key={entry.business} className="border-t border-vellum/15 py-6">
+                <dt className="font-display text-2xl font-normal">{entry.business}</dt>
+                <dd className="body-copy-compact mt-2 max-w-md text-limestone">{entry.why}</dd>
+              </div>
             ))}
-          </ul>
+          </dl>
         </div>
       </section>
 
       <section
         id="plan-others"
-        className="scroll-mt-20 bg-ink px-6 py-28 text-vellum md:px-12 md:py-40 lg:px-16"
+        className="scroll-mt-32 bg-ink px-6 py-28 text-vellum md:px-12 md:py-40 lg:px-16"
       >
-        <div className="mx-auto max-w-7xl">
-          <h2 className="headline max-w-xl">A different altitude</h2>
-          <ul className="mt-16 grid gap-6 md:grid-cols-2">
-            {others.map((other) => (
-              <li key={other.id} className="plan-card rounded-lg bg-night p-8 md:p-10">
-                <p className="font-sans text-xs text-limestone tabular-nums">
-                  {other.altitude.toLocaleString("en-GB")} m
-                </p>
-                <p className="mt-6 font-display text-3xl font-light">{other.name}</p>
-                <p className="body-copy-compact mt-4 text-limestone">{other.for}</p>
-                <Link
-                  to="/plans/$planId"
-                  params={{ planId: other.id }}
-                  className="mt-8 inline-flex hover:underline underline-offset-4 min-h-11 items-center gap-2 font-sans text-[13px] font-medium text-vellum transition-[opacity] duration-150 hover:opacity-70"
-                >
-                  See what {other.name} holds
-                  <ArrowRight className="size-4" aria-hidden="true" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-24 flex flex-wrap items-center justify-between gap-6">
-            <p className="max-w-md font-display text-2xl font-normal">
-              Know your altitude? Tell us where you want to go.
-            </p>
-            <a
-              href={`mailto:${BRAND.email}?subject=${subject}`}
-              className="inline-flex min-h-12 items-center gap-2 bg-vellum px-6 font-sans text-[13px] font-medium text-ink transition-[opacity] duration-150 hover:opacity-90"
-            >
-              Talk about {plan.name}
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+          <h2 className="headline lg:col-span-5">A different altitude</h2>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <ul>
+              {others.map((other) => (
+                <li key={other.id} className="border-t border-vellum/12 py-6 last:border-b">
+                  <p className="font-sans text-xs font-medium text-juniper tabular-nums">
+                    {other.altitude.toLocaleString("en-GB")} m
+                  </p>
+                  <Link
+                    to="/plans/$planId"
+                    params={{ planId: other.id }}
+                    className="mt-1 inline-block font-display text-3xl font-light transition-[color] duration-150 hover:text-juniper"
+                  >
+                    {other.name}
+                  </Link>
+                  <p className="body-copy-compact mt-2 max-w-md text-limestone">{other.for}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-16 flex flex-wrap items-center gap-6">
+              <Link to="/" hash="conversation" className="btn-primary">
+                Start a conversation
+              </Link>
+              <p className="body-copy-compact max-w-xs text-limestone">
+                Mention {plan.name}, or tell us where you are and we will suggest one.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
-      <Footer onJump={jumpHome} />
-    </div>
+    </SiteFrame>
   );
 }
 

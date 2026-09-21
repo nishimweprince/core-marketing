@@ -1,5 +1,5 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { B as require_jsx_runtime, z as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
+import { R as require_react, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { v as cn } from "./mark-B04OdnPl.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/brand-image-B23lfHks.js
 var import_react = /* @__PURE__ */ __toESM(require_react());

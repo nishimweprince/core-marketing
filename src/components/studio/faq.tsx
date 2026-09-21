@@ -29,14 +29,10 @@ export function Faq() {
             <h2 id="faq-title" className="headline">
               Questions, answered
             </h2>
-            <p className="editorial mt-8 text-ash">
-              The things people usually ask before the first conversation. Anything else, bring it
-              to the call.
-            </p>
           </div>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col">
             {STUDIO_QUESTIONS.map((item) => {
               const expanded = open === item.id;
               return (
@@ -46,7 +42,7 @@ export function Faq() {
                     if (el) items.current.set(item.id, el);
                     else items.current.delete(item.id);
                   }}
-                  className="rounded-md bg-ink/[0.04] px-6 py-2 md:px-8"
+                  className="border-t border-ink/10 py-2 last:border-b"
                 >
                   <button
                     type="button"
@@ -58,7 +54,7 @@ export function Faq() {
                     <span className="font-display text-xl font-normal md:text-2xl">{item.q}</span>
                     <span
                       className={cn(
-                        "flex size-9 shrink-0 items-center justify-center rounded-full bg-ink text-vellum motion-safe:transition-transform motion-safe:duration-300",
+                        "flex size-9 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink motion-safe:transition-transform motion-safe:duration-300",
                         expanded ? "rotate-45" : undefined,
                       )}
                       aria-hidden="true"

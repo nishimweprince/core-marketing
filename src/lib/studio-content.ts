@@ -1,6 +1,6 @@
 export type StudioImage = {
   src: string;
-  sourcePage: string;
+  sourcePage?: string;
   alt: string;
   objectPosition: string;
 };
@@ -14,6 +14,128 @@ export const HERO_IMAGE: StudioImage = {
   alt: "An aerial view over Kigali's modern skyline, rooftops and green ridges under a bright sky.",
   objectPosition: "center",
 };
+
+export type StudioVideo = {
+  /** Default (720p) rendition. */
+  src: string;
+  /** Larger rendition, used on wide viewports and fast connections. */
+  srcLarge: string;
+  poster: StudioImage;
+  sourcePage: string;
+};
+
+// Pexels Video, hotlinked from the Pexels CDN. Move the files to /public/video and point
+// these at "/video/hero-720.mp4" if self-hosting is preferred later.
+export const HERO_VIDEO: StudioVideo = {
+  src: "https://videos.pexels.com/video-files/35145696/14888603_1280_720_24fps.mp4",
+  srcLarge: "https://videos.pexels.com/video-files/35145696/14888604_1920_1080_24fps.mp4",
+  poster: {
+    src: "https://images.pexels.com/videos/35145696/4k-drone-abandoned-building-above-city-court-of-law-35145696.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    sourcePage:
+      "https://www.pexels.com/video/aerial-view-of-kigali-cityscape-at-twilight-35145696/",
+    alt: "Kigali's city centre from the air at twilight, towers lit against the hills.",
+    objectPosition: "center",
+  },
+  sourcePage: "https://www.pexels.com/video/aerial-view-of-kigali-cityscape-at-twilight-35145696/",
+};
+
+export const HERO = {
+  kicker: "Kigali · Est. 2025",
+  title: "Presence, made inevitable.",
+  deck: "One senior team for the hotels, villas, motor brands, and properties people choose before they arrive.",
+  cta: "Start a conversation",
+} as const;
+
+export type Partner = {
+  id: string;
+  name: string;
+  /** Path or URL to a logo. Until one is set the carousel shows a placeholder slot. */
+  logo?: string;
+};
+
+export const PARTNERS: Partner[] = [
+  { id: "partner-1", name: "Partner one" },
+  { id: "partner-2", name: "Partner two" },
+  { id: "partner-3", name: "Partner three" },
+  { id: "partner-4", name: "Partner four" },
+  { id: "partner-5", name: "Partner five" },
+  { id: "partner-6", name: "Partner six" },
+  { id: "partner-7", name: "Partner seven" },
+  { id: "partner-8", name: "Partner eight" },
+  { id: "partner-9", name: "Partner nine" },
+  { id: "partner-10", name: "Partner ten" },
+];
+
+export const WHAT_WE_DO = {
+  title: "What we do",
+  pull: "Guests, drivers, and buyers meet you on a screen long before they meet you in person.",
+  paragraphs: [
+    "By the time someone walks into your lobby, sits behind the wheel, or stands on the plot, they have already decided how they feel about you. That decision was made in a search result, a reel, a friend's message, a listing photo. It was made quietly, and it was made early.",
+    "Core exists for that early moment. We work with a small number of premium hospitality, motor, and property brands in Rwanda and the region, and we hold strategy, digital presence, content, and promotion together as one senior team, so that everything a person sees of you feels like it came from the same considered hand.",
+  ],
+} as const;
+
+export const STUDIO_INDUSTRIES = [
+  {
+    id: "hotels",
+    name: "Hotels & villas",
+    lede: "The stay begins with the first photograph.",
+    image: {
+      src: "/brand/villa.jpg",
+      alt: "A villa terrace at night: linen curtains, a single lamp, and the dark garden beyond.",
+      objectPosition: "center",
+    },
+    paragraphs: [
+      "A guest chooses a hotel or a villa on feeling, then justifies it with facts. We work on the feeling: how the property is described, how it is photographed and filmed, which channels carry it, and what happens in the days between booking and arrival.",
+      "The result is a brand that reads the same on the website, on Instagram, on the booking platforms, and in the welcome note on the pillow. Rates hold better when the story is coherent.",
+    ],
+    cares: [
+      "Positioning and the language of the property",
+      "Direction for film, stills, and social content",
+      "Website, booking presence, and guest communication",
+    ],
+  },
+  {
+    id: "motor",
+    name: "Motor",
+    lede: "Let the vehicle, and the road around it, lead.",
+    image: {
+      src: "/brand/motor.jpg",
+      alt: "A dark saloon in a stone courtyard at night, held by the light of a single doorway.",
+      objectPosition: "center",
+    },
+    paragraphs: [
+      "Tour operators, premium hire fleets, and dealerships sell a journey, not a spec sheet. We build a presence that gets out of the way of the vehicle: composed imagery, clear offers, and channels that reach the traveller or the buyer at the moment they are planning.",
+      "For operators, that means the itinerary feels as considered as the car. For dealerships, it means the showroom starts online, with the same calm you would expect on the floor.",
+    ],
+    cares: [
+      "Brand and offer clarity for fleets and dealerships",
+      "Vehicle and journey photography and film",
+      "Launch, seasonal, and always-on promotion",
+    ],
+  },
+  {
+    id: "property",
+    name: "Real estate",
+    lede: "Sell the life around the address.",
+    image: {
+      src: "/brand/property.jpg",
+      alt: "A stone residence at blue hour, one tall window glowing warm against the evening.",
+      objectPosition: "center",
+    },
+    paragraphs: [
+      "A development or a private residence is bought on a picture of a life. We help developers, private offices, and distinctive properties communicate more than square metres and finishes: a point of view a buyer can see themselves inside.",
+      "That begins with a narrative for the address, continues through the launch, and holds across sales cycles and seasons, so the property is still recognisable two years on.",
+    ],
+    cares: [
+      "Narrative and naming for developments and residences",
+      "Launch campaigns and sales collateral",
+      "Long-run presence across listings, social, and press",
+    ],
+  },
+] as const;
+
+export type StudioIndustry = (typeof STUDIO_INDUSTRIES)[number];
 
 export const STUDIO_ROOMS = [
   {
@@ -49,8 +171,7 @@ export const STUDIO_ROOMS = [
     name: "Places worth choosing",
     image: {
       src: pexelsImage("39128396"),
-      sourcePage:
-        "https://www.pexels.com/photo/scenic-view-of-kigali-s-urban-landscape-39128396/",
+      sourcePage: "https://www.pexels.com/photo/scenic-view-of-kigali-s-urban-landscape-39128396/",
       alt: "Kigali homes and rooftops among greenery, glowing in warm evening light.",
       objectPosition: "center",
     },
@@ -109,7 +230,7 @@ export const HOUSE_IMAGE: StudioImage = {
 };
 
 export const STUDIO_MEASURES = [
-  { figure: "2018", caption: "Working with ambitious brands since." },
+  { figure: "2025", caption: "Working with ambitious brands since." },
   { figure: "Kigali", caption: "Based here. Working wherever the fit is right." },
   { figure: "IV", caption: "Four disciplines, led as one." },
   { figure: "One", caption: "Senior team, from first conversation to final detail." },
@@ -150,50 +271,134 @@ export const STUDIO_PRACTICES = [
   },
 ] as const;
 
-export const STUDIO_RETAINERS = [
+export const PLANS = {
+  title: "Plans",
+  intro:
+    "Three plans, named for the three volcanoes on our northern horizon. Each is senior-led and shaped around where your brand is now and how far it needs to go. We discuss fees after the first conversation, once we understand the work.",
+} as const;
+
+export const STUDIO_PLANS = [
   {
-    id: "prima",
-    latin: "Prima",
+    id: "sabyinyo",
+    name: "Sabyinyo",
+    altitude: 3669,
     means: "A clear beginning",
-    term: "Three months",
     featured: false,
     for: "For brands establishing or sharpening their public presence.",
     includes: [
-      "Positioning and narrative",
-      "Channel strategy and a sustainable content cadence",
-      "A monthly senior working session",
+      "Social media management",
+      "Content creation (four videos)",
+      "Four graphics or carousels",
+      "Social media marketing (Meta and TikTok)",
     ],
     typical: "A focused foundation for a launch, reset, or first serious marketing system.",
+    suitedFor: [
+      {
+        business: "Boutique hotels",
+        why: "A steady social presence between seasons, without hiring a team in-house.",
+      },
+      {
+        business: "Private villas",
+        why: "Four videos and a month of graphics that keep the house visible while you host.",
+      },
+      {
+        business: "Tour & hire operators",
+        why: "Vehicles on the feed every week, with offers that read clearly at a glance.",
+      },
+      {
+        business: "Real estate listings",
+        why: "New listings introduced properly, then kept warm until the right buyer appears.",
+      },
+    ],
   },
   {
-    id: "altera",
-    latin: "Altera",
+    id: "muhabura",
+    name: "Muhabura",
+    altitude: 4127,
     means: "Build the evidence",
-    term: "Six months",
     featured: false,
     for: "For brands with a direction that need consistent content and momentum.",
     includes: [
-      "Everything in Prima",
-      "Creative direction for film, stills, and language",
-      "Two priority channels managed with intent",
+      "Everything in Sabyinyo",
+      "Content creation (eight videos)",
+      "Google Business Profile (setup & optimization)",
+      "Ad campaigns (Google, Meta, TikTok, and more)",
     ],
     typical: "A sustained partnership for brands ready to turn their direction into visible proof.",
+    suitedFor: [
+      {
+        business: "Established hotels",
+        why: "Double the content plus campaigns that fill the shoulder seasons.",
+      },
+      {
+        business: "Motor dealerships",
+        why: "Showroom stories plus the Google presence buyers check before visiting.",
+      },
+      {
+        business: "Real estate developments",
+        why: "A launch rhythm across Google, Meta, and TikTok that compounds over months.",
+      },
+      {
+        business: "Villa collections",
+        why: "Several houses, one voice, and campaigns that keep occupancy steady.",
+      },
+    ],
   },
   {
-    id: "summa",
-    latin: "Summa",
+    id: "karisimbi",
+    name: "Karisimbi",
+    altitude: 4507,
     means: "Full partnership",
-    term: "Twelve months",
     featured: true,
     for: "For brands ready to hold a complete, always-on marketing system.",
     includes: [
-      "Everything in Altera",
-      "Campaign and paid-promotion strategy",
-      "Launch and always-on planning",
+      "Everything in Muhabura",
+      "Web development & design",
+      "SEO & answer engine optimization (AEO)",
+      "Custom application development",
     ],
     typical: "The complete Core partnership for brands building long-term recognition and growth.",
+    suitedFor: [
+      {
+        business: "Hotel groups",
+        why: "A website, search presence, and campaigns for the whole collection, held as one.",
+      },
+      {
+        business: "Regional motor brands",
+        why: "Web, SEO, and always-on demand across several markets at once.",
+      },
+      {
+        business: "Major developments",
+        why: "From the address narrative to the website to a custom sales tool.",
+      },
+      {
+        business: "Real estate portfolios",
+        why: "Every listing discoverable by search and by answer engines, for years.",
+      },
+    ],
   },
 ] as const;
+
+export type StudioPlan = (typeof STUDIO_PLANS)[number];
+
+export const PROJECT_CTA = {
+  title: "Have a project in mind?",
+  body: "A launch, a reset, a season that matters. Tell us what you are trying to change and what a strong result would look like a year from now. We reply to every note with a clear next step.",
+  cta: "Start a conversation",
+  image: {
+    src: "/brand/reception.jpg",
+    alt: "A hotel lobby at dusk: walnut, limestone, one lamp, an empty chair.",
+    objectPosition: "center",
+  },
+} as const;
+
+export const CONTACT = {
+  title: "Start a conversation",
+  paragraphs: [
+    "Tell us about the brand, what you are trying to change, launch, or grow, and what a strong result would look like a year from now.",
+    "We reply to every note with a clear next step. If Core is not the right fit, we will say so and, where we can, point you somewhere that is.",
+  ],
+} as const;
 
 export const STUDIO_STEPS = [
   {
@@ -242,8 +447,8 @@ export const STUDIO_QUESTIONS = [
   },
   {
     id: "retainers",
-    q: "How do Prima, Altera, and Summa differ?",
-    a: "Prima builds the strategic foundation. Altera adds ongoing content and channel direction. Summa is the full, always-on partnership, including promotion.",
+    q: "How do Sabyinyo, Muhabura, and Karisimbi differ?",
+    a: "Sabyinyo covers social management, four videos, graphics, and Meta and TikTok promotion. Muhabura doubles the content and adds Google presence and wider ad campaigns. Karisimbi adds web, SEO and answer engine optimization, and custom application development.",
   },
   {
     id: "fees",
@@ -253,7 +458,7 @@ export const STUDIO_QUESTIONS = [
   {
     id: "term",
     q: "How long do you work with clients?",
-    a: "Prima runs for three months, Altera for six, and Summa for twelve. Each term gives the work enough time to become clear, consistent, and useful.",
+    a: "For as long as the work needs. Each engagement is scoped around your goals and given the time to become clear, consistent, and useful. There are no fixed terms and no countdowns.",
   },
   {
     id: "fit",

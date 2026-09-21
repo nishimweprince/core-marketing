@@ -128,4 +128,4 @@ L->0:  (0,0) (+1,0) (-2,0) (+1,-2) (-2,+1)
 - Tetris Guideline (official standard): https://tetris.wiki/Tetris_Guideline
 - "Tetris" implementation guide (javidx9 / general): https://tetris.wiki/Tetris_(NES,_Nintendo)
 - Wikipedia — Flood fill (BFS/DFS): https://en.wikipedia.org/wiki/Flood_fill
-- Bejeweled/Candy Crush match-3 algorithm write-ups (match detection + cascade): https://www.emanueleferonato.com/2018/07/13/build-a-html5-match-3-game-using-phaser/
+- Bejeweled/Candy Crush match-3 algorithm write-ups (match detection + cascade): https://www.emanueleferonato.com/2025/07/13/build-a-html5-match-3-game-using-phaser/

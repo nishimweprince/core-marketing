@@ -458,11 +458,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_1Tf6MB = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy__QmszB = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_1Tf6MB
+		handler: _lazy__QmszB
 	};
 	return ((_m, p) => {
 		return {

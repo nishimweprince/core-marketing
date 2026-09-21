@@ -3,10 +3,10 @@ export const BRAND = {
   short: "CORE",
   discipline: "MARKETING",
   tagline: "The architecture of attention.",
-  year: "2018",
+  year: "2025",
   origin: "Kigali",
-  email: "studio@core.marketing",
-  web: "core.marketing",
+  email: "studio@coremarketing.rw",
+  web: "coremarketing.rw",
   bookTitle: "The Brand Book",
   edition: "Volume 01",
 } as const;
@@ -307,10 +307,10 @@ export const KIT_ZIP = {
 } as const;
 
 export const SITE_NAV = [
-  { id: "rooms", label: "Rooms" },
-  { id: "work", label: "Work" },
-  { id: "retainers", label: "Retainers" },
-  { id: "house", label: "The house" },
+  { id: "what-we-do", label: "What we do" },
+  { id: "plans", label: "Plans" },
+  { id: "faq", label: "FAQ" },
+  { id: "conversation", label: "Contact" },
 ] as const;
 
 export const ROOMS = [
@@ -410,12 +410,12 @@ export const STEPS = [
   {
     roman: "IV",
     name: "The evidence",
-    body: "Film, stills, and language. If it would not survive a quiet room, it does not ship. Promotion, when the retainer is Summa, follows.",
+    body: "Film, stills, and language. If it would not survive a quiet room, it does not ship. Promotion, when the plan is Karisimbi, follows.",
   },
 ] as const;
 
 export const MEASURES = [
-  { figure: "2018", caption: "The house opened." },
+  { figure: "2025", caption: "The house opened." },
   { figure: "Kigali", caption: "The city. Work travels." },
   { figure: "IV", caption: "Practices, never sold apart." },
   { figure: "One", caption: "Architecture. Not a menu of trades." },
@@ -490,7 +490,7 @@ export const QUESTIONS = [
     num: "06",
     id: "where",
     q: "Where is the house?",
-    a: "Kigali. Working wherever the work is serious. Correspondence is by appointment: studio@core.marketing.",
+    a: "Kigali. Working wherever the work is serious. Correspondence is by appointment: studio@coremarketing.rw.",
   },
 ] as const;
 

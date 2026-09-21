@@ -40,9 +40,9 @@ export function BusinessCard({
       </div>
       <div className="flex items-end justify-between gap-4">
         <p className="font-sans text-[11px] text-ash">
-          studio@core.marketing
+          studio@coremarketing.rw
           <br />
-          core.marketing
+          coremarketing.rw
         </p>
         <CoreMark className="size-6 text-ink" field="vellum" />
       </div>
@@ -66,7 +66,7 @@ export function Letterhead({ className }: { className?: string }) {
           <br />
           By appointment · Kigali
           <br />
-          studio@core.marketing
+          studio@coremarketing.rw
         </p>
       </div>
       <div className="mt-16 flex-1 space-y-3">
@@ -80,7 +80,7 @@ export function Letterhead({ className }: { className?: string }) {
       </div>
       <div className="flex items-center justify-between pt-6">
         <p className="label text-[8px]">Confidential</p>
-        <p className="font-sans text-[10px] text-ash uppercase">core.marketing</p>
+        <p className="font-sans text-[10px] text-ash uppercase">coremarketing.rw</p>
       </div>
     </div>
   );
@@ -227,9 +227,9 @@ export function EmailSignature({ className }: { className?: string }) {
           <p className="mt-1 font-sans text-xs text-ash">Partner, Strategy</p>
           <div className="mt-4 h-px w-12 bg-ink/15" />
           <p className="mt-4 font-sans text-xs leading-relaxed text-ash">
-            studio@core.marketing
+            studio@coremarketing.rw
             <br />
-            core.marketing
+            coremarketing.rw
             <br />
             Kigali · By appointment
           </p>
@@ -250,7 +250,7 @@ export function WebChrome({ className }: { className?: string }) {
         <span className="size-2.5 rounded-full bg-vellum/20" />
         <span className="size-2.5 rounded-full bg-vellum/20" />
         <span className="ml-3 flex-1 rounded-sm bg-ink px-3 py-1.5 font-sans text-[10px] text-ash">
-          core.marketing
+          coremarketing.rw
         </span>
       </div>
       <div className="relative aspect-video overflow-hidden bg-ink">

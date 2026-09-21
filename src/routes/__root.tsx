@@ -11,7 +11,11 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "Core Marketing: the architecture of attention. A house of strategy, presence, content, and promotion for hotels, villas, motor, and property." },
+      {
+        name: "description",
+        content:
+          "Core Marketing is a Kigali-based, senior-led marketing studio for premium hotels, villas, motor brands, and properties. Strategy, presence, content, and promotion, held by one team.",
+      },
       { name: "theme-color", content: "#0C0B0A" },
     ],
     links: [

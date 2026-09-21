@@ -4,9 +4,9 @@ EDITING THE BUSINESS CARD
 2. The back has five text objects with ids:
      name    —  Your Name
      role    —  Partner
-     email   —  studio@core.marketing
+     email   —  studio@coremarketing.rw
      phone   —  +250 000 000 000
-     web     —  core.marketing
+     web     —  coremarketing.rw
 3. Do not move the mark or change Juniper (#2F7A4E).
 4. Front is the lockup only. Leave it as-is.
 5. Export PDF from your editor, or use the PDF already in this folder.

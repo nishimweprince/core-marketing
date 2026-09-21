@@ -31,4 +31,4 @@ Ink                    #0C0B0A
 Vellum                 #F3EFE8
 Limestone              #B7AFA3
 
-studio@core.marketing
+studio@coremarketing.rw

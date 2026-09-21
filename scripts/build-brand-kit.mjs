@@ -124,9 +124,9 @@ function cardBack() {
   <rect width="350" height="200" fill="${VELLUM}"/>
   <text id="name" class="name" x="28" y="52">Your Name</text>
   <text id="role" class="role" x="28" y="72">Partner</text>
-  <text id="email" class="meta" x="28" y="154">studio@core.marketing</text>
+  <text id="email" class="meta" x="28" y="154">studio@coremarketing.rw</text>
   <text id="phone" class="meta" x="28" y="168">+250 000 000 000</text>
-  <text id="web" class="meta" x="28" y="182">core.marketing</text>
+  <text id="web" class="meta" x="28" y="182">coremarketing.rw</text>
   <g transform="translate(286 148)">
     <circle cx="18" cy="18" r="14.2" stroke="${INK}" stroke-width="0.95" fill="none"/>
     <circle cx="18" cy="18" r="8.4" stroke="${LIMESTONE}" stroke-width="0.95" fill="none"/>
@@ -156,8 +156,8 @@ function letterhead() {
   <text class="core" x="32" y="20">CORE</text>
   <text class="mkt" x="32" y="25">MARKETING</text>
   <text class="meta" x="150" y="18">By appointment · Kigali</text>
-  <text class="meta" x="150" y="22">studio@core.marketing</text>
-  <text class="meta" x="150" y="26">core.marketing</text>
+  <text class="meta" x="150" y="22">studio@coremarketing.rw</text>
+  <text class="meta" x="150" y="26">coremarketing.rw</text>
   <line class="rule" x1="18" y1="36" x2="192" y2="36"/>
   <line class="rule" x1="18" y1="272" x2="192" y2="272"/>
   <text class="meta" x="18" y="282">Confidential  ·  Volume 01</text>
@@ -187,7 +187,7 @@ function envelope() {
   <text class="mkt" x="28" y="70">MARKETING</text>
   <text class="meta" x="140" y="64">By appointment</text>
   <text class="meta" x="140" y="70">Kigali</text>
-  <text class="meta" x="140" y="76">core.marketing</text>
+  <text class="meta" x="140" y="76">coremarketing.rw</text>
 </svg>
 `;
 }
@@ -265,7 +265,7 @@ Ink                    #0C0B0A
 Vellum                 #F3EFE8
 Limestone              #B7AFA3
 
-studio@core.marketing
+studio@coremarketing.rw
 `,
 );
 
@@ -277,9 +277,9 @@ writeFileSync(
 2. The back has five text objects with ids:
      name    —  Your Name
      role    —  Partner
-     email   —  studio@core.marketing
+     email   —  studio@coremarketing.rw
      phone   —  +250 000 000 000
-     web     —  core.marketing
+     web     —  coremarketing.rw
 3. Do not move the mark or change Juniper (#2F7A4E).
 4. Front is the lockup only. Leave it as-is.
 5. Export PDF from your editor, or use the PDF already in this folder.
@@ -351,7 +351,7 @@ const bookHtml = `<!doctype html>
       </div>
     </div>
     <h1 style="margin-top:28mm;font-style:italic;font-size:36pt">Presence, made inevitable.</h1>
-    <p class="muted" style="margin-top:14pt">Kigali  ·  A marketing studio  ·  Est. 2018</p>
+    <p class="muted" style="margin-top:14pt">Kigali  ·  A marketing studio  ·  Est. 2025</p>
     <div class="foot"><span>Core Marketing</span><span>01 / 07</span></div>
   </section>
 
@@ -423,7 +423,7 @@ const bookHtml = `<!doctype html>
       <div style="flex:1;background:${VELLUM};height:62mm;border-radius:3pt;padding:10pt;outline:0.4pt solid ${INK}18">
         <div style="font-family:'Cormorant Garamond',serif;font-size:14pt">Your Name</div>
         <div style="font-size:6.5pt;letter-spacing:0.28em;color:${ASH};margin-top:4pt">PARTNER</div>
-        <div style="font-size:7pt;color:${ASH};margin-top:18pt">studio@core.marketing<br/>core.marketing</div>
+        <div style="font-size:7pt;color:${ASH};margin-top:18pt">studio@coremarketing.rw<br/>coremarketing.rw</div>
       </div>
     </div>
     <p class="muted" style="margin-top:16pt">Also in the kit: A4 letterhead, DL envelope, and the lockup as SVG / PNG.</p>
@@ -446,8 +446,8 @@ const bookHtml = `<!doctype html>
   <section class="page ink">
     <p class="label">End matter</p>
     <h1 style="margin-top:28mm;font-style:italic">The architecture of attention.</h1>
-    <p style="margin-top:16pt">studio@core.marketing<br/>core.marketing<br/>Kigali · By appointment</p>
-    <p class="muted" style="margin-top:22pt">Est. 2018  ·  Volume 01</p>
+    <p style="margin-top:16pt">studio@coremarketing.rw<br/>coremarketing.rw<br/>Kigali · By appointment</p>
+    <p class="muted" style="margin-top:22pt">Est. 2025  ·  Volume 01</p>
     <div class="foot"><span>Core Marketing</span><span>07 / 07</span></div>
   </section>
 </body>

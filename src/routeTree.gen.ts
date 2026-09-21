@@ -11,6 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BookRouteImport } from './routes/book'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SitemapRouteImport } from './routes/sitemap'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PlansPlanIdRouteImport } from './routes/plans.$planId'
+import { Route as WhatWeDoSlugRouteImport } from './routes/what-we-do.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +27,98 @@ const BookRoute = BookRouteImport.update({
   path: '/book',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlansPlanIdRoute = PlansPlanIdRouteImport.update({
+  id: '/plans/$planId',
+  path: '/plans/$planId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeDoSlugRoute = WhatWeDoSlugRouteImport.update({
+  id: '/what-we-do/$slug',
+  path: '/what-we-do/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/book': typeof BookRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap': typeof SitemapRoute
+  '/terms': typeof TermsRoute
+  '/plans/$planId': typeof PlansPlanIdRoute
+  '/what-we-do/$slug': typeof WhatWeDoSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/book': typeof BookRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap': typeof SitemapRoute
+  '/terms': typeof TermsRoute
+  '/plans/$planId': typeof PlansPlanIdRoute
+  '/what-we-do/$slug': typeof WhatWeDoSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/book': typeof BookRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap': typeof SitemapRoute
+  '/terms': typeof TermsRoute
+  '/plans/$planId': typeof PlansPlanIdRoute
+  '/what-we-do/$slug': typeof WhatWeDoSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/book'
+  fullPaths:
+    | '/'
+    | '/book'
+    | '/privacy'
+    | '/sitemap'
+    | '/terms'
+    | '/plans/$planId'
+    | '/what-we-do/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/book'
-  id: '__root__' | '/' | '/book'
+  to:
+    | '/'
+    | '/book'
+    | '/privacy'
+    | '/sitemap'
+    | '/terms'
+    | '/plans/$planId'
+    | '/what-we-do/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/book'
+    | '/privacy'
+    | '/sitemap'
+    | '/terms'
+    | '/plans/$planId'
+    | '/what-we-do/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BookRoute: typeof BookRoute
+  PrivacyRoute: typeof PrivacyRoute
+  SitemapRoute: typeof SitemapRoute
+  TermsRoute: typeof TermsRoute
+  PlansPlanIdRoute: typeof PlansPlanIdRoute
+  WhatWeDoSlugRoute: typeof WhatWeDoSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +137,52 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plans/$planId': {
+      id: '/plans/$planId'
+      path: '/plans/$planId'
+      fullPath: '/plans/$planId'
+      preLoaderRoute: typeof PlansPlanIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-do/$slug': {
+      id: '/what-we-do/$slug'
+      path: '/what-we-do/$slug'
+      fullPath: '/what-we-do/$slug'
+      preLoaderRoute: typeof WhatWeDoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BookRoute: BookRoute,
+  PrivacyRoute: PrivacyRoute,
+  SitemapRoute: SitemapRoute,
+  TermsRoute: TermsRoute,
+  PlansPlanIdRoute: PlansPlanIdRoute,
+  WhatWeDoSlugRoute: WhatWeDoSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

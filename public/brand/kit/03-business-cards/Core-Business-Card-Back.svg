@@ -12,9 +12,9 @@
   <rect width="350" height="200" fill="#F3EFE8"/>
   <text id="name" class="name" x="28" y="52">Your Name</text>
   <text id="role" class="role" x="28" y="72">Partner</text>
-  <text id="email" class="meta" x="28" y="154">studio@core.marketing</text>
+  <text id="email" class="meta" x="28" y="154">studio@coremarketing.rw</text>
   <text id="phone" class="meta" x="28" y="168">+250 000 000 000</text>
-  <text id="web" class="meta" x="28" y="182">core.marketing</text>
+  <text id="web" class="meta" x="28" y="182">coremarketing.rw</text>
   <g transform="translate(286 148)">
     <circle cx="18" cy="18" r="14.2" stroke="#0C0B0A" stroke-width="0.95" fill="none"/>
     <circle cx="18" cy="18" r="8.4" stroke="#B7AFA3" stroke-width="0.95" fill="none"/>

@@ -32,9 +32,6 @@ export function Footer({ onJump }: { onJump?: (id: string) => void }) {
                 </Link>
               ),
             )}
-            <Link to="/book" className={LINK}>
-              The book
-            </Link>
           </nav>
         </div>
         <div className="lg:col-span-2">

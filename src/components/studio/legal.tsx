@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { BRAND } from "@/lib/brand";
 import { SiteFrame } from "@/components/studio/frame";
 
@@ -24,7 +25,10 @@ export function LegalPage({
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
-              <h1 className="headline">{title}</h1>
+              <Link to="/" className="link text-ash">
+                Home
+              </Link>
+              <h1 className="headline mt-8">{title}</h1>
               <p className="editorial mt-8 text-ash">{intro}</p>
               <p className="mt-8 font-sans text-xs text-ash">Last updated {updated}</p>
               <nav aria-label="On this page" className="mt-10 hidden flex-col lg:flex">

@@ -42,7 +42,7 @@ export const HERO_VIDEO: StudioVideo = {
 export const HERO = {
   kicker: "Kigali · Est. 2025",
   title: "Presence, made inevitable.",
-  deck: "One senior team for hotels, motor, and real estate in Kigali.",
+  deck: "One senior team. Hotels, motor, and real estate in Kigali.",
   cta: "Start a conversation",
 } as const;
 
@@ -70,7 +70,7 @@ export const WHAT_WE_DO = {
   title: "What we do",
   pull: "Guests, drivers, and buyers meet you on a screen long before they meet you in person.",
   paragraphs: [
-    "We work with a small number of premium hospitality, motor, and real estate brands in Rwanda, and hold strategy, presence, content, and promotion as one senior team, so everything a person sees of you comes from the same hand.",
+    "We work with a small number of premium hospitality, motor, and real estate brands in Rwanda. Strategy, presence, content, and promotion, held as one senior team, so everything a person sees of you comes from the same hand.",
   ],
 } as const;
 
@@ -108,18 +108,17 @@ export const STUDIO_INDUSTRIES = [
     name: "Motor",
     lede: "Let the vehicle, and the road around it, lead.",
     image: {
-      src: pexelsImage("35870484", 1800),
-      sourcePage: "https://www.pexels.com/photo/safari-vehicle-on-winding-forest-road-35870484/",
-      alt: "A Rwandan-plated Land Cruiser with its roof raised, climbing a forest road in soft light.",
-      objectPosition: "center",
+      src: pexelsImage("11877372", 1800),
+      sourcePage: "https://www.pexels.com/photo/back-of-a-black-mercedes-at-dawn-11877372/",
+      alt: "The rear quarter of a black sedan at dusk, city lights coming on across the valley behind it.",
+      objectPosition: "center 60%",
     },
     second: {
-      src: pexelsImage("39386240", 1800),
-      sourcePage:
-        "https://www.pexels.com/photo/rural-dirt-road-in-kigali-surrounded-by-walls-39386240/",
-      alt: "A quiet red-earth road winding between brick walls and homes in Kigali.",
+      src: pexelsImage("15071553", 1800),
+      sourcePage: "https://www.pexels.com/photo/luxurious-black-car-at-dusk-15071553/",
+      alt: "A black car's flank reflecting the last of the light, evening traffic blurred beyond it.",
       objectPosition: "center",
-      caption: "Kigali, off the tarmac.",
+      caption: "The evening run home.",
     },
     paragraphs: [
       "Tour operators, hire fleets, and dealerships sell a journey, not a spec sheet. We build a presence that gets out of the vehicle's way: composed imagery, clear offers, and channels that reach the traveller or buyer while they are still planning.",
@@ -307,10 +306,11 @@ export const STUDIO_PLANS = [
     name: "Sabyinyo",
     altitude: 3669,
     image: {
-      src: pexelsImage("33439499", 1800),
-      sourcePage: "https://www.pexels.com/photo/scenic-view-of-mount-bisoke-in-rwanda-33439499/",
-      alt: "A jagged volcanic crown in the Virunga range above a concrete track through green scrub.",
-      objectPosition: "center 40%",
+      src: pexelsImage("38383640", 1800),
+      sourcePage:
+        "https://www.pexels.com/photo/videographer-with-camera-stabilizer-indoors-38383640/",
+      alt: "A videographer steadies a camera on a gimbal in a marble-clad lobby.",
+      objectPosition: "20% 35%",
     },
     means: "A clear beginning",
     featured: false,
@@ -346,11 +346,11 @@ export const STUDIO_PLANS = [
     name: "Muhabura",
     altitude: 4127,
     image: {
-      src: pexelsImage("19755751", 1800),
+      src: pexelsImage("16565901", 1800),
       sourcePage:
-        "https://www.pexels.com/photo/landscape-with-a-mountain-lake-and-clouds-19755751/",
-      alt: "A volcano's cone under cloud, seen across the still water and green headlands of Lake Burera.",
-      objectPosition: "center 35%",
+        "https://www.pexels.com/photo/two-videographers-filming-a-night-street-scene-with-a-camera-on-tripod-16565901/",
+      alt: "A night shoot on a lit street: camera on a tripod, a monitor glowing, two people watching the frame.",
+      objectPosition: "center 40%",
     },
     means: "Build the evidence",
     featured: false,
@@ -386,11 +386,10 @@ export const STUDIO_PLANS = [
     name: "Karisimbi",
     altitude: 4507,
     image: {
-      src: pexelsImage("34784514", 1800),
-      sourcePage:
-        "https://www.pexels.com/photo/beautiful-landscape-with-tree-and-mount-karisimbi-in-rwanda-34784514/",
-      alt: "A lone tree over terraced fields, a volcano rising into cloud behind it.",
-      objectPosition: "center 45%",
+      src: pexelsImage("986774", 1800),
+      sourcePage: "https://www.pexels.com/photo/photography-of-laptop-in-a-dark-area-986774/",
+      alt: "A laptop half-open in a dark room, its keyboard lit from the screen.",
+      objectPosition: "center 60%",
     },
     means: "Full partnership",
     featured: true,
@@ -426,11 +425,10 @@ export const STUDIO_PLANS = [
 export type StudioPlan = (typeof STUDIO_PLANS)[number];
 
 export const PLANS_BAND_IMAGE: StudioImage = {
-  src: pexelsImage("33596470", 1800),
-  sourcePage:
-    "https://www.pexels.com/photo/sacks-of-potatoes-in-kinigi-with-mountain-view-33596470/",
-  alt: "Sacks of potatoes stacked in a Kinigi field, the Virunga ridge dark against the evening cloud.",
-  objectPosition: "center 60%",
+  src: HERO_VIDEO.poster.src,
+  sourcePage: HERO_VIDEO.sourcePage,
+  alt: HERO_VIDEO.poster.alt,
+  objectPosition: "center 70%",
 };
 
 export const CONTACT = {
@@ -492,7 +490,7 @@ export const STUDIO_QUESTIONS = [
   },
   {
     id: "fees",
-    q: "How much does an engagement cost?",
+    q: "What are your fees?",
     a: "Fees depend on scope, team, and pace. We discuss them after the first conversation, once we understand what a strong result requires.",
   },
   {

@@ -3,10 +3,10 @@ import { R as require_react, v as Link, z as require_jsx_runtime } from "../_lib
 import { t as BRAND, v as cn } from "./mark-B04OdnPl.mjs";
 import { r as Plus } from "../_libs/lucide-react.mjs";
 import { n as toast } from "../_libs/sonner.mjs";
-import { a as HERO, c as PLANS, d as STUDIO_PLANS, f as STUDIO_QUESTIONS, i as CONTACT, m as WHAT_WE_DO, o as HERO_VIDEO, s as PARTNERS, u as STUDIO_INDUSTRIES } from "./router-CgnfWR8m.mjs";
-import { t as SiteFrame } from "./frame-gHxYmb8u.mjs";
+import { a as HERO, c as PLANS, d as STUDIO_PLANS, f as STUDIO_QUESTIONS, i as CONTACT, m as WHAT_WE_DO, o as HERO_VIDEO, s as PARTNERS, u as STUDIO_INDUSTRIES } from "./router-8nmoHR3v.mjs";
+import { t as SiteFrame } from "./frame-B8uR3J0j.mjs";
 import { t as BrandImage } from "./brand-image-B23lfHks.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-h6rZ3DvN.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-D_8w97Nw.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function Hero({ onJump }) {
@@ -367,9 +367,9 @@ function Faq() {
 								onClick: () => toggle(item.id),
 								"aria-expanded": expanded,
 								"aria-controls": `faq-panel-${item.id}`,
-								className: "flex min-h-14 w-full items-center justify-between gap-6 py-3 text-left",
+								className: "group flex min-h-14 w-full items-center justify-between gap-6 py-3 text-left",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "font-display text-xl font-normal md:text-2xl",
+									className: "font-display text-xl font-normal transition-[color] duration-150 group-hover:text-juniper md:text-2xl",
 									children: item.q
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									className: cn("flex size-9 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink motion-safe:transition-transform motion-safe:duration-300", expanded ? "rotate-45" : void 0),

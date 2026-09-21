@@ -1,9 +1,9 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { R as require_react, v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
-import { d as STUDIO_PLANS, n as Route, p as STUDIO_STEPS, u as STUDIO_INDUSTRIES } from "./router-CgnfWR8m.mjs";
-import { t as SiteFrame } from "./frame-gHxYmb8u.mjs";
+import { d as STUDIO_PLANS, n as Route, p as STUDIO_STEPS, u as STUDIO_INDUSTRIES } from "./router-8nmoHR3v.mjs";
+import { t as SiteFrame } from "./frame-B8uR3J0j.mjs";
 import { t as BrandImage } from "./brand-image-B23lfHks.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/what-we-do._slug-DjCFwPI-.js
+//#region node_modules/.nitro/vite/services/ssr/assets/what-we-do._slug-CeaSBte6.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function IndustryPage() {

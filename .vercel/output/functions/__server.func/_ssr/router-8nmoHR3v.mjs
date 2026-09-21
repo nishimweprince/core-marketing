@@ -2,7 +2,7 @@ import { i as __toESM } from "../_runtime.mjs";
 import { R as require_react, _ as createRootRoute, d as HeadContent, g as createFileRoute, h as lazyRouteComponent, m as Outlet, p as createRouter, u as Scripts, y as useRouter, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/studio-content-DXk81Oqj.js
+//#region node_modules/.nitro/vite/services/ssr/assets/studio-content-BpnlWGvW.js
 var pexelsImage = (id, width = 1400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
 pexelsImage("31466702", 1800);
 var HERO_VIDEO = {
@@ -19,7 +19,7 @@ var HERO_VIDEO = {
 var HERO = {
 	kicker: "Kigali · Est. 2025",
 	title: "Presence, made inevitable.",
-	deck: "One senior team for hotels, motor, and real estate in Kigali.",
+	deck: "One senior team. Hotels, motor, and real estate in Kigali.",
 	cta: "Start a conversation"
 };
 var PARTNERS = [
@@ -67,7 +67,7 @@ var PARTNERS = [
 var WHAT_WE_DO = {
 	title: "What we do",
 	pull: "Guests, drivers, and buyers meet you on a screen long before they meet you in person.",
-	paragraphs: ["We work with a small number of premium hospitality, motor, and real estate brands in Rwanda, and hold strategy, presence, content, and promotion as one senior team, so everything a person sees of you comes from the same hand."]
+	paragraphs: ["We work with a small number of premium hospitality, motor, and real estate brands in Rwanda. Strategy, presence, content, and promotion, held as one senior team, so everything a person sees of you comes from the same hand."]
 };
 var STUDIO_INDUSTRIES = [
 	{
@@ -99,17 +99,17 @@ var STUDIO_INDUSTRIES = [
 		name: "Motor",
 		lede: "Let the vehicle, and the road around it, lead.",
 		image: {
-			src: pexelsImage("35870484", 1800),
-			sourcePage: "https://www.pexels.com/photo/safari-vehicle-on-winding-forest-road-35870484/",
-			alt: "A Rwandan-plated Land Cruiser with its roof raised, climbing a forest road in soft light.",
-			objectPosition: "center"
+			src: pexelsImage("11877372", 1800),
+			sourcePage: "https://www.pexels.com/photo/back-of-a-black-mercedes-at-dawn-11877372/",
+			alt: "The rear quarter of a black sedan at dusk, city lights coming on across the valley behind it.",
+			objectPosition: "center 60%"
 		},
 		second: {
-			src: pexelsImage("39386240", 1800),
-			sourcePage: "https://www.pexels.com/photo/rural-dirt-road-in-kigali-surrounded-by-walls-39386240/",
-			alt: "A quiet red-earth road winding between brick walls and homes in Kigali.",
+			src: pexelsImage("15071553", 1800),
+			sourcePage: "https://www.pexels.com/photo/luxurious-black-car-at-dusk-15071553/",
+			alt: "A black car's flank reflecting the last of the light, evening traffic blurred beyond it.",
 			objectPosition: "center",
-			caption: "Kigali, off the tarmac."
+			caption: "The evening run home."
 		},
 		paragraphs: ["Tour operators, hire fleets, and dealerships sell a journey, not a spec sheet. We build a presence that gets out of the vehicle's way: composed imagery, clear offers, and channels that reach the traveller or buyer while they are still planning."],
 		cares: [
@@ -156,10 +156,10 @@ var STUDIO_PLANS = [
 		name: "Sabyinyo",
 		altitude: 3669,
 		image: {
-			src: pexelsImage("33439499", 1800),
-			sourcePage: "https://www.pexels.com/photo/scenic-view-of-mount-bisoke-in-rwanda-33439499/",
-			alt: "A jagged volcanic crown in the Virunga range above a concrete track through green scrub.",
-			objectPosition: "center 40%"
+			src: pexelsImage("38383640", 1800),
+			sourcePage: "https://www.pexels.com/photo/videographer-with-camera-stabilizer-indoors-38383640/",
+			alt: "A videographer steadies a camera on a gimbal in a marble-clad lobby.",
+			objectPosition: "20% 35%"
 		},
 		means: "A clear beginning",
 		featured: false,
@@ -195,10 +195,10 @@ var STUDIO_PLANS = [
 		name: "Muhabura",
 		altitude: 4127,
 		image: {
-			src: pexelsImage("19755751", 1800),
-			sourcePage: "https://www.pexels.com/photo/landscape-with-a-mountain-lake-and-clouds-19755751/",
-			alt: "A volcano's cone under cloud, seen across the still water and green headlands of Lake Burera.",
-			objectPosition: "center 35%"
+			src: pexelsImage("16565901", 1800),
+			sourcePage: "https://www.pexels.com/photo/two-videographers-filming-a-night-street-scene-with-a-camera-on-tripod-16565901/",
+			alt: "A night shoot on a lit street: camera on a tripod, a monitor glowing, two people watching the frame.",
+			objectPosition: "center 40%"
 		},
 		means: "Build the evidence",
 		featured: false,
@@ -234,10 +234,10 @@ var STUDIO_PLANS = [
 		name: "Karisimbi",
 		altitude: 4507,
 		image: {
-			src: pexelsImage("34784514", 1800),
-			sourcePage: "https://www.pexels.com/photo/beautiful-landscape-with-tree-and-mount-karisimbi-in-rwanda-34784514/",
-			alt: "A lone tree over terraced fields, a volcano rising into cloud behind it.",
-			objectPosition: "center 45%"
+			src: pexelsImage("986774", 1800),
+			sourcePage: "https://www.pexels.com/photo/photography-of-laptop-in-a-dark-area-986774/",
+			alt: "A laptop half-open in a dark room, its keyboard lit from the screen.",
+			objectPosition: "center 60%"
 		},
 		means: "Full partnership",
 		featured: true,
@@ -270,10 +270,10 @@ var STUDIO_PLANS = [
 	}
 ];
 var PLANS_BAND_IMAGE = {
-	src: pexelsImage("33596470", 1800),
-	sourcePage: "https://www.pexels.com/photo/sacks-of-potatoes-in-kinigi-with-mountain-view-33596470/",
-	alt: "Sacks of potatoes stacked in a Kinigi field, the Virunga ridge dark against the evening cloud.",
-	objectPosition: "center 60%"
+	src: HERO_VIDEO.poster.src,
+	sourcePage: HERO_VIDEO.sourcePage,
+	alt: HERO_VIDEO.poster.alt,
+	objectPosition: "center 70%"
 };
 var CONTACT = {
 	title: "Start a conversation",
@@ -314,7 +314,7 @@ var STUDIO_QUESTIONS = [
 	},
 	{
 		id: "fees",
-		q: "How much does an engagement cost?",
+		q: "What are your fees?",
 		a: "Fees depend on scope, team, and pace. We discuss them after the first conversation, once we understand what a strong result requires."
 	},
 	{
@@ -324,7 +324,7 @@ var STUDIO_QUESTIONS = [
 	}
 ];
 //#endregion
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CgnfWR8m.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-8nmoHR3v.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -628,7 +628,7 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-BKVMLRmD.css";
+var styles_default = "/assets/styles-CBYCJKij.css";
 var APP_NAME = "Core Marketing";
 var Route$7 = createRootRoute({
 	head: () => ({
@@ -682,14 +682,14 @@ var Route$7 = createRootRoute({
 		})]
 	})
 });
-var $$splitComponentImporter$6 = () => import("./routes-h6rZ3DvN.mjs");
+var $$splitComponentImporter$6 = () => import("./routes-D_8w97Nw.mjs");
 var Route$6 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$6, "component") });
 var $$splitComponentImporter$5 = () => import("./book-D9UFVnLo.mjs");
 var Route$5 = createFileRoute("/book")({
 	component: lazyRouteComponent($$splitComponentImporter$5, "component"),
 	head: () => ({ meta: [{ title: "The brand book · Core Marketing" }] })
 });
-var $$splitComponentImporter$4 = () => import("./privacy-CNQ0Bd2e.mjs");
+var $$splitComponentImporter$4 = () => import("./privacy-D7npbuia.mjs");
 var Route$4 = createFileRoute("/privacy")({
 	component: lazyRouteComponent($$splitComponentImporter$4, "component"),
 	head: () => ({ meta: [{ title: "Privacy · Core Marketing" }, {
@@ -697,7 +697,7 @@ var Route$4 = createFileRoute("/privacy")({
 		content: "What Core Marketing collects when you write to us, and what happens to it."
 	}] })
 });
-var $$splitComponentImporter$3 = () => import("./sitemap-CcC-cEcE.mjs");
+var $$splitComponentImporter$3 = () => import("./sitemap-DSvNnVwY.mjs");
 var Route$3 = createFileRoute("/sitemap")({
 	component: lazyRouteComponent($$splitComponentImporter$3, "component"),
 	head: () => ({ meta: [{ title: "Sitemap · Core Marketing" }, {
@@ -705,7 +705,7 @@ var Route$3 = createFileRoute("/sitemap")({
 		content: "Every page on the Core Marketing site, and every section of the home page."
 	}] })
 });
-var $$splitComponentImporter$2 = () => import("./terms-CnzGtsBL.mjs");
+var $$splitComponentImporter$2 = () => import("./terms-DklRLnHu.mjs");
 var Route$2 = createFileRoute("/terms")({
 	component: lazyRouteComponent($$splitComponentImporter$2, "component"),
 	head: () => ({ meta: [{ title: "Terms · Core Marketing" }, {
@@ -713,7 +713,7 @@ var Route$2 = createFileRoute("/terms")({
 		content: "The plain-language basis on which Core Marketing works with clients."
 	}] })
 });
-var $$splitComponentImporter$1 = () => import("./plans._planId-VZlgOEVt.mjs");
+var $$splitComponentImporter$1 = () => import("./plans._planId-DmbHJtGM.mjs");
 var Route$1 = createFileRoute("/plans/$planId")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: ({ params }) => {
@@ -728,7 +728,7 @@ var Route$1 = createFileRoute("/plans/$planId")({
 * "Everything in Muhabura" is a pointer, not a deliverable. Resolve it to the items it stands
 * for, grouped by the plan they come from, following the chain down to the first plan.
 */
-var $$splitComponentImporter = () => import("./what-we-do._slug-DjCFwPI-.mjs");
+var $$splitComponentImporter = () => import("./what-we-do._slug-CeaSBte6.mjs");
 var Route = createFileRoute("/what-we-do/$slug")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	head: ({ params }) => {

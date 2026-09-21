@@ -49,9 +49,11 @@ export function Faq() {
                     onClick={() => toggle(item.id)}
                     aria-expanded={expanded}
                     aria-controls={`faq-panel-${item.id}`}
-                    className="flex min-h-14 w-full items-center justify-between gap-6 py-3 text-left"
+                    className="group flex min-h-14 w-full items-center justify-between gap-6 py-3 text-left"
                   >
-                    <span className="font-display text-xl font-normal md:text-2xl">{item.q}</span>
+                    <span className="font-display text-xl font-normal transition-[color] duration-150 group-hover:text-juniper md:text-2xl">
+                      {item.q}
+                    </span>
                     <span
                       className={cn(
                         "flex size-9 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink motion-safe:transition-transform motion-safe:duration-300",

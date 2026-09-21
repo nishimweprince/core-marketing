@@ -1,23 +1,16 @@
 import { v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { p as SITE_NAV } from "./mark-B04OdnPl.mjs";
-import { d as STUDIO_PLANS, u as STUDIO_INDUSTRIES } from "./router-CgnfWR8m.mjs";
-import { t as SiteFrame } from "./frame-gHxYmb8u.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/sitemap-CcC-cEcE.js
+import { d as STUDIO_PLANS, u as STUDIO_INDUSTRIES } from "./router-8nmoHR3v.mjs";
+import { t as SiteFrame } from "./frame-B8uR3J0j.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/sitemap-DSvNnVwY.js
 var import_jsx_runtime = require_jsx_runtime();
-var ELSEWHERE = [
-	{
-		to: "/book",
-		label: "The book"
-	},
-	{
-		to: "/privacy",
-		label: "Privacy"
-	},
-	{
-		to: "/terms",
-		label: "Terms"
-	}
-];
+var ELSEWHERE = [{
+	to: "/privacy",
+	label: "Privacy"
+}, {
+	to: "/terms",
+	label: "Terms"
+}];
 var ENTRY = "inline-flex min-h-11 items-center font-display text-2xl font-normal transition-[color] duration-150 hover:text-juniper";
 function SitemapPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SiteFrame, {
@@ -27,8 +20,13 @@ function SitemapPage() {
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mx-auto max-w-7xl",
 				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/",
+						className: "link text-ash",
+						children: "Home"
+					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-						className: "headline",
+						className: "headline mt-8",
 						children: "Sitemap"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {

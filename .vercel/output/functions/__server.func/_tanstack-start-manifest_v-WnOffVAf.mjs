@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CfR16ygm.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-WnOffVAf.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/__root.tsx",
@@ -12,24 +12,24 @@ var tsrStartManifest = () => ({ routes: {
 			"/what-we-do/$slug"
 		],
 		preloads: [
-			"/assets/index-B1yL4uUo.js",
+			"/assets/index-Ctdy4pce.js",
 			"/assets/createLucideIcon-DxPQju7P.js",
 			"/assets/preload-helper-drQecDCx.js",
-			"/assets/studio-content-B6vKk8US.js"
+			"/assets/studio-content-CurOALWx.js"
 		],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-B1yL4uUo.js"
+			src: "/assets/index-Ctdy4pce.js"
 		} }]
 	},
 	"/": {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-BhOE99Dl.js",
+			"/assets/routes-BHkBQvix.js",
 			"/assets/mark-Dlw4TJHR.js",
-			"/assets/frame-PbUS1G5U.js",
+			"/assets/frame-pHzvZtwT.js",
 			"/assets/brand-image-C4jNSLFC.js"
 		]
 	},
@@ -41,29 +41,29 @@ var tsrStartManifest = () => ({ routes: {
 	"/privacy": {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/privacy.tsx",
 		children: void 0,
-		preloads: ["/assets/privacy-DPTSxiyq.js", "/assets/legal-DO0s0Is2.js"]
+		preloads: ["/assets/privacy-Dk71h9HJ.js", "/assets/legal-DvAyYRo4.js"]
 	},
 	"/sitemap": {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/sitemap.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/sitemap-DJqrzA1y.js",
+			"/assets/sitemap-B_50s6No.js",
 			"/assets/mark-Dlw4TJHR.js",
-			"/assets/frame-PbUS1G5U.js"
+			"/assets/frame-pHzvZtwT.js"
 		]
 	},
 	"/terms": {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/terms.tsx",
 		children: void 0,
-		preloads: ["/assets/terms-BaeYL5M0.js", "/assets/legal-DO0s0Is2.js"]
+		preloads: ["/assets/terms-B-kXsWxm.js", "/assets/legal-DvAyYRo4.js"]
 	},
 	"/plans/$planId": {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/plans.$planId.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/plans._planId-ZwaegaXG.js",
+			"/assets/plans._planId-B--t1Q_f.js",
 			"/assets/mark-Dlw4TJHR.js",
-			"/assets/frame-PbUS1G5U.js",
+			"/assets/frame-pHzvZtwT.js",
 			"/assets/brand-image-C4jNSLFC.js"
 		]
 	},
@@ -71,8 +71,8 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/Users/pnishimwe/Documents/Work/Core Marketing/Apps/core-marketing/src/routes/what-we-do.$slug.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/what-we-do._slug-mN12Y5tv.js",
-			"/assets/frame-PbUS1G5U.js",
+			"/assets/what-we-do._slug-WupU8W7-.js",
+			"/assets/frame-pHzvZtwT.js",
 			"/assets/brand-image-C4jNSLFC.js"
 		]
 	}

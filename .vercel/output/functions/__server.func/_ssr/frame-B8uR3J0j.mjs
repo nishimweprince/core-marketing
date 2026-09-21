@@ -3,8 +3,8 @@ import { R as require_react, v as Link, z as require_jsx_runtime } from "../_lib
 import { p as SITE_NAV, r as CoreLockup, t as BRAND, v as cn } from "./mark-B04OdnPl.mjs";
 import { i as Menu, t as X } from "../_libs/lucide-react.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
-import { d as STUDIO_PLANS, u as STUDIO_INDUSTRIES } from "./router-CgnfWR8m.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/frame-gHxYmb8u.js
+import { d as STUDIO_PLANS, u as STUDIO_INDUSTRIES } from "./router-8nmoHR3v.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/frame-B8uR3J0j.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function Header({ scrolled, open, onToggle, onJump, solid = false }) {
@@ -23,25 +23,17 @@ function Header({ scrolled, open, onToggle, onJump, solid = false }) {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
 					className: "hidden items-center gap-1 lg:flex",
 					"aria-label": "Site",
-					children: [
-						SITE_NAV.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
-							id: item.id,
-							onJump,
-							className: "nav-link inline-flex min-h-11 items-center px-3 text-limestone",
-							children: item.label
-						}, item.id)),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							to: "/book",
-							className: "nav-link inline-flex min-h-11 items-center px-3 text-limestone",
-							children: "The book"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
-							id: "conversation",
-							onJump,
-							className: "btn-primary ml-3 min-h-11 px-4",
-							children: "Start a conversation"
-						})
-					]
+					children: [SITE_NAV.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
+						id: item.id,
+						onJump,
+						className: "nav-link inline-flex min-h-11 items-center px-3 text-limestone",
+						children: item.label
+					}, item.id)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
+						id: "conversation",
+						onJump,
+						className: "btn-primary ml-3 min-h-11 px-4",
+						children: "Start a conversation"
+					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 					type: "button",
@@ -58,28 +50,19 @@ function Header({ scrolled, open, onToggle, onJump, solid = false }) {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
 			className: "mt-8 flex flex-col",
 			"aria-label": "Site",
-			children: [
-				SITE_NAV.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
-					id: item.id,
-					onJump,
-					onNavigate: onToggle,
-					className: "flex min-h-14 items-center border-b border-vellum/8 text-left font-display text-2xl font-normal text-vellum",
-					children: item.label
-				}, item.id)),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-					to: "/book",
-					className: "flex min-h-14 items-center border-b border-vellum/8 font-display text-2xl font-normal text-vellum",
-					onClick: () => onToggle(),
-					children: "The book"
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
-					id: "conversation",
-					onJump,
-					onNavigate: onToggle,
-					className: "btn-primary mt-8",
-					children: "Start a conversation"
-				})
-			]
+			children: [SITE_NAV.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
+				id: item.id,
+				onJump,
+				onNavigate: onToggle,
+				className: "flex min-h-14 items-center border-b border-vellum/8 text-left font-display text-2xl font-normal text-vellum",
+				children: item.label
+			}, item.id)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionLink, {
+				id: "conversation",
+				onJump,
+				onNavigate: onToggle,
+				className: "btn-primary mt-8",
+				children: "Start a conversation"
+			})]
 		})
 	}) : null] });
 }
@@ -119,10 +102,10 @@ function Footer({ onJump }) {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "label text-limestone",
 						children: "Site"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
 						className: "mt-5 flex flex-col",
 						"aria-label": "Footer",
-						children: [SITE_NAV.map((item) => onJump ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						children: SITE_NAV.map((item) => onJump ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 							type: "button",
 							onClick: () => onJump(item.id),
 							className: LINK,
@@ -132,11 +115,7 @@ function Footer({ onJump }) {
 							hash: item.id,
 							className: LINK,
 							children: item.label
-						}, item.id)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							to: "/book",
-							className: LINK,
-							children: "The book"
-						})]
+						}, item.id))
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

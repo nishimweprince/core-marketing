@@ -2,10 +2,10 @@ import { i as __toESM } from "../_runtime.mjs";
 import { R as require_react, v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { v as cn } from "./mark-B04OdnPl.mjs";
 import { s as ChevronDown } from "../_libs/lucide-react.mjs";
-import { d as STUDIO_PLANS, l as PLANS_BAND_IMAGE, r as Route$1 } from "./router-CgnfWR8m.mjs";
-import { t as SiteFrame } from "./frame-gHxYmb8u.mjs";
+import { d as STUDIO_PLANS, l as PLANS_BAND_IMAGE, r as Route$1 } from "./router-8nmoHR3v.mjs";
+import { t as SiteFrame } from "./frame-B8uR3J0j.mjs";
 import { t as BrandImage } from "./brand-image-B23lfHks.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/plans._planId-VZlgOEVt.js
+//#region node_modules/.nitro/vite/services/ssr/assets/plans._planId-DmbHJtGM.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var SECTIONS = [
@@ -181,7 +181,7 @@ function PlanPage() {
 					className: "relative mx-auto max-w-7xl px-6 py-28 md:px-12 md:py-40 lg:px-16",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 						className: "headline max-w-xl",
-						children: ["Businesses on ", plan.name]
+						children: ["Houses on ", plan.name]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {
 						className: "mt-16 grid gap-x-12 md:grid-cols-2",
 						children: plan.suitedFor.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -281,7 +281,7 @@ function Inherited({ label, groups }) {
 			"aria-controls": id,
 			className: "group flex w-full items-baseline justify-between gap-4 text-left",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-				className: "font-display text-2xl font-normal md:text-[1.75rem]",
+				className: "font-display text-2xl font-normal transition-[color] duration-150 group-hover:text-juniper md:text-[1.75rem]",
 				children: label
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 				className: "inline-flex shrink-0 items-center gap-1.5 font-sans text-xs text-ash transition-[color] duration-150 group-hover:text-ink",

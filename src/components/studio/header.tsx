@@ -44,12 +44,6 @@ export function Header({ scrolled, open, onToggle, onJump, solid = false }: Head
                 {item.label}
               </SectionLink>
             ))}
-            <Link
-              to="/book"
-              className="nav-link inline-flex min-h-11 items-center px-3 text-limestone"
-            >
-              The book
-            </Link>
             <SectionLink
               id="conversation"
               onJump={onJump}
@@ -83,13 +77,6 @@ export function Header({ scrolled, open, onToggle, onJump, solid = false }: Head
                 {item.label}
               </SectionLink>
             ))}
-            <Link
-              to="/book"
-              className="flex min-h-14 items-center border-b border-vellum/8 font-display text-2xl font-normal text-vellum"
-              onClick={() => onToggle()}
-            >
-              The book
-            </Link>
             <SectionLink
               id="conversation"
               onJump={onJump}

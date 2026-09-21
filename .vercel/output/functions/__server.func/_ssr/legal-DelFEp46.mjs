@@ -1,7 +1,7 @@
-import { z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as BRAND } from "./mark-B04OdnPl.mjs";
-import { t as SiteFrame } from "./frame-gHxYmb8u.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/legal-hf8NJ21U.js
+import { t as SiteFrame } from "./frame-B8uR3J0j.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/legal-DelFEp46.js
 var import_jsx_runtime = require_jsx_runtime();
 function LegalPage({ title, intro, updated, sections }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SiteFrame, {
@@ -15,8 +15,13 @@ function LegalPage({ title, intro, updated, sections }) {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "lg:sticky lg:top-28",
 						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+								to: "/",
+								className: "link text-ash",
+								children: "Home"
+							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-								className: "headline",
+								className: "headline mt-8",
 								children: title
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {

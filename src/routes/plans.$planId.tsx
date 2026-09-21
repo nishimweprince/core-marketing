@@ -164,7 +164,7 @@ function PlanPage() {
         />
         <div className="absolute inset-0 bg-ink/80" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-6 py-28 md:px-12 md:py-40 lg:px-16">
-          <h2 className="headline max-w-xl">Businesses on {plan.name}</h2>
+          <h2 className="headline max-w-xl">Houses on {plan.name}</h2>
           <dl className="mt-16 grid gap-x-12 md:grid-cols-2">
             {plan.suitedFor.map((entry) => (
               <div key={entry.business} className="border-t border-vellum/15 py-6">
@@ -254,7 +254,9 @@ function Inherited({
         aria-controls={id}
         className="group flex w-full items-baseline justify-between gap-4 text-left"
       >
-        <span className="font-display text-2xl font-normal md:text-[1.75rem]">{label}</span>
+        <span className="font-display text-2xl font-normal transition-[color] duration-150 group-hover:text-juniper md:text-[1.75rem]">
+          {label}
+        </span>
         <span className="inline-flex shrink-0 items-center gap-1.5 font-sans text-xs text-ash transition-[color] duration-150 group-hover:text-ink">
           {open ? "Hide" : `${total} items`}
           <ChevronDown

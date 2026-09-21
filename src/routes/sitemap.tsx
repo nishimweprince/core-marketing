@@ -17,7 +17,6 @@ export const Route = createFileRoute("/sitemap")({
 });
 
 const ELSEWHERE = [
-  { to: "/book", label: "The book" },
   { to: "/privacy", label: "Privacy" },
   { to: "/terms", label: "Terms" },
 ] as const;
@@ -30,7 +29,10 @@ function SitemapPage() {
     <SiteFrame solid>
       <div className="bg-vellum px-6 pt-20 pb-28 text-ink md:px-12 md:pt-28 md:pb-40 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h1 className="headline">Sitemap</h1>
+          <Link to="/" className="link text-ash">
+            Home
+          </Link>
+          <h1 className="headline mt-8">Sitemap</h1>
           <p className="editorial mt-8 text-ash">
             Every page on the site, and every section of the home page.
           </p>

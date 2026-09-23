@@ -252,20 +252,6 @@
     filter: saturate(1.08) contrast(1.05);
   }
 
-  /* Partner carousel: the track holds two copies of the list and slides one copy's width. */
-  .marquee {
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  }
-
-  .marquee-track {
-    width: max-content;
-    animation: marquee 60s linear infinite;
-  }
-
-  .marquee:hover .marquee-track,
-  .marquee:focus-within .marquee-track {
-    animation-play-state: paused;
-  }
 
   /* Package cards lift toward the reader on hover or keyboard focus. */
   .plan-card {
@@ -348,15 +334,6 @@
   }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @keyframes brand-image-shimmer {
   from {
     background-position: 100% 0;
@@ -385,11 +362,6 @@
 
   .brand-photo img {
     transition: none;
-  }
-
-  .marquee-track {
-    animation: none;
-    transform: none;
   }
 
   .plan-card,

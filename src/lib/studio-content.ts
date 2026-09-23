@@ -49,21 +49,31 @@ export const HERO = {
 export type Partner = {
   id: string;
   name: string;
-  /** Path or URL to a logo. Until one is set the carousel shows a placeholder slot. */
+  /** Path or URL to a logo. Until one is set the partner strip shows a placeholder slot. */
   logo?: string;
+  /** Partner's website, opened in a new tab. */
+  url?: string;
 };
 
 export const PARTNERS: Partner[] = [
-  { id: "partner-1", name: "Partner one" },
-  { id: "partner-2", name: "Partner two" },
-  { id: "partner-3", name: "Partner three" },
-  { id: "partner-4", name: "Partner four" },
-  { id: "partner-5", name: "Partner five" },
-  { id: "partner-6", name: "Partner six" },
-  { id: "partner-7", name: "Partner seven" },
-  { id: "partner-8", name: "Partner eight" },
-  { id: "partner-9", name: "Partner nine" },
-  { id: "partner-10", name: "Partner ten" },
+  {
+    id: "amakombe",
+    name: "Amakombe Safaris",
+    logo: "/partners/amakombe.webp",
+    url: "https://amakombe.rw/",
+  },
+  {
+    id: "bpartners",
+    name: "B Partners Limited",
+    logo: "/partners/bpartners.webp",
+    url: "https://bpartners.rw/",
+  },
+  {
+    id: "lens",
+    name: "Lens",
+    logo: "/partners/lens-mark.webp",
+    url: "https://lens.rw/",
+  },
 ];
 
 export const WHAT_WE_DO = {

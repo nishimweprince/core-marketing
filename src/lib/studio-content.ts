@@ -9,9 +9,8 @@ const pexelsImage = (id: string, width = 1400) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
 
 export const HERO_IMAGE: StudioImage = {
-  src: pexelsImage("31466702", 1800),
-  sourcePage: "https://www.pexels.com/photo/aerial-view-of-kigali-s-modern-skyline-31466702/",
-  alt: "An aerial view over Kigali's modern skyline, rooftops and green ridges under a bright sky.",
+  src: "/hero.jpeg",
+  alt: "The Kigali Convention Centre dome and its latticed tower, seen from below in black and white.",
   objectPosition: "center",
 };
 
@@ -80,7 +79,7 @@ export const WHAT_WE_DO = {
   title: "What we do",
   pull: "Guests, drivers, and buyers meet you on a screen long before they meet you in person.",
   paragraphs: [
-    "We work with a small number of premium hospitality, motor, and real estate brands in Rwanda. Strategy, presence, content, and promotion, held as one senior team, so everything a person sees of you comes from the same hand.",
+    "We work with a small number of premium hospitality, automotive, and real estate brands in Rwanda. Strategy, presence, content, and promotion, held as one senior team, so everything a person sees of you comes from the same hand.",
   ],
 } as const;
 
@@ -114,8 +113,8 @@ export const STUDIO_INDUSTRIES = [
     ],
   },
   {
-    id: "motor",
-    name: "Motor",
+    id: "automotive",
+    name: "Automotive",
     lede: "Let the vehicle, and the road around it, lead.",
     image: {
       src: pexelsImage("11877372", 1800),

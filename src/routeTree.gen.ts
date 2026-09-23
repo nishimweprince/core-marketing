@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BookRouteImport } from './routes/book'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -20,11 +19,6 @@ import { Route as WhatWeDoSlugRouteImport } from './routes/what-we-do.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BookRoute = BookRouteImport.update({
-  id: '/book',
-  path: '/book',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -55,7 +49,6 @@ const WhatWeDoSlugRoute = WhatWeDoSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/book': typeof BookRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
@@ -64,7 +57,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/book': typeof BookRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
@@ -74,7 +66,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/book': typeof BookRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
@@ -85,7 +76,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/book'
     | '/privacy'
     | '/sitemap'
     | '/terms'
@@ -94,7 +84,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/book'
     | '/privacy'
     | '/sitemap'
     | '/terms'
@@ -103,7 +92,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/book'
     | '/privacy'
     | '/sitemap'
     | '/terms'
@@ -113,7 +101,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BookRoute: typeof BookRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapRoute: typeof SitemapRoute
   TermsRoute: typeof TermsRoute
@@ -128,13 +115,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/book': {
-      id: '/book'
-      path: '/book'
-      fullPath: '/book'
-      preLoaderRoute: typeof BookRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -177,7 +157,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BookRoute: BookRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapRoute: SitemapRoute,
   TermsRoute: TermsRoute,
